@@ -207,7 +207,7 @@ class Pipeline:
         rv = det = None
         while d is not None:
             det = reviewer.deterministic_checks(d)
-            rv = attempt("draft_reviewer", lambda: reviewer.run(self.llm, cid, redacted, label, mode=mode, draft=d))
+            rv = attempt("draft_reviewer", lambda: reviewer.run(self.llm, cid, redacted, label, mode=mode, draft=d, route_name=route_name))
             problems = (rv or {}).get("revision_instructions", []) if (rv and rv["verdict"] == "revise") else []
             problems += [f"Remove: {k.replace('_', ' ')}" for k in det["hard_failures"]]
             if not problems or revisions >= 1:

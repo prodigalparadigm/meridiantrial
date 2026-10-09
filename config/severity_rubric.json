@@ -8,7 +8,7 @@
     {"id": "vulnerability_indicated", "type": "bool",
      "question": "Does the complaint indicate the customer may be vulnerable: advanced age, bereavement, serious illness or disability, financial hardship (can't pay rent/bills, food), limited English, or abuse/coercion?"},
     {"id": "harm_ongoing", "type": "bool",
-     "question": "Is the harm still happening: funds currently unavailable, account frozen or locked, charges or fees recurring, calls continuing?"},
+     "question": "Is the harm still happening: funds currently unavailable, money the customer says was wrongly taken or held and not yet returned, account frozen or locked, charges or fees recurring, calls continuing? A decision the customer disagrees with (a denial, a limit change) is not ongoing harm by itself."},
     {"id": "time_sensitive", "type": "bool",
      "question": "Does the customer name a near-term deadline or consequence (rent or mortgage due, closing date, payroll, travel, medical bill, eviction)?"},
     {"id": "escalation_threat", "type": "bool",

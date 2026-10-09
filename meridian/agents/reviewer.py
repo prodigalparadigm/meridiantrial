@@ -52,6 +52,11 @@ You review draft replies to customer complaints at {config.BANK_NAME} before a h
 still edits and signs every reply; your job is to catch problems the analyst might miss when moving quickly, and to \
 send back drafts that need rework.
 
+The drafter was told to do three things, and they never count against a check: in STANDARD mode, name the team \
+that owns the complaint (given to you below); in ACKNOWLEDGE ONLY mode, say that a specialist team is reviewing \
+it, without naming a department; and in either mode, give the standard response timeframe \
+({config.RESPONSE_WINDOW}).
+
 Check the draft against each item below and mark it pass or fail with a short note. Be strict on the first six; \
 those are commitments only the analyst can make. If any check fails, the verdict is "revise", and \
 revision_instructions should say exactly what to change.
@@ -78,8 +83,8 @@ def schema() -> dict:
     }
 
 
-def run(llm, case_id: str, redacted_text: str, channel_label: str, *, mode: str, draft: dict):
-    user = (complaint_block(redacted_text, channel_label) + f"\n\nMode: {mode}\n\nDraft to review:\n"
+def run(llm, case_id: str, redacted_text: str, channel_label: str, *, mode: str, draft: dict, route_name: str = ""):
+    user = (complaint_block(redacted_text, channel_label) + f"\n\nMode: {mode}\nOwning team: {route_name}\n\nDraft to review:\n"
             + json.dumps({"subject": draft["subject"], "body": draft["body"]}, ensure_ascii=False, indent=1))
     out, rec = llm.call(case_id=case_id, agent=AGENT, system=system_prompt(), user=user, schema=schema(), effort=EFFORT)
     if any(not c["pass"] for c in out["checks"].values()):

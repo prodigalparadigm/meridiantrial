@@ -1,0 +1,3574 @@
+{
+ "customers": [
+  {
+   "customer_id": "CUST-10001",
+   "name": "Emre Ó Súilleabháin",
+   "email": "eosuilleabhain3@example.org",
+   "phone": "914-555-0172",
+   "address": "1874 Fieldstone Ct, East Halvern, CT 06331",
+   "dob": "1996-08-15",
+   "accounts": [
+    {
+     "type": "mortgage",
+     "number": "0086415148"
+    },
+    {
+     "type": "credit_card",
+     "number": "5555006282295273"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10002",
+   "name": "Sakura Yamamoto",
+   "email": "syamamoto4@example.com",
+   "phone": "347-555-0189",
+   "address": "1492 Highview Terrace, New Ardley, NY 10598",
+   "dob": "1971-06-12",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1049049956"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10003",
+   "name": "Rangi Wilson",
+   "email": "rangi_wilson7@example.net",
+   "phone": "914-555-0100",
+   "address": "1367 Larkspur Way, Apt 2B, Sawmill Hollow, NY 10532",
+   "dob": "1955-03-02",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1087340668"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000001135798072"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10004",
+   "name": "Rocío Zúñiga",
+   "email": "rzuniga@example.net",
+   "phone": "413-555-0139",
+   "address": "1711 Weatherby St, Wexford, CT 06795",
+   "dob": "1963-04-11",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1048847928"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000008254640159"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10005",
+   "name": "Miroslav Novák",
+   "email": "miroslavnovak75@example.net",
+   "phone": "914-555-0127",
+   "address": "1502 Tamarack St, New Ardley, NY 10598",
+   "dob": "1975-04-22",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1034973709"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002407969318"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10006",
+   "name": "Nusrat Gill",
+   "email": "gillfamily@example.com",
+   "phone": "914-555-0147",
+   "address": "176 Ferncliff Dr, Apt 6B, Tarrow, CT 06260",
+   "dob": "1986-09-26",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1097338151"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000007129874696"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10007",
+   "name": "Adaeze Appiah",
+   "email": "adaeze.appiah@example.org",
+   "phone": "860-555-0142",
+   "address": "1155 Tamarack St, Tarrow, CT 06260",
+   "dob": "1937-05-22",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1087099021"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10008",
+   "name": "Adaeze Boateng",
+   "email": "aboateng1@example.com",
+   "phone": "413-555-0116",
+   "address": "58 Highview Terrace, Apt 4B, Cold Spring Landing, NY 10516",
+   "dob": "1992-08-01",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1057910944"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000004540654435"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10009",
+   "name": "Anil Siddiqui",
+   "email": "anil85@example.org",
+   "phone": "518-555-0176",
+   "address": "481 Quarry Hill Ln, Harbor Falls, NY 12538",
+   "dob": "1981-09-25",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1025054439"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000005369270765"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10010",
+   "name": "Adaeze Boateng",
+   "email": "boatengfamily@example.com",
+   "phone": "845-555-0137",
+   "address": "1361 Bluestone Ave, New Ardley, NY 10598",
+   "dob": "1966-07-20",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1016681023"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000007978942545"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10011",
+   "name": "Mateus Smith",
+   "email": "mateus95@example.org",
+   "phone": "845-555-0112",
+   "address": "1191 Orchard Glen, Sawmill Hollow, NY 10532",
+   "dob": "1960-02-11",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1030989384"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000003978443964"
+    },
+    {
+     "type": "mortgage",
+     "number": "0083410346"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10012",
+   "name": "Hyun-joo Watanabe",
+   "email": "hyunjoo.w@example.com",
+   "phone": "475-555-0184",
+   "address": "6 Fieldstone Ct, Millbrook Station, NY 12545",
+   "dob": "1998-09-23",
+   "accounts": [
+    {
+     "type": "auto_loan",
+     "number": "710080957267"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10013",
+   "name": "Priya Malhotra",
+   "email": "priya.m@example.com",
+   "phone": "860-555-0107",
+   "address": "550 Ferncliff Dr, Apt 1D, Port Ellery, NY 10573",
+   "dob": "1998-10-16",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1064118553"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000008149605730"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10014",
+   "name": "Dragana Watanabe",
+   "email": "dwatanabe@example.net",
+   "phone": "413-555-0183",
+   "address": "663 Highview Terrace, Kessler Point, CT 06478",
+   "dob": "1983-05-24",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1002191235"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10015",
+   "name": "Rocío De la Cruz",
+   "email": "delacruz.rocio@example.com",
+   "phone": "845-555-0138",
+   "address": "1446 Copper Beech Rd, Kessler Point, CT 06478",
+   "dob": "1985-03-02",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1019248255"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000006981421281"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10016",
+   "name": "James Smith",
+   "email": "jamessmith62@example.com",
+   "phone": "203-555-0122",
+   "address": "1546 Quarry Hill Ln, Wexford, CT 06795",
+   "dob": "1962-08-18",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1007143282"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000005120382867"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10017",
+   "name": "Bogdan Popescu",
+   "email": "bogdan.p@example.net",
+   "phone": "845-555-0160",
+   "address": "878 Pine Knoll Dr, Apt 4C, Cold Spring Landing, NY 10516",
+   "dob": "1963-09-04",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1090385935"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000005519484175"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10018",
+   "name": "Rocío Anderson",
+   "email": "anderson.rocio@example.com",
+   "phone": "413-555-0144",
+   "address": "1092 Fieldstone Ct, Port Ellery, NY 10573",
+   "dob": "1980-03-25",
+   "accounts": [
+    {
+     "type": "credit_card",
+     "number": "5555005705597794"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10019",
+   "name": "Gary Bell",
+   "email": "bell.gary@example.org",
+   "phone": "347-555-0124",
+   "address": "1525 Ferncliff Dr, Port Ellery, NY 10573",
+   "dob": "1968-11-14",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1077047688"
+    },
+    {
+     "type": "auto_loan",
+     "number": "710056539778"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10020",
+   "name": "Folasade Traoré",
+   "email": "folasade.traore@example.com",
+   "phone": "845-555-0153",
+   "address": "960 Quarry Hill Ln, Port Ellery, NY 10573",
+   "dob": "1948-06-28",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1011654258"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000003560887859"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10021",
+   "name": "Araceli Quispe",
+   "email": "araceli.quispe@example.com",
+   "phone": "914-555-0194",
+   "address": "1366 Juniper St, Grayling, NY 12603",
+   "dob": "1933-07-21",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1023721324"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000004152376327"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10022",
+   "name": "José Hernández",
+   "email": "jose.hernandez1957@example.com",
+   "phone": "860-555-0156",
+   "address": "1619 Cobble Ct, East Halvern, CT 06331",
+   "dob": "1957-02-10",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1036945336"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000004380744098"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10023",
+   "name": "Tariq Ochoa",
+   "email": "tochoa@example.com",
+   "phone": "475-555-0106",
+   "address": "617 Tamarack St, Wexford, CT 06795",
+   "dob": "1950-07-07",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1055072633"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000009138553287"
+    },
+    {
+     "type": "credit_card",
+     "number": "5555007278624195"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10024",
+   "name": "Kimberly Hargrove",
+   "email": "kimberly.h@example.com",
+   "phone": "413-555-0172",
+   "address": "1804 Quarry Hill Ln, Apt 3C, Harbor Falls, NY 12538",
+   "dob": "1965-12-19",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1096512510"
+    },
+    {
+     "type": "credit_card",
+     "number": "5555006494593663"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10025",
+   "name": "Ashley Abernathy",
+   "email": "abernathya@example.com",
+   "phone": "413-555-0146",
+   "address": "858 Hemlock Hollow Rd, Kessler Point, CT 06478",
+   "dob": "1958-09-03",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1031186077"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000008893695291"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10026",
+   "name": "Ama Okafor",
+   "email": "amaokafor@example.net",
+   "phone": "413-555-0107",
+   "address": "909 Ferncliff Dr, Wexford, CT 06795",
+   "dob": "1987-02-26",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1058655312"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000001271453490"
+    },
+    {
+     "type": "savings",
+     "number": "2075386744"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10027",
+   "name": "Dragana Chaudhry",
+   "email": "dragana_chaudhry45@example.com",
+   "phone": "475-555-0110",
+   "address": "1966 Ferncliff Dr, Lantern Hill, CT 06359",
+   "dob": "1969-10-05",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1025551347"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000006142061216"
+    },
+    {
+     "type": "credit_card",
+     "number": "5555002034577027"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10028",
+   "name": "Dennis Wolf",
+   "email": "dennis_wolf68@example.net",
+   "phone": "860-555-0114",
+   "address": "1271 Highview Terrace, Sawmill Hollow, NY 10532",
+   "dob": "2003-06-02",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1059228883"
+    },
+    {
+     "type": "credit_card",
+     "number": "5555000788384269"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10029",
+   "name": "Vikram Kaur",
+   "email": "vikram_kaur98@example.com",
+   "phone": "518-555-0175",
+   "address": "1088 Orchard Glen, Apt 1B, Cold Spring Landing, NY 10516",
+   "dob": "1961-09-20",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1010814351"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000006330044933"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10030",
+   "name": "Rafael Castillo",
+   "email": "rafael.castillo1984@example.net",
+   "phone": "203-555-0121",
+   "address": "1664 Larkspur Way, Apt 4D, Wexford, CT 06795",
+   "dob": "1984-07-27",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1061212028"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000005942652836"
+    },
+    {
+     "type": "savings",
+     "number": "2061577041"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10031",
+   "name": "Hassan Nasser",
+   "email": "nasserh@example.net",
+   "phone": "914-555-0152",
+   "address": "101 Pine Knoll Dr, Cold Spring Landing, NY 10516",
+   "dob": "1950-02-23",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1053346267"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000005189809388"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10032",
+   "name": "Joaquín Zhang",
+   "email": "zhangj@example.com",
+   "phone": "914-555-0192",
+   "address": "1923 Orchard Glen, Apt 5B, Tarrow, CT 06260",
+   "dob": "1967-08-13",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1040411368"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000004326243817"
+    },
+    {
+     "type": "personal_loan",
+     "number": "720035883070"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10033",
+   "name": "Kwame Eze",
+   "email": "ezefamily@example.com",
+   "phone": "845-555-0119",
+   "address": "1642 Pine Knoll Dr, Sawmill Hollow, NY 10532",
+   "dob": "1955-08-02",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1035627847"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002512455773"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10034",
+   "name": "Sakura Lim",
+   "email": "lim.sakura@example.com",
+   "phone": "914-555-0111",
+   "address": "1259 Saltbox Ln, Millbrook Station, NY 12545",
+   "dob": "2001-06-06",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1001772487"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000003705604375"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10035",
+   "name": "Tavita Lindqvist",
+   "email": "lindqvistt@example.net",
+   "phone": "914-555-0151",
+   "address": "244 Chestnut Hollow Rd, Lantern Hill, CT 06359",
+   "dob": "1977-09-21",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1023915269"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000006056540627"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10036",
+   "name": "Imran Ramaswamy",
+   "email": "imran.ramaswamy@example.net",
+   "phone": "914-555-0144",
+   "address": "1761 Orchard Glen, Cold Spring Landing, NY 10516",
+   "dob": "1965-11-13",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1070074601"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000004050767031"
+    },
+    {
+     "type": "credit_card",
+     "number": "5555000259444865"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10037",
+   "name": "Thomas Wolf",
+   "email": "wolf.thomas@example.org",
+   "phone": "475-555-0144",
+   "address": "1015 Old Mill Rd, Apt 1B, Wexford, CT 06795",
+   "dob": "1979-02-20",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1083551396"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000003262916899"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10038",
+   "name": "Gary Strong",
+   "email": "gary.s@example.com",
+   "phone": "518-555-0192",
+   "address": "1598 Pine Knoll Dr, Apt 5A, Millbrook Station, NY 12545",
+   "dob": "1945-10-04",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1025779290"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000004010530255"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10039",
+   "name": "Keith Gold",
+   "email": "keith_gold84@example.net",
+   "phone": "914-555-0132",
+   "address": "565 Highview Terrace, Grayling, NY 12603",
+   "dob": "1998-04-21",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1027604016"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000005518858239"
+    },
+    {
+     "type": "auto_loan",
+     "number": "710077743499"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10040",
+   "name": "Patricia Davis",
+   "email": "patricia_davis63@example.net",
+   "phone": "413-555-0162",
+   "address": "732 Chestnut Hollow Rd, Millbrook Station, NY 12545",
+   "dob": "1955-09-04",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1000647654"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000007184289723"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10041",
+   "name": "Ji-woo Choi",
+   "email": "choi.jiwoo@example.com",
+   "phone": "518-555-0106",
+   "address": "1765 Juniper St, Apt 2B, New Ardley, NY 10598",
+   "dob": "1986-10-12",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1031357509"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000004781862416"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10042",
+   "name": "Ximena De la Cruz",
+   "email": "delacruzfamily@example.net",
+   "phone": "413-555-0117",
+   "address": "230 Fieldstone Ct, Apt 5C, Kessler Point, CT 06478",
+   "dob": "1953-03-07",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1054901331"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000004342264581"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10043",
+   "name": "Chiamaka Danjuma",
+   "email": "cdanjuma@example.com",
+   "phone": "914-555-0146",
+   "address": "1503 Saltbox Ln, Port Ellery, NY 10573",
+   "dob": "1977-03-02",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1094464726"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002494629692"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10044",
+   "name": "Kavya Kealoha",
+   "email": "kavya83@example.org",
+   "phone": "845-555-0124",
+   "address": "1698 Mill Pond Way, Cold Spring Landing, NY 10516",
+   "dob": "1968-10-02",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1032916482"
+    },
+    {
+     "type": "personal_loan",
+     "number": "720045772233"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10045",
+   "name": "Mateus Van der Berg",
+   "email": "mateus.v@example.com",
+   "phone": "845-555-0125",
+   "address": "389 Orchard Glen, Lantern Hill, CT 06359",
+   "dob": "1977-05-16",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1050254327"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000004920799867"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10046",
+   "name": "Nabil Mansour",
+   "email": "mansourfamily@example.com",
+   "phone": "413-555-0106",
+   "address": "9 Pine Knoll Dr, Apt 1B, Tarrow, CT 06260",
+   "dob": "1974-07-10",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1067149340"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000001693399677"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10047",
+   "name": "Chukwuemeka Owusu",
+   "email": "cowusu@example.com",
+   "phone": "518-555-0191",
+   "address": "1769 Saltbox Ln, Tarrow, CT 06260",
+   "dob": "1967-05-21",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1084257743"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000008674745463"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10048",
+   "name": "Sanjay Banerjee",
+   "email": "banerjeefamily@example.net",
+   "phone": "347-555-0176",
+   "address": "79 Ridgeview Ave, Apt 1B, Millbrook Station, NY 12545",
+   "dob": "1998-10-06",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1095643642"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000005165344608"
+    },
+    {
+     "type": "credit_card",
+     "number": "5555006876463915"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10049",
+   "name": "Yasmin Sullivan",
+   "email": "ysullivan2@example.com",
+   "phone": "860-555-0111",
+   "address": "929 Mill Pond Way, Lantern Hill, CT 06359",
+   "dob": "1984-07-24",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1025454322"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000009368658764"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10050",
+   "name": "Priya Venkataraman",
+   "email": "priya.venkataraman1965@example.com",
+   "phone": "860-555-0180",
+   "address": "769 Quarry Hill Ln, Apt 6B, Kessler Point, CT 06478",
+   "dob": "1965-07-22",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1007184262"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10051",
+   "name": "Deborah Dunleavy",
+   "email": "dunleavyfamily@example.com",
+   "phone": "347-555-0146",
+   "address": "1524 Pine Knoll Dr, Apt 1B, Millbrook Station, NY 12545",
+   "dob": "1979-10-22",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1016642735"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000006153420707"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10052",
+   "name": "Irina Kowalczyk",
+   "email": "kowalczyk.irina@example.net",
+   "phone": "203-555-0165",
+   "address": "680 Copper Beech Rd, New Ardley, NY 10598",
+   "dob": "1996-09-11",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1009502600"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002821681861"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10053",
+   "name": "Aroha Yilmaz",
+   "email": "aroha.y@example.org",
+   "phone": "860-555-0129",
+   "address": "1327 Old Mill Rd, Wexford, CT 06795",
+   "dob": "1951-03-24",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1035789208"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000008399133482"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10054",
+   "name": "Layla Siddiqui",
+   "email": "layla.siddiqui2003@example.com",
+   "phone": "860-555-0163",
+   "address": "1501 Wainwright Ave, Millbrook Station, NY 12545",
+   "dob": "2003-03-04",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1023747583"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002401802143"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10055",
+   "name": "Kwabena Boateng",
+   "email": "kboateng1@example.com",
+   "phone": "518-555-0178",
+   "address": "1781 Saltbox Ln, Cold Spring Landing, NY 10516",
+   "dob": "1969-11-22",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1025328949"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002060615117"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10056",
+   "name": "Karen Smith",
+   "email": "karen.smith1952@example.com",
+   "phone": "845-555-0159",
+   "address": "1039 Highview Terrace, Wexford, CT 06795",
+   "dob": "1952-11-19",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1040095835"
+    },
+    {
+     "type": "savings",
+     "number": "2079078153"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10057",
+   "name": "Min-jun Haddad",
+   "email": "minjun38@example.com",
+   "phone": "518-555-0149",
+   "address": "691 Highview Terrace, Millbrook Station, NY 12545",
+   "dob": "1978-12-22",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1051647223"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000009991857379"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10058",
+   "name": "Gurpreet Hernández",
+   "email": "hernandezfamily@example.com",
+   "phone": "347-555-0182",
+   "address": "1645 Sycamore Ct, Apt 6A, Port Ellery, NY 10573",
+   "dob": "1965-10-03",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1082838134"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000000407175506"
+    },
+    {
+     "type": "credit_card",
+     "number": "5555006330241964"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10059",
+   "name": "Haoran Tanaka",
+   "email": "tanakafamily@example.com",
+   "phone": "518-555-0182",
+   "address": "824 Copper Beech Rd, Harbor Falls, NY 12538",
+   "dob": "1972-03-03",
+   "accounts": [
+    {
+     "type": "debit_card",
+     "number": "4000008905725326"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10060",
+   "name": "Siddharth Kaur",
+   "email": "skaur@example.org",
+   "phone": "203-555-0166",
+   "address": "760 Bluestone Ave, Apt 4C, Grayling, NY 12603",
+   "dob": "1958-08-01",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1092864413"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000007810745205"
+    },
+    {
+     "type": "personal_loan",
+     "number": "720065145066"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10061",
+   "name": "Yesenia Quispe",
+   "email": "yesenia.quispe@example.com",
+   "phone": "203-555-0174",
+   "address": "360 Highview Terrace, Harbor Falls, NY 12538",
+   "dob": "1969-04-19",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1095483306"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10062",
+   "name": "Folasade Villanueva",
+   "email": "villanuevafamily@example.com",
+   "phone": "845-555-0189",
+   "address": "1251 Sycamore Ct, Kessler Point, CT 06478",
+   "dob": "1948-10-20",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1077822419"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000009725863750"
+    },
+    {
+     "type": "savings",
+     "number": "2052542877"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10063",
+   "name": "Earl Gold",
+   "email": "goldfamily@example.org",
+   "phone": "518-555-0197",
+   "address": "1362 Alder Ridge Rd, Cold Spring Landing, NY 10516",
+   "dob": "1956-05-12",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1048449894"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000001932660145"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10064",
+   "name": "Yesenia Morales",
+   "email": "moralesy@example.org",
+   "phone": "914-555-0107",
+   "address": "1329 Ridgeview Ave, New Ardley, NY 10598",
+   "dob": "1980-01-26",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1053641621"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002892766955"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10065",
+   "name": "Afua Adeyemi",
+   "email": "afua_adeyemi18@example.net",
+   "phone": "860-555-0191",
+   "address": "1121 Pine Knoll Dr, New Ardley, NY 10598",
+   "dob": "1970-07-19",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1038111367"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002737125292"
+    },
+    {
+     "type": "credit_card",
+     "number": "5555003440037374"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10066",
+   "name": "Dorothy Strong",
+   "email": "strongd@example.com",
+   "phone": "347-555-0112",
+   "address": "324 Saltbox Ln, New Ardley, NY 10598",
+   "dob": "1956-04-15",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1031420029"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000007418969090"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10067",
+   "name": "Łukasz Popescu",
+   "email": "lukasz.popescu@example.net",
+   "phone": "845-555-0126",
+   "address": "1153 Hemlock Hollow Rd, Wexford, CT 06795",
+   "dob": "2002-10-21",
+   "accounts": [
+    {
+     "type": "credit_card",
+     "number": "5555001898580614"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10068",
+   "name": "Ximena García",
+   "email": "ximenagarcia79@example.com",
+   "phone": "347-555-0162",
+   "address": "495 Hemlock Hollow Rd, Apt 3A, Millbrook Station, NY 12545",
+   "dob": "1979-03-16",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1090015000"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000003437638394"
+    },
+    {
+     "type": "mortgage",
+     "number": "0081657867"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10069",
+   "name": "Araceli Ochoa",
+   "email": "araceliochoa@example.net",
+   "phone": "845-555-0109",
+   "address": "222 Weatherby St, Grayling, NY 12603",
+   "dob": "1971-03-04",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1052060176"
+    },
+    {
+     "type": "auto_loan",
+     "number": "710057307988"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10070",
+   "name": "Yetunde Adeyemi",
+   "email": "adeyemi.yetunde@example.com",
+   "phone": "845-555-0110",
+   "address": "1405 Tamarack St, Kessler Point, CT 06478",
+   "dob": "1974-10-24",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1089218899"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000007108263150"
+    },
+    {
+     "type": "savings",
+     "number": "2018873712"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10071",
+   "name": "Faisal Ramaswamy",
+   "email": "ramaswamy.faisal@example.com",
+   "phone": "203-555-0126",
+   "address": "1743 Saltbox Ln, Port Ellery, NY 10573",
+   "dob": "1949-02-16",
+   "accounts": [
+    {
+     "type": "debit_card",
+     "number": "4000003215819323"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10072",
+   "name": "Nalani Okafor-Reyes",
+   "email": "nalani_okaforreyes70@example.net",
+   "phone": "860-555-0171",
+   "address": "751 Ferncliff Dr, Apt 2C, Millbrook Station, NY 12545",
+   "dob": "1991-08-04",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1023176597"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000007690025033"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10073",
+   "name": "Barbara Smith",
+   "email": "smith.barbara@example.org",
+   "phone": "475-555-0119",
+   "address": "1191 Orchard Glen, Sawmill Hollow, NY 10532",
+   "dob": "1978-07-16",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1043747555"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10074",
+   "name": "Cody Wolf",
+   "email": "codywolf@example.net",
+   "phone": "347-555-0123",
+   "address": "35 Larkspur Way, East Halvern, CT 06331",
+   "dob": "1946-07-01",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1085394364"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000009710225338"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10075",
+   "name": "Earl Mitchell",
+   "email": "mitchelle@example.com",
+   "phone": "860-555-0106",
+   "address": "46 Cobble Ct, Port Ellery, NY 10573",
+   "dob": "1963-02-17",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1045160026"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10076",
+   "name": "Andrei Nowak",
+   "email": "andrei.nowak2001@example.com",
+   "phone": "914-555-0134",
+   "address": "691 Hemlock Hollow Rd, Cold Spring Landing, NY 10516",
+   "dob": "2001-02-08",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1057330175"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000007753485710"
+    },
+    {
+     "type": "mortgage",
+     "number": "0083438793"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10077",
+   "name": "Abena Boateng",
+   "email": "aboateng5@example.com",
+   "phone": "475-555-0135",
+   "address": "1078 Bluestone Ave, Millbrook Station, NY 12545",
+   "dob": "1980-08-08",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1046574546"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002603583087"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10078",
+   "name": "Siddharth Chaudhry",
+   "email": "siddharth.c@example.net",
+   "phone": "518-555-0196",
+   "address": "164 Highview Terrace, New Ardley, NY 10598",
+   "dob": "1956-09-27",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1061882884"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000008430540984"
+    },
+    {
+     "type": "personal_loan",
+     "number": "720034111144"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10079",
+   "name": "Aroha Lindqvist",
+   "email": "aroha78@example.com",
+   "phone": "413-555-0143",
+   "address": "789 Bluestone Ave, Tarrow, CT 06260",
+   "dob": "1953-07-07",
+   "accounts": [
+    {
+     "type": "mortgage",
+     "number": "0089518743"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10080",
+   "name": "Alejandro Ochoa",
+   "email": "alejandro.o@example.com",
+   "phone": "860-555-0117",
+   "address": "387 Mill Pond Way, Apt 2A, Sawmill Hollow, NY 10532",
+   "dob": "1945-12-16",
+   "accounts": [
+    {
+     "type": "mortgage",
+     "number": "0085328387"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10081",
+   "name": "José Quispe",
+   "email": "jquispe@example.com",
+   "phone": "860-555-0112",
+   "address": "1299 Pine Knoll Dr, Tarrow, CT 06260",
+   "dob": "1988-10-10",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1036439669"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10082",
+   "name": "Guadalupe Zúñiga",
+   "email": "zunigag@example.com",
+   "phone": "203-555-0195",
+   "address": "995 Weatherby St, Cold Spring Landing, NY 10516",
+   "dob": "1953-11-04",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1047274170"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10083",
+   "name": "Dorothy McAllister",
+   "email": "dorothy32@example.com",
+   "phone": "845-555-0111",
+   "address": "1416 Tamarack St, Tarrow, CT 06260",
+   "dob": "2000-02-27",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1057517058"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10084",
+   "name": "Mele Thompson",
+   "email": "mthompson5@example.com",
+   "phone": "845-555-0174",
+   "address": "583 Weatherby St, Apt 4D, Harbor Falls, NY 12538",
+   "dob": "1978-01-18",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1087847166"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000007421662872"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10085",
+   "name": "Venkatesh Rahman",
+   "email": "venkatesh_rahman47@example.net",
+   "phone": "203-555-0101",
+   "address": "477 Mill Pond Way, Sawmill Hollow, NY 10532",
+   "dob": "1979-01-18",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1036830664"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000009936487126"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10086",
+   "name": "Kimberly O'Brien",
+   "email": "kobrien@example.com",
+   "phone": "860-555-0120",
+   "address": "1594 Cobble Ct, Wexford, CT 06795",
+   "dob": "1998-06-22",
+   "accounts": [
+    {
+     "type": "credit_card",
+     "number": "5555002507471450"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10087",
+   "name": "Russell Hargrove",
+   "email": "russellhargrove79@example.org",
+   "phone": "413-555-0177",
+   "address": "247 Highview Terrace, Cold Spring Landing, NY 10516",
+   "dob": "1979-01-22",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1063376414"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002972942187"
+    },
+    {
+     "type": "auto_loan",
+     "number": "710071142490"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10088",
+   "name": "Jennifer Thompson",
+   "email": "jenniferthompson87@example.com",
+   "phone": "203-555-0145",
+   "address": "1166 Chestnut Hollow Rd, Harbor Falls, NY 12538",
+   "dob": "1987-12-04",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1068295037"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000005712851642"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10089",
+   "name": "Ximena Quispe",
+   "email": "xquispe@example.org",
+   "phone": "347-555-0107",
+   "address": "1212 Alder Ridge Rd, Kessler Point, CT 06478",
+   "dob": "1985-02-04",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1074584452"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10090",
+   "name": "Łukasz Kuznetsov",
+   "email": "lkuznetsov2@example.com",
+   "phone": "347-555-0157",
+   "address": "202 Copper Beech Rd, Lantern Hill, CT 06359",
+   "dob": "1944-06-07",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1043128598"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000001073111767"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10091",
+   "name": "Sanjay Chaudhry",
+   "email": "schaudhry@example.net",
+   "phone": "475-555-0168",
+   "address": "1638 Mill Pond Way, Sawmill Hollow, NY 10532",
+   "dob": "1992-01-21",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1072284567"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000006742308751"
+    },
+    {
+     "type": "credit_card",
+     "number": "5555003085495705"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10092",
+   "name": "Sione Fuentes",
+   "email": "sionefuentes49@example.net",
+   "phone": "518-555-0168",
+   "address": "737 Larkspur Way, Harbor Falls, NY 12538",
+   "dob": "1949-10-21",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1058914377"
+    },
+    {
+     "type": "personal_loan",
+     "number": "720003998248"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10093",
+   "name": "Ingrid Tupou",
+   "email": "tupou.ingrid@example.org",
+   "phone": "347-555-0103",
+   "address": "1708 Ridgeview Ave, Apt 6A, Port Ellery, NY 10573",
+   "dob": "1977-08-20",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1018501583"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000001781311907"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10094",
+   "name": "José Morales",
+   "email": "josemorales47@example.com",
+   "phone": "845-555-0134",
+   "address": "1852 Mill Pond Way, Apt 5B, Grayling, NY 12603",
+   "dob": "1947-07-10",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1061884751"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002067557031"
+    },
+    {
+     "type": "personal_loan",
+     "number": "720018716513"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10095",
+   "name": "Arjun Rahman",
+   "email": "arahman@example.org",
+   "phone": "860-555-0150",
+   "address": "1206 Sycamore Ct, Lantern Hill, CT 06359",
+   "dob": "1967-09-20",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1020375911"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000005609774923"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10096",
+   "name": "Thanh Lim",
+   "email": "lim.thanh@example.com",
+   "phone": "413-555-0149",
+   "address": "1556 Juniper St, Apt 2B, East Halvern, CT 06331",
+   "dob": "1996-10-02",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1042365490"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000004201867458"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10097",
+   "name": "Andrei Shevchenko",
+   "email": "andrei_shevchenko38@example.net",
+   "phone": "347-555-0171",
+   "address": "1096 Saltbox Ln, Lantern Hill, CT 06359",
+   "dob": "1978-07-16",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1098651902"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000008783502326"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10098",
+   "name": "Jennifer McAllister",
+   "email": "jennifer.m@example.net",
+   "phone": "347-555-0158",
+   "address": "1857 Orchard Glen, Lantern Hill, CT 06359",
+   "dob": "1956-01-14",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1004862329"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000008423047179"
+    },
+    {
+     "type": "personal_loan",
+     "number": "720099836634"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10099",
+   "name": "Gerald Miller",
+   "email": "gerald.miller1977@example.com",
+   "phone": "347-555-0110",
+   "address": "1186 Sycamore Ct, Grayling, NY 12603",
+   "dob": "1977-11-23",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1036864582"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10100",
+   "name": "Leilani Tupou",
+   "email": "tupoufamily@example.com",
+   "phone": "413-555-0189",
+   "address": "201 Chestnut Hollow Rd, East Halvern, CT 06331",
+   "dob": "1974-11-08",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1057665818"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000007470010775"
+    },
+    {
+     "type": "savings",
+     "number": "2007414858"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10101",
+   "name": "Tomasz Nowak",
+   "email": "tnowak@example.com",
+   "phone": "845-555-0115",
+   "address": "623 Larkspur Way, Port Ellery, NY 10573",
+   "dob": "1947-10-09",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1030131437"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000003051963581"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10102",
+   "name": "Joan Price",
+   "email": "joan14@example.com",
+   "phone": "914-555-0154",
+   "address": "1186 Juniper St, Lantern Hill, CT 06359",
+   "dob": "1980-03-01",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1069698682"
+    },
+    {
+     "type": "auto_loan",
+     "number": "710049723294"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10103",
+   "name": "Guadalupe Quispe",
+   "email": "quispeg@example.com",
+   "phone": "845-555-0129",
+   "address": "858 Old Mill Rd, Cold Spring Landing, NY 10516",
+   "dob": "1989-04-20",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1037603734"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000009871586049"
+    },
+    {
+     "type": "personal_loan",
+     "number": "720062662796"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10104",
+   "name": "Marisol Villanueva",
+   "email": "marisol.v@example.com",
+   "phone": "413-555-0100",
+   "address": "1796 Mill Pond Way, New Ardley, NY 10598",
+   "dob": "1985-12-24",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1017080242"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000009824817087"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10105",
+   "name": "Tammy Davis",
+   "email": "tammy_davis27@example.com",
+   "phone": "347-555-0121",
+   "address": "1670 Cobble Ct, Cold Spring Landing, NY 10516",
+   "dob": "1989-07-10",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1046300540"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000006920890844"
+    },
+    {
+     "type": "personal_loan",
+     "number": "720088492638"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10106",
+   "name": "Tavita Okafor-Reyes",
+   "email": "tavita_okaforreyes95@example.com",
+   "phone": "413-555-0153",
+   "address": "123 Larkspur Way, Wexford, CT 06795",
+   "dob": "1973-09-18",
+   "accounts": [
+    {
+     "type": "auto_loan",
+     "number": "710090295685"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10107",
+   "name": "Oluwaseun Okafor",
+   "email": "ookafor@example.org",
+   "phone": "475-555-0165",
+   "address": "1414 Alder Ridge Rd, Tarrow, CT 06260",
+   "dob": "1999-09-06",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1011892304"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000000438888309"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10108",
+   "name": "Brandon Hargrove",
+   "email": "hargrovefamily@example.net",
+   "phone": "860-555-0182",
+   "address": "388 Cobble Ct, Port Ellery, NY 10573",
+   "dob": "1936-09-20",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1089580846"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000008455227913"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10109",
+   "name": "Marisol Hernández",
+   "email": "mhernandez@example.net",
+   "phone": "860-555-0124",
+   "address": "1338 Chestnut Hollow Rd, Apt 5B, Sawmill Hollow, NY 10532",
+   "dob": "1971-12-19",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1030942376"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000006819152777"
+    },
+    {
+     "type": "personal_loan",
+     "number": "720063955307"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10110",
+   "name": "Sekou Ochoa",
+   "email": "sochoa@example.com",
+   "phone": "347-555-0198",
+   "address": "825 Old Mill Rd, Port Ellery, NY 10573",
+   "dob": "1950-08-25",
+   "accounts": [
+    {
+     "type": "debit_card",
+     "number": "4000006025019851"
+    },
+    {
+     "type": "savings",
+     "number": "2089488363"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10111",
+   "name": "Milena Popescu",
+   "email": "milena.popescu@example.com",
+   "phone": "860-555-0185",
+   "address": "86 Weatherby St, Lantern Hill, CT 06359",
+   "dob": "1947-12-01",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1006555662"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000007154503475"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10112",
+   "name": "Siddharth Kaur",
+   "email": "skaur8@example.net",
+   "phone": "413-555-0175",
+   "address": "1940 Saltbox Ln, East Halvern, CT 06331",
+   "dob": "1957-07-10",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1063230583"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10113",
+   "name": "Oluwaseun Danjuma",
+   "email": "oluwaseun.d@example.net",
+   "phone": "475-555-0125",
+   "address": "169 Chestnut Hollow Rd, Port Ellery, NY 10573",
+   "dob": "1962-10-06",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1057103300"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10114",
+   "name": "James Gold",
+   "email": "james.gold1961@example.com",
+   "phone": "914-555-0195",
+   "address": "18 Bluestone Ave, Wexford, CT 06795",
+   "dob": "1961-05-27",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1055610327"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002894470424"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10115",
+   "name": "Eun-ji Yamamoto",
+   "email": "eunji69@example.com",
+   "phone": "203-555-0141",
+   "address": "1285 Highview Terrace, Port Ellery, NY 10573",
+   "dob": "1992-07-10",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1080056126"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000001239791957"
+    },
+    {
+     "type": "personal_loan",
+     "number": "720098609442"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10116",
+   "name": "Olumide Asante",
+   "email": "asante.olumide@example.com",
+   "phone": "914-555-0153",
+   "address": "852 Copper Beech Rd, Lantern Hill, CT 06359",
+   "dob": "1992-01-24",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1064514794"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000007901438652"
+    },
+    {
+     "type": "auto_loan",
+     "number": "710045399117"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10117",
+   "name": "Youssef Aziz",
+   "email": "yaziz4@example.org",
+   "phone": "203-555-0109",
+   "address": "1362 Weatherby St, Kessler Point, CT 06478",
+   "dob": "1979-04-07",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1057790367"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10118",
+   "name": "Kenji Watanabe",
+   "email": "kenjiwatanabe89@example.net",
+   "phone": "860-555-0116",
+   "address": "1529 Old Mill Rd, Apt 6C, Kessler Point, CT 06478",
+   "dob": "1989-08-26",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1004013284"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000005432114131"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10119",
+   "name": "Rocío Ochoa",
+   "email": "rocio.ochoa@example.com",
+   "phone": "413-555-0121",
+   "address": "1121 Pine Knoll Dr, Apt 6C, Port Ellery, NY 10573",
+   "dob": "1956-01-15",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1080276747"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000009955667244"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10120",
+   "name": "Mauricio Benítez",
+   "email": "mauricio_benitez76@example.org",
+   "phone": "914-555-0177",
+   "address": "753 Chestnut Hollow Rd, Port Ellery, NY 10573",
+   "dob": "1953-02-21",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1087560929"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000000584448577"
+    },
+    {
+     "type": "auto_loan",
+     "number": "710008382963"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10121",
+   "name": "Venkatesh Chaudhry",
+   "email": "venkatesh.c@example.net",
+   "phone": "860-555-0177",
+   "address": "38 Orchard Glen, Grayling, NY 12603",
+   "dob": "1994-08-25",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1051470821"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10122",
+   "name": "Mauricio Ochoa",
+   "email": "mauricio.o@example.com",
+   "phone": "203-555-0190",
+   "address": "398 Juniper St, Kessler Point, CT 06478",
+   "dob": "1964-01-21",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1041306994"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000009639176562"
+    },
+    {
+     "type": "mortgage",
+     "number": "0089038454"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10123",
+   "name": "Bogdan Novák",
+   "email": "bogdan.novak@example.com",
+   "phone": "845-555-0136",
+   "address": "1031 Highview Terrace, Harbor Falls, NY 12538",
+   "dob": "1984-04-14",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1074187462"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10124",
+   "name": "Luis Fuentes",
+   "email": "luis.fuentes1989@example.net",
+   "phone": "413-555-0194",
+   "address": "214 Juniper St, New Ardley, NY 10598",
+   "dob": "1989-08-26",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1017672383"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000007449012399"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10125",
+   "name": "Duc Tanaka",
+   "email": "tanaka.duc@example.com",
+   "phone": "203-555-0111",
+   "address": "692 Old Mill Rd, Apt 2B, East Halvern, CT 06331",
+   "dob": "2007-07-09",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1028024956"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000003173740644"
+    },
+    {
+     "type": "mortgage",
+     "number": "0083394697"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10126",
+   "name": "Michael Dunleavy",
+   "email": "dunleavym@example.com",
+   "phone": "518-555-0188",
+   "address": "1731 Weatherby St, Sawmill Hollow, NY 10532",
+   "dob": "1984-08-28",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1062666539"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10127",
+   "name": "Babatunde Appiah",
+   "email": "bappiah@example.com",
+   "phone": "347-555-0183",
+   "address": "787 Ferncliff Dr, Kessler Point, CT 06478",
+   "dob": "1979-02-09",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1016961927"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000005010549229"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10128",
+   "name": "Wayne Gallagher",
+   "email": "wgallagher7@example.com",
+   "phone": "845-555-0140",
+   "address": "1887 Ridgeview Ave, Lantern Hill, CT 06359",
+   "dob": "1962-04-05",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1075301743"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10129",
+   "name": "Cody Abernathy",
+   "email": "abernathyc@example.com",
+   "phone": "845-555-0113",
+   "address": "733 Orchard Glen, Apt 1A, Lantern Hill, CT 06359",
+   "dob": "1986-11-10",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1042666702"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000009766866084"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10130",
+   "name": "Cody Carter",
+   "email": "ccarter2@example.net",
+   "phone": "203-555-0177",
+   "address": "996 Highview Terrace, Sawmill Hollow, NY 10532",
+   "dob": "1982-02-17",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1072322105"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10131",
+   "name": "Rafael Hernández",
+   "email": "rafael_hernandez9@example.org",
+   "phone": "413-555-0145",
+   "address": "613 Wainwright Ave, Sawmill Hollow, NY 10532",
+   "dob": "1953-05-02",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1060776580"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000001069494904"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10132",
+   "name": "Yaw Traoré",
+   "email": "yaw48@example.org",
+   "phone": "413-555-0132",
+   "address": "375 Mill Pond Way, Apt 6A, Lantern Hill, CT 06359",
+   "dob": "1989-04-01",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1060869253"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000008875341427"
+    },
+    {
+     "type": "mortgage",
+     "number": "0085130383"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10133",
+   "name": "Donna Rich",
+   "email": "richfamily@example.com",
+   "phone": "347-555-0172",
+   "address": "432 Orchard Glen, Apt 4C, Lantern Hill, CT 06359",
+   "dob": "1994-05-15",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1031383790"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000009605085441"
+    },
+    {
+     "type": "auto_loan",
+     "number": "710072364956"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10134",
+   "name": "Tyler Wilson",
+   "email": "wilsonfamily@example.com",
+   "phone": "914-555-0114",
+   "address": "1696 Wainwright Ave, Wexford, CT 06795",
+   "dob": "1999-04-28",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1040178974"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10135",
+   "name": "Anil Gill",
+   "email": "gillfamily@example.net",
+   "phone": "347-555-0111",
+   "address": "1609 Weatherby St, Harbor Falls, NY 12538",
+   "dob": "1943-09-26",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1070332645"
+    },
+    {
+     "type": "auto_loan",
+     "number": "710001973581"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10136",
+   "name": "William Dunleavy",
+   "email": "wdunleavy5@example.com",
+   "phone": "860-555-0145",
+   "address": "515 Chestnut Hollow Rd, Wexford, CT 06795",
+   "dob": "1976-02-04",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1086124593"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000007358998877"
+    },
+    {
+     "type": "savings",
+     "number": "2059907176"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10137",
+   "name": "Megan Rose",
+   "email": "megan.r@example.net",
+   "phone": "518-555-0193",
+   "address": "262 Copper Beech Rd, Sawmill Hollow, NY 10532",
+   "dob": "1997-02-07",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1012638687"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10138",
+   "name": "Bogdan Shevchenko",
+   "email": "shevchenkob@example.com",
+   "phone": "845-555-0177",
+   "address": "681 Juniper St, Apt 1B, Harbor Falls, NY 12538",
+   "dob": "1944-11-17",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1089798323"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000006632231386"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10139",
+   "name": "Gerald Johnson",
+   "email": "gerald.j@example.org",
+   "phone": "914-555-0179",
+   "address": "1098 Sycamore Ct, Wexford, CT 06795",
+   "dob": "1968-10-17",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1087794803"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000006865723117"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10140",
+   "name": "Guadalupe Saleh",
+   "email": "guadalupe30@example.com",
+   "phone": "347-555-0126",
+   "address": "1773 Larkspur Way, East Halvern, CT 06331",
+   "dob": "1964-10-02",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1057200782"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002573997150"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10141",
+   "name": "Hiroshi Nguyen",
+   "email": "hiroshi.nguyen1961@example.com",
+   "phone": "845-555-0117",
+   "address": "309 Saltbox Ln, Apt 1D, Lantern Hill, CT 06359",
+   "dob": "1961-03-21",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1043366388"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000006316943264"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10142",
+   "name": "Deepika Siddiqui",
+   "email": "deepika.s@example.com",
+   "phone": "518-555-0118",
+   "address": "919 Quarry Hill Ln, Port Ellery, NY 10573",
+   "dob": "1989-03-12",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1004180705"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10143",
+   "name": "Tariq Davis",
+   "email": "tdavis5@example.com",
+   "phone": "914-555-0176",
+   "address": "112 Orchard Glen, Apt 3B, Cold Spring Landing, NY 10516",
+   "dob": "1956-05-06",
+   "accounts": [
+    {
+     "type": "mortgage",
+     "number": "0087514963"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10144",
+   "name": "David Mitchell",
+   "email": "dmitchell@example.org",
+   "phone": "914-555-0180",
+   "address": "767 Sycamore Ct, Kessler Point, CT 06478",
+   "dob": "1956-03-05",
+   "accounts": [
+    {
+     "type": "mortgage",
+     "number": "0082096924"
+    },
+    {
+     "type": "personal_loan",
+     "number": "720022427828"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10145",
+   "name": "Gurpreet Rahman",
+   "email": "rahmang@example.net",
+   "phone": "413-555-0163",
+   "address": "922 Quarry Hill Ln, Kessler Point, CT 06478",
+   "dob": "1956-08-01",
+   "accounts": [
+    {
+     "type": "debit_card",
+     "number": "4000007105295023"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10146",
+   "name": "Donna O'Brien",
+   "email": "donna.o@example.org",
+   "phone": "845-555-0194",
+   "address": "1593 Tamarack St, Sawmill Hollow, NY 10532",
+   "dob": "1984-12-04",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1053231695"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10147",
+   "name": "Patricia Whitfield",
+   "email": "whitfield.patricia@example.com",
+   "phone": "845-555-0176",
+   "address": "679 Orchard Glen, Apt 6B, Lantern Hill, CT 06359",
+   "dob": "1951-01-06",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1033880352"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10148",
+   "name": "José Liu",
+   "email": "jliu@example.net",
+   "phone": "845-555-0163",
+   "address": "1896 Hemlock Hollow Rd, New Ardley, NY 10598",
+   "dob": "1954-01-27",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1042206079"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000003254919406"
+    },
+    {
+     "type": "savings",
+     "number": "2027394739"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10149",
+   "name": "Deepika Kaur",
+   "email": "deepika.kaur@example.net",
+   "phone": "475-555-0117",
+   "address": "886 Highview Terrace, Lantern Hill, CT 06359",
+   "dob": "1995-08-03",
+   "accounts": [
+    {
+     "type": "savings",
+     "number": "2097661836"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10150",
+   "name": "Leilani Ó Súilleabháin",
+   "email": "leilani.o@example.net",
+   "phone": "518-555-0167",
+   "address": "190 Sycamore Ct, Kessler Point, CT 06478",
+   "dob": "1974-09-09",
+   "accounts": [
+    {
+     "type": "debit_card",
+     "number": "4000008618144492"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10151",
+   "name": "Guadalupe Castillo",
+   "email": "castillofamily@example.com",
+   "phone": "475-555-0109",
+   "address": "444 Copper Beech Rd, Grayling, NY 12603",
+   "dob": "1976-01-02",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1062224320"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000001034369538"
+    },
+    {
+     "type": "auto_loan",
+     "number": "710079710802"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10152",
+   "name": "Kwabena Eze",
+   "email": "ezefamily@example.org",
+   "phone": "347-555-0106",
+   "address": "1000 Chestnut Hollow Rd, Apt 6C, Lantern Hill, CT 06359",
+   "dob": "1996-03-21",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1011067469"
+    },
+    {
+     "type": "mortgage",
+     "number": "0089461963"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10153",
+   "name": "Nour Nasser",
+   "email": "nour.nasser1989@example.net",
+   "phone": "518-555-0111",
+   "address": "1481 Fieldstone Ct, Harbor Falls, NY 12538",
+   "dob": "1989-01-16",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1013575882"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002677000430"
+    },
+    {
+     "type": "credit_card",
+     "number": "5555000759490368"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10154",
+   "name": "Colleen Wilson",
+   "email": "colleen81@example.net",
+   "phone": "518-555-0132",
+   "address": "795 Alder Ridge Rd, Apt 3C, Millbrook Station, NY 12545",
+   "dob": "2000-02-03",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1076179108"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10155",
+   "name": "Sakura Wang",
+   "email": "swang@example.net",
+   "phone": "914-555-0131",
+   "address": "1496 Juniper St, Cold Spring Landing, NY 10516",
+   "dob": "1967-04-21",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1036151715"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000004173087986"
+    },
+    {
+     "type": "mortgage",
+     "number": "0084200088"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10156",
+   "name": "Kavya Siddiqui",
+   "email": "siddiqui.kavya@example.net",
+   "phone": "203-555-0153",
+   "address": "458 Mill Pond Way, Sawmill Hollow, NY 10532",
+   "dob": "1987-08-04",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1040422866"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000008756719535"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10157",
+   "name": "Tyler Miller",
+   "email": "tmiller@example.net",
+   "phone": "845-555-0142",
+   "address": "1538 Saltbox Ln, Millbrook Station, NY 12545",
+   "dob": "1941-01-22",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1035931291"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000000806518488"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10158",
+   "name": "Óscar De la Cruz",
+   "email": "delacruzo@example.net",
+   "phone": "475-555-0123",
+   "address": "852 Bluestone Ave, Harbor Falls, NY 12538",
+   "dob": "1965-07-03",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1076224645"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10159",
+   "name": "Youssef Al-Masri",
+   "email": "youssefalmasri@example.net",
+   "phone": "518-555-0159",
+   "address": "1849 Bluestone Ave, Sawmill Hollow, NY 10532",
+   "dob": "1962-11-04",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1050165310"
+    },
+    {
+     "type": "personal_loan",
+     "number": "720081802844"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10160",
+   "name": "Olumide Traoré",
+   "email": "traoreo@example.net",
+   "phone": "203-555-0118",
+   "address": "1558 Cobble Ct, Wexford, CT 06795",
+   "dob": "1984-09-21",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1087805314"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000008664899049"
+    },
+    {
+     "type": "auto_loan",
+     "number": "710043519660"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10161",
+   "name": "Mele Van der Berg",
+   "email": "melevanderberg84@example.net",
+   "phone": "860-555-0187",
+   "address": "1291 Sycamore Ct, Port Ellery, NY 10573",
+   "dob": "1984-03-19",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1097979066"
+    },
+    {
+     "type": "auto_loan",
+     "number": "710099557886"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10162",
+   "name": "Joan Whitfield",
+   "email": "whitfieldfamily@example.com",
+   "phone": "347-555-0155",
+   "address": "931 Fieldstone Ct, New Ardley, NY 10598",
+   "dob": "1961-06-08",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1095690445"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000000390190884"
+    },
+    {
+     "type": "auto_loan",
+     "number": "710086642628"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10163",
+   "name": "Ama Nwosu",
+   "email": "amanwosu98@example.com",
+   "phone": "518-555-0195",
+   "address": "1676 Sycamore Ct, Apt 1B, Port Ellery, NY 10573",
+   "dob": "1998-02-05",
+   "accounts": [
+    {
+     "type": "debit_card",
+     "number": "4000001980463921"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10164",
+   "name": "Araceli Desai",
+   "email": "araceli_desai84@example.com",
+   "phone": "914-555-0123",
+   "address": "1000 Bluestone Ave, Harbor Falls, NY 12538",
+   "dob": "1975-01-03",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1004405252"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000007563768529"
+    },
+    {
+     "type": "mortgage",
+     "number": "0086918959"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10165",
+   "name": "Chiamaka Boateng",
+   "email": "chiamaka17@example.net",
+   "phone": "860-555-0126",
+   "address": "1609 Quarry Hill Ln, Grayling, NY 12603",
+   "dob": "1943-02-11",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1084981874"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10166",
+   "name": "Ximena Ochoa",
+   "email": "ochoax@example.com",
+   "phone": "845-555-0184",
+   "address": "1476 Bluestone Ave, Apt 1B, New Ardley, NY 10598",
+   "dob": "1981-03-12",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1088366055"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000005548986778"
+    },
+    {
+     "type": "auto_loan",
+     "number": "710006710433"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10167",
+   "name": "Sanjay Fifita",
+   "email": "sfifita3@example.net",
+   "phone": "860-555-0109",
+   "address": "504 Juniper St, New Ardley, NY 10598",
+   "dob": "1979-12-14",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1026551613"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000009051201633"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10168",
+   "name": "Dennis Small",
+   "email": "dsmall6@example.net",
+   "phone": "347-555-0164",
+   "address": "466 Fieldstone Ct, Kessler Point, CT 06478",
+   "dob": "1990-10-14",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1088578655"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002165726009"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10169",
+   "name": "Katarzyna Horvat",
+   "email": "katarzyna.horvat1981@example.com",
+   "phone": "475-555-0114",
+   "address": "175 Orchard Glen, Sawmill Hollow, NY 10532",
+   "dob": "1981-12-27",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1064852122"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000000715594687"
+    },
+    {
+     "type": "savings",
+     "number": "2041844045"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10170",
+   "name": "Qiuyue Nguyen",
+   "email": "nguyenq@example.org",
+   "phone": "845-555-0188",
+   "address": "563 Hemlock Hollow Rd, Apt 6A, Cold Spring Landing, NY 10516",
+   "dob": "1963-09-17",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1020875916"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000001859453540"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10171",
+   "name": "Brandon Anderson",
+   "email": "anderson.brandon@example.net",
+   "phone": "347-555-0181",
+   "address": "969 Larkspur Way, Grayling, NY 12603",
+   "dob": "1966-11-06",
+   "accounts": [
+    {
+     "type": "credit_card",
+     "number": "5555007887487646"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10172",
+   "name": "Gerald Sullivan",
+   "email": "gerald.sullivan2000@example.com",
+   "phone": "475-555-0138",
+   "address": "1287 Weatherby St, Harbor Falls, NY 12538",
+   "dob": "2000-11-27",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1042875964"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000007315974797"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10173",
+   "name": "Daniela Hernández",
+   "email": "daniela60@example.com",
+   "phone": "203-555-0130",
+   "address": "951 Quarry Hill Ln, New Ardley, NY 10598",
+   "dob": "1978-11-03",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1033438268"
+    },
+    {
+     "type": "mortgage",
+     "number": "0089190125"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10174",
+   "name": "Deepika Patel",
+   "email": "deepika76@example.org",
+   "phone": "347-555-0153",
+   "address": "1057 Weatherby St, Apt 4C, Wexford, CT 06795",
+   "dob": "1968-07-28",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1009650154"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000009574976844"
+    },
+    {
+     "type": "personal_loan",
+     "number": "720047788758"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10175",
+   "name": "Katarzyna Popescu",
+   "email": "katarzyna_popescu46@example.com",
+   "phone": "475-555-0122",
+   "address": "580 Larkspur Way, Apt 4A, New Ardley, NY 10598",
+   "dob": "1984-05-09",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1008721206"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000003932812536"
+    },
+    {
+     "type": "credit_card",
+     "number": "5555008660041618"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10176",
+   "name": "Bjørn Kealoha",
+   "email": "bjorn_kealoha76@example.com",
+   "phone": "475-555-0151",
+   "address": "1629 Weatherby St, Lantern Hill, CT 06359",
+   "dob": "1954-06-25",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1082178155"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000009673218445"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10177",
+   "name": "Bernadette Dunleavy",
+   "email": "bdunleavy@example.com",
+   "phone": "413-555-0130",
+   "address": "762 Quarry Hill Ln, Apt 5C, Kessler Point, CT 06478",
+   "dob": "1960-05-10",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1037879984"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000009746664211"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10178",
+   "name": "Rocío García",
+   "email": "rocio.garcia@example.net",
+   "phone": "860-555-0133",
+   "address": "230 Ferncliff Dr, Apt 4D, Cold Spring Landing, NY 10516",
+   "dob": "1974-03-02",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1009376549"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10179",
+   "name": "Harold Miller",
+   "email": "millerfamily@example.com",
+   "phone": "845-555-0175",
+   "address": "1773 Juniper St, Kessler Point, CT 06478",
+   "dob": "1961-12-26",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1080031575"
+    },
+    {
+     "type": "savings",
+     "number": "2048331217"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10180",
+   "name": "Siobhan Lindqvist",
+   "email": "siobhan.l@example.net",
+   "phone": "860-555-0162",
+   "address": "1483 Alder Ridge Rd, New Ardley, NY 10598",
+   "dob": "1963-01-04",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1089096971"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000007916230490"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10181",
+   "name": "Samira Haddad",
+   "email": "haddad.samira@example.com",
+   "phone": "347-555-0113",
+   "address": "38 Cobble Ct, New Ardley, NY 10598",
+   "dob": "2000-10-20",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1004725548"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000000390512848"
+    },
+    {
+     "type": "auto_loan",
+     "number": "710046480087"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10182",
+   "name": "Heather Dunleavy",
+   "email": "heatherdunleavy@example.net",
+   "phone": "347-555-0170",
+   "address": "796 Weatherby St, Apt 6C, Cold Spring Landing, NY 10516",
+   "dob": "1957-10-10",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1006003300"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002799635584"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10183",
+   "name": "Luis García",
+   "email": "lgarcia@example.net",
+   "phone": "475-555-0161",
+   "address": "1353 Highview Terrace, Harbor Falls, NY 12538",
+   "dob": "1964-05-11",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1078573839"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000001383464898"
+    },
+    {
+     "type": "credit_card",
+     "number": "5555009739677283"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10184",
+   "name": "Milena Petrov",
+   "email": "petrovm@example.com",
+   "phone": "413-555-0158",
+   "address": "849 Ferncliff Dr, Port Ellery, NY 10573",
+   "dob": "1982-11-28",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1063135578"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10185",
+   "name": "Kwame Asante",
+   "email": "kwameasante@example.com",
+   "phone": "845-555-0171",
+   "address": "277 Quarry Hill Ln, Kessler Point, CT 06478",
+   "dob": "1986-06-22",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1004732481"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10186",
+   "name": "Deborah Smith",
+   "email": "smith.deborah@example.net",
+   "phone": "347-555-0128",
+   "address": "20 Orchard Glen, Sawmill Hollow, NY 10532",
+   "dob": "1933-08-02",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1047810717"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10187",
+   "name": "Héctor Villanueva",
+   "email": "hector61@example.com",
+   "phone": "475-555-0126",
+   "address": "97 Larkspur Way, Apt 6C, Grayling, NY 12603",
+   "dob": "1983-03-21",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1086357145"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002377757172"
+    },
+    {
+     "type": "personal_loan",
+     "number": "720094160666"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10188",
+   "name": "Ximena Park",
+   "email": "ximena.park1988@example.org",
+   "phone": "845-555-0156",
+   "address": "1180 Highview Terrace, Grayling, NY 12603",
+   "dob": "1988-04-24",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1020481664"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000006384314109"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10189",
+   "name": "Luis Fuentes",
+   "email": "fuentesfamily@example.net",
+   "phone": "413-555-0114",
+   "address": "338 Ferncliff Dr, Kessler Point, CT 06478",
+   "dob": "2002-01-28",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1038949423"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000002084543774"
+    },
+    {
+     "type": "auto_loan",
+     "number": "710073645839"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10190",
+   "name": "Mei Lim",
+   "email": "limm@example.com",
+   "phone": "845-555-0154",
+   "address": "1506 Juniper St, Wexford, CT 06795",
+   "dob": "1973-11-06",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1057424634"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000003167805759"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10191",
+   "name": "Gerald Little",
+   "email": "littleg@example.net",
+   "phone": "413-555-0122",
+   "address": "1057 Saltbox Ln, Tarrow, CT 06260",
+   "dob": "1992-05-19",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1040410168"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000006710194480"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10192",
+   "name": "Sanjay Rahman",
+   "email": "sanjayrahman48@example.net",
+   "phone": "518-555-0108",
+   "address": "158 Bluestone Ave, Wexford, CT 06795",
+   "dob": "1948-11-01",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1067098541"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000006222414772"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10193",
+   "name": "Yesenia Rodríguez",
+   "email": "yesenia.r@example.net",
+   "phone": "845-555-0114",
+   "address": "1751 Weatherby St, Apt 5A, Tarrow, CT 06260",
+   "dob": "1972-02-22",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1092101472"
+    },
+    {
+     "type": "mortgage",
+     "number": "0088375135"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10194",
+   "name": "Yaw Okonkwo",
+   "email": "yaw.okonkwo1994@example.net",
+   "phone": "860-555-0138",
+   "address": "1480 Old Mill Rd, Apt 5C, Port Ellery, NY 10573",
+   "dob": "1994-12-26",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1071314618"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000009804414335"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10195",
+   "name": "Venkatesh Ochoa",
+   "email": "vochoa@example.net",
+   "phone": "860-555-0195",
+   "address": "47 Hemlock Hollow Rd, Wexford, CT 06795",
+   "dob": "2005-02-15",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1036086350"
+    },
+    {
+     "type": "debit_card",
+     "number": "4000005499464213"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10196",
+   "name": "Omar Haddad",
+   "email": "haddad.omar@example.com",
+   "phone": "518-555-0189",
+   "address": "911 Weatherby St, Millbrook Station, NY 12545",
+   "dob": "1967-07-15",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1077550056"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10197",
+   "name": "Emre Van der Berg",
+   "email": "emre.vanderberg1959@example.com",
+   "phone": "413-555-0108",
+   "address": "684 Highview Terrace, East Halvern, CT 06331",
+   "dob": "1959-07-26",
+   "accounts": [
+    {
+     "type": "auto_loan",
+     "number": "710019796491"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10198",
+   "name": "Nusrat Banerjee",
+   "email": "banerjee.nusrat@example.org",
+   "phone": "914-555-0184",
+   "address": "1829 Ferncliff Dr, Millbrook Station, NY 12545",
+   "dob": "1960-03-21",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1019109321"
+    }
+   ]
+  },
+  {
+   "customer_id": "CUST-10199",
+   "name": "Efua Traoré",
+   "email": "traorefamily@example.org",
+   "phone": "845-555-0186",
+   "address": "963 Fieldstone Ct, Kessler Point, CT 06478",
+   "dob": "1988-04-18",
+   "accounts": [
+    {
+     "type": "checking",
+     "number": "1068228109"
+    }
+   ]
+  }
+ ]
+}

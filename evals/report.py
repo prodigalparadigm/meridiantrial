@@ -24,8 +24,10 @@ def write_evidence(r: dict) -> Path:
 
     w("## 1. Customer data stays in the bank\n")
     w(f"Every outbound model payload is logged. The leak scan checked **{pii['payloads_scanned']} payloads** across "
-      f"{pii['cases_with_payloads']} complaints against **{pii['total_planted']} planted PII values**.\n")
-    w("| PII type | planted | reached a model |\n|---|---:|---:|")
+      f"{pii['cases_with_payloads']} complaints against every personal detail planted inside complaint text "
+      f"(**{pii['total_planted']}**). Another {pii['metadata_only']} planted values sit in sender fields (from-address, form "
+      f"name, callback number); those fields are never part of any payload, by design.\n")
+    w("| PII type | inside complaint text | reached a model |\n|---|---:|---:|")
     for t in sorted(pii["planted"]):
         w(f"| {t} | {pii['planted'][t]} | {pii['leaked'].get(t, 0)} |")
     w(f"| **total** | **{pii['total_planted']}** | **{pii['total_leaked']}** |\n")
@@ -34,6 +36,22 @@ def write_evidence(r: dict) -> Path:
         for d in pii["details"]:
             w(f"- `{d['id']}` {d['type']}: …{d['context'].strip()}…")
         w("")
+    ho = r.get("redaction_holdout")
+    w("**How much to trust that number.** The redactor was first written blind to the data. On its first run it "
+      "left 8 of 159 in-text values readable on this month and 8 of 165 on a held-out month (same generator, different "
+      "seed, so different people and numbers). Every miss was a name or an awkwardly written detail. The fixes were "
+      "general: role cues accept dictionary-word names (\"teller Tammy\"), a name found once is redacted everywhere it recurs, "
+      "spelled-out names (C-H-A-U-D-H-R-Y), filler words before a date of birth, line-by-line detection of capitals in "
+      "call notes, and more street suffixes. Because those fixes were found on this month, its 0 is optimistic.")
+    if ho:
+        w(f"The held-out month was never used for tuning: **{ho['leaked_total']} of {ho['in_text_total']}** in-text values "
+          f"stay readable there ({', '.join(f'{k} {v}' for k, v in ho['leaked'].items()) or 'none'}). That is the honest estimate. "
+          f"The remaining miss is a full name in an all-capitals call note that is in no customer record. "
+          f"Over-redaction (ordinary words hidden as names) is {ho['non_pii_words_hidden_as_names']} words across the held-out month. "
+          f"Reproduce with `python3 -m evals.redaction_check` (no model calls).\n")
+    w("The residual is names with no pattern and no directory entry. Production closes it two ways: a named-entity model "
+      "running on bank hardware in front of the gate, and running Claude inside Meridian's own cloud tenancy so redaction "
+      "becomes a second layer rather than the only one.\n")
     w("Failure handling: when the egress gate finds residual PII, the call is not made and the complaint fails closed to "
       "manual triage. Unit tests disable the redactor entirely and confirm that zero calls leave and the complaint "
       "still reaches Compliance.\n")

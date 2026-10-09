@@ -57,4 +57,14 @@ cust cx csr adv advd adv'd esc supv sup acct acct# pls plz w/ b/c bc re: tx txn 
 ach atm pin otp nsf od apr heloc cd ira
 yes no ok okay please thank god lord
 spanish-speaking
+jan feb mar apr jun jul aug sep sept oct nov dec mon tue tues wed thu thur thurs fri sat sun
+st rd ave dr blvd ln ct pkwy hwy pl ter cir sq
+email e-mail voicemail website web login password text texts online internet wifi smartphone laptop pdf
+america usa us canada mexico ghana nigeria india china japan korea philippines vietnam jamaica haiti dominican
+colombia brazil peru ecuador guatemala honduras salvador el poland ukraine russia germany france italy spain portugal
+ireland england uk britain london paris lisbon rome toronto montreal vancouver florida orlando miami tampa texas
+california nashville atlanta boston chicago denver seattle vegas phoenix philadelphia washington dc carolina virginia
+maryland ohio michigan georgia arizona europe africa asia caribbean
+req reqs txn txns int recvd rcvd abt prev proc natl info appt mgr pmt pmts stmt stmts chk ck xfer xfers dep deps wd
+auth unauth cc dc accts approx fwd fwded cb vm lvm ph tel eta asap fyi tbd docs doc pymt pymts bk br brs svc cxl
 """.split())

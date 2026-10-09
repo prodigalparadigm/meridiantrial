@@ -111,9 +111,10 @@ ACCOUNT_CUE_RE = re.compile(
 ROUTING_CUE_RE = re.compile(r"\b(?:routing|aba|rtn)\b[^\d\n]{0,15}(\d{9})", re.I)
 _MONTH = r"(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)"
 _DATE = rf"(?:\d{{1,2}}/\d{{1,2}}/\d{{2,4}}|\d{{4}}-\d{{2}}-\d{{2}}|{_MONTH}\.?\s+\d{{1,2}}(?:st|nd|rd|th)?,?\s+\d{{4}}|\d{{1,2}}\s+{_MONTH}\.?\s+\d{{4}})"
-DOB_RE = re.compile(rf"\b(?:dob|d\.o\.b\.?|date\s+of\s+birth|born(?:\s+on)?|birthday(?:\s+is)?|fecha\s+de\s+nacimiento)\b[:\s\-]*({_DATE})", re.I)
+DOB_RE = re.compile(rf"\b(?:dob|d\.o\.b\.?|date\s+of\s+birth|born(?:\s+on)?|birthday|fecha\s+de\s+nacimiento)\b(?:\s+(?:is|was|of|es))?[:\s\-]*({_DATE})", re.I)
 _STREET = (r"(?:Street|St|Avenue|Ave|Road|Rd|Lane|Ln|Drive|Dr|Boulevard|Blvd|Court|Ct|Way|Place|Pl|Terrace|Ter|"
-           r"Circle|Cir|Highway|Hwy|Parkway|Pkwy|Trail|Trl|Square|Sq|Loop|Pike|Turnpike|Calle)")
+           r"Circle|Cir|Highway|Hwy|Parkway|Pkwy|Trail|Trl|Square|Sq|Loop|Pike|Turnpike|Calle|Glen|Hollow|Ridge|Crossing|"
+           r"Landing|Heights|Hts|Commons|Manor|Mews|Bend|Knoll|Grove|Meadows?|Estates|Gardens|Cove|Run)")
 ADDRESS_RE = re.compile(
     rf"\b\d{{1,6}}\s+(?:[NSEW]\.?\s+)?(?:[A-Za-z0-9][A-Za-z0-9'’\-]*\.?\s+){{0,4}}{_STREET}\b\.?"
     r"(?:,?\s*(?:Apt|Apartment|Unit|Suite|Ste|#)\.?\s*[\w\-]+)?"
@@ -122,6 +123,7 @@ ADDRESS_RE = re.compile(
     re.I)
 PO_BOX_RE = re.compile(r"\bP\.?\s?O\.?\s+Box\s+\d+\b", re.I)
 _NUMWORD = r"(?:zero|oh|o|one|two|three|four|five|six|seven|eight|nine|cero|uno|dos|tres|cuatro|cinco|seis|siete|ocho|nueve)"
+SPELLED_LETTERS_RE = re.compile(r"\b[A-Za-z](?:[\-.][A-Za-z]){3,}\b\.?")   # C-H-A-U-D-H-R-Y, S.M.I.T.H
 SPELLED_DIGITS_RE = re.compile(rf"\b{_NUMWORD}(?:[\s,\-]+{_NUMWORD}){{6,}}\b", re.I)
 
 # -------------------------------------------------------------------- names
@@ -136,12 +138,19 @@ _CUES = (r"my\s+(?:son|daughter|husband|wife|mother|mom|father|dad|brother|siste
          r"hijo|hija|esposo|esposa|madre|padre|hermano|hermana)"
          r"|(?:son|daughter|husband|wife|caregiver|aide|poa)(?:\s+is)?(?:\s+named)?"
          r"|named|called|teller|banker|rep|representative|agent|manager|supervisor|officer|associate|advisor|"
-         r"specialist|employee|lady|guy|woman|man|gentleman|spoke\s+(?:to|with)|talked\s+(?:to|with)|asked\s+for|"
+         r"specialist|employee|lady|guy|woman|man|gentleman|clerk|cashier|coworker|co-worker|colleague|caseworker|"
+         r"nurse|assistant|spoke\s+(?:to|with)|talked\s+(?:to|with)|asked\s+for|"
          r"helped\s+by|transferred\s+to|per|cx|cust|caller|customer|member|account\s+holder|signed|attn|c/o")
-CUE_NAME_RE = re.compile(rf"\b(?:{_CUES})\b[,:]?\s+(?:(?:the|a|an)\s+)?({_NAME_WORD_ANYCASE}(?:\s+{_NAME_WORD_ANYCASE})?)", re.I)
+CUE_NAME_RE = re.compile(rf"\b(?:{_CUES})\b[,:]?\s*[(\"'“‘]?\s*(?:(?:the|a|an)\s+)?({_NAME_WORD_ANYCASE}(?:\s+{_NAME_WORD_ANYCASE})?)", re.I)
 SIGNOFF_RE = re.compile(
     r"(?:^|\n)\s*(?:thanks|thank\s+you|regards|best|best\s+regards|sincerely|respectfully|cheers|gracias|atentamente|saludos|-{1,2}|—)\s*[,!.]?\s*\n+\s*"
     rf"({_NAME_WORD}(?:\s+{_NAME_WORD}){{0,3}})\s*(?:\n|$)", re.I)
+_STOP = frozenset("i the a an he she they we it this that these those my your our their his her its there then when if "
+                  "and but or so as at in on of to for from with by".split())
+PERSON_NEXT_RE = re.compile(r"[ \t]+(?:at|from|in|was|is|has|had|said|says|told|tells|called|took|takes|gave|refused|kept|"
+                            r"never|didn't|did|wouldn't|would|will|won't|and|who|rolled|yelled|laughed|asked|explained|"
+                            r"helped|handled|hung|put|made|sent|signed|opened|closed|changed|cashed|treated|insisted|"
+                            r"promised|claimed|denied|wanted|works|worked|manages)\b")
 CAP_SEQ_RE = re.compile(rf"\b({_NAME_WORD})((?:[ \t]+{_NAME_WORD})*)")   # names don't span lines
 
 
@@ -173,7 +182,17 @@ def _base(word: str) -> str:
 
 def _is_all_caps_text(text: str) -> bool:
     letters = [c for c in text if c.isalpha()]
-    return bool(letters) and sum(c.isupper() for c in letters) / len(letters) > 0.8
+    return len(letters) >= 12 and sum(c.isupper() for c in letters) / len(letters) > 0.8
+
+
+def _caps_lines(text: str) -> list[tuple[int, int]]:
+    """Character ranges of lines written in capitals. Call notes are often all caps under a normal header."""
+    out, pos = [], 0
+    for line in text.split("\n"):
+        if _is_all_caps_text(line):
+            out.append((pos, pos + len(line)))
+        pos += len(line) + 1
+    return out
 
 
 def _looks_like_name_word(word: str, all_caps: bool) -> bool:
@@ -188,6 +207,18 @@ def _looks_like_name_word(word: str, all_caps: bool) -> bool:
     return w[0].isupper() and (w in COMMON_FIRST_NAMES or w in AMBIGUOUS_FIRST_NAMES or not is_english(w))
 
 
+def _branch_words() -> frozenset[str]:
+    try:
+        from . import config
+        names = config._load("branches.json")["branches"]
+    except Exception:  # noqa: BLE001 - no directory just means more over-redaction, the safe side
+        return frozenset()
+    return frozenset(w.lower() for n in names for w in re.findall(r"[A-Za-z]+", n))
+
+
+KEEP_CAPITALIZED = KEEP_CAPITALIZED | _branch_words()
+
+
 class Redactor:
     """Stateless detector set; one call per complaint."""
 
@@ -200,7 +231,9 @@ class Redactor:
         known = known or {}
         spans: list[Span] = []
         add = lambda s, e, kind, src: spans.append(Span(s, e, kind, src, _PRIORITY.get(src, _PRIORITY.get(kind, 50))))
-        all_caps = _is_all_caps_text(text)
+        caps = _caps_lines(text)
+        in_caps = lambda pos: any(a <= pos < b for a, b in caps)
+        all_caps = bool(caps)   # some line is in capitals: match known names case-insensitively
 
         # 1. Known entities -------------------------------------------------
         for kind, values in self._known_values(known).items():
@@ -243,6 +276,8 @@ class Redactor:
             add(m.start(), m.end(), "PHONE", "PHONE")
         for m in SPELLED_DIGITS_RE.finditer(text):
             add(m.start(), m.end(), "PHONE", "PHONE")
+        for m in SPELLED_LETTERS_RE.finditer(text):   # four or more letters: never a normal abbreviation
+            add(m.start(), m.end(), "NAME", "NAME")
         for m in DIGIT_RUN_RE.finditer(text):
             d = _digits(m.group(0))
             if 13 <= len(d) <= 19 and _luhn_ok(d):
@@ -264,7 +299,7 @@ class Redactor:
         for m in HONORIFIC_RE.finditer(text):
             add(m.start(1), m.end(1), "NAME", "NAME")
         for m in CUE_NAME_RE.finditer(text):
-            s, e = self._trim_name(text, m.start(1), m.end(1), all_caps)
+            s, e = self._trim_name(text, m.start(1), m.end(1), in_caps(m.start(1)))
             if s is not None:
                 add(s, e, "NAME", "NAME")
         for m in SIGNOFF_RE.finditer(text):
@@ -272,16 +307,33 @@ class Redactor:
             if all(w.lower() not in KEEP_CAPITALIZED for w in words):
                 add(m.start(1), m.end(1), "NAME", "NAME")
         for m in CAP_SEQ_RE.finditer(text):
-            self._cap_sequence(text, m, all_caps, add)
-        if all_caps:
+            self._cap_sequence(text, m, in_caps(m.start()), add)
+        if caps:
             for m in re.finditer(rf"\b{_UP}(?:{_UP}|['’\-])+\b", text):
-                if m.group(0).capitalize() in COMMON_FIRST_NAMES:
+                if in_caps(m.start()) and m.group(0).capitalize() in COMMON_FIRST_NAMES:
                     end = m.end()
                     nxt = re.match(rf"\s+({_UP}(?:{_UP}|['’\-])+)\b", text[end:])
                     if nxt and not is_english(nxt.group(1)) and nxt.group(1).lower() not in KEEP_CAPITALIZED:
                         end += nxt.end()
                     add(m.start(), end, "NAME", "NAME")
+        self._propagate_names(text, spans, all_caps, add)
         return spans
+
+    @staticmethod
+    def _propagate_names(text: str, spans: list, all_caps: bool, add) -> None:
+        """A name found once is redacted everywhere it recurs in the same complaint, including
+        where it stands alone at the start of a sentence (where the heuristics are cautious)."""
+        parts = set()
+        for sp in spans:
+            if sp.kind in ("NAME", "CUSTOMER_NAME"):
+                for p in re.split(r"[\s,]+", text[sp.start:sp.end]):
+                    b = _base(p)
+                    if len(b) >= 3 and b.lower() not in KEEP_CAPITALIZED and b.lower() not in _STOP and (
+                            not is_english(b) or b in COMMON_FIRST_NAMES or b in AMBIGUOUS_FIRST_NAMES):
+                        parts.add(b)
+        for p in parts:
+            for m in re.finditer(rf"(?<!{_LET}){re.escape(p)}(?!{_LET})", text, re.I if all_caps else 0):
+                add(m.start(), m.end(), "NAME", "NAME")
 
     @staticmethod
     def _known_values(known: dict) -> dict[str, list[str]]:
@@ -302,15 +354,21 @@ class Redactor:
 
     @staticmethod
     def _trim_name(text: str, s: int, e: int, all_caps: bool) -> tuple[int | None, int]:
+        """Keep the capitalized words right after a cue. Being after a role cue ("the teller", "my son")
+        is itself evidence, so English-looking words count here too, except in ALL-CAPS text where
+        every word is capitalized and only non-English words or listed first names qualify."""
         words = list(re.finditer(r"\S+", text[s:e]))
         kept = []
         for w in words:
             token = _base(w.group(0))
-            if token and token[0].isupper() and token.lower() not in KEEP_CAPITALIZED and (
-                    not is_english(token) or token in COMMON_FIRST_NAMES or token in AMBIGUOUS_FIRST_NAMES
-                    or (all_caps and token.capitalize() in COMMON_FIRST_NAMES | AMBIGUOUS_FIRST_NAMES)):
-                kept.append(w)
-            else:
+            low = token.lower()
+            if not token or not token[0].isupper() or low in KEEP_CAPITALIZED or low in _STOP:
+                break
+            if token.isupper() and token.capitalize() not in COMMON_FIRST_NAMES | AMBIGUOUS_FIRST_NAMES and (
+                    is_english(token) or len(token) < 5):
+                break   # shorthand ("REQ", "TXNS") or an English word in capitals ("LOCKED", "STATES")
+            kept.append(w)
+            if w.group(0)[-1:] in ",.;:!?)":
                 break
         if not kept:
             return None, e
@@ -343,7 +401,13 @@ class Redactor:
             wpos = text.index(w, pos)
             pos = wpos + len(w)
             initial = sentence_initial and wpos == start
-            if initial or w.isupper():
+            if w.isupper():
+                continue
+            if initial:
+                b = _base(w).lower()
+                if (len(words) == 1 and not is_english(b) and b not in KEEP_CAPITALIZED and len(b) > 2
+                        and PERSON_NEXT_RE.match(text, wpos + len(w))):
+                    add(wpos, wpos + len(w), "NAME", "NAME")
                 continue
             b = _base(w).lower()
             if not is_english(b) and b not in KEEP_CAPITALIZED and len(b) > 2:

@@ -1,0 +1,7 @@
+{
+  "_owner": "Head of Retail Operations",
+  "_note": "The bank's branch directory. Branch names are not personal data; the redactor keeps them visible so the model can tell which branch a complaint is about.",
+  "branches": ["Route 9", "Cold Spring Rd", "Harbor Street", "Millbrook Plaza", "Wexford Commons", "Elm & 4th",
+               "Kingsbury Mall", "North Ardley", "Sawmill Pkwy", "Depot Square", "Riverside Dr", "Old Post Rd",
+               "Fairhaven", "Lantern Hill", "Bridge St", "Quarry Rd"]
+}

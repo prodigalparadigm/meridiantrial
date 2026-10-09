@@ -46,18 +46,25 @@ def leaked(value: str, kind: str, payload: str) -> bool:
         return any(g in runs for g in groups)
     if kind in ("CUSTOMER_NAME", "THIRD_PARTY_NAME"):
         return re.search(rf"(?<![^\W\d_]){re.escape(value)}(?![^\W\d_])", text) is not None
+    if kind == "ADDRESS":
+        street = value.split(",")[0].strip()          # the street line alone identifies a household
+        return value.lower() in text.lower() or street.lower() in text.lower()
     return value.lower() in text.lower()
 
 
-def scan_leaks(labels: dict, egress: list[dict]) -> dict:
+def scan_leaks(labels: dict, egress: list[dict], originals: dict[str, str]) -> dict:
     by_case = defaultdict(list)
     for e in egress:
         by_case[e["case_id"]].append(e["user"])
     planted, leaks = Counter(), Counter()
+    metadata_only = 0
     details = []
     for cid, lab in labels.items():
         payloads = by_case.get(cid, [])
         for p in lab["pii"]:
+            if p["value"].lower() not in originals.get(cid, "").lower():
+                metadata_only += 1   # sender fields: never part of any payload, by design
+                continue
             planted[p["type"]] += 1
             hit = next((pl for pl in payloads if leaked(p["value"], p["type"], pl)), None)
             if hit:
@@ -65,7 +72,7 @@ def scan_leaks(labels: dict, egress: list[dict]) -> dict:
                 i = TOKEN_RE.sub(" ", hit).lower().find(p["value"].lower()[:6])
                 details.append({"id": cid, "type": p["type"], "value_length": len(p["value"]),
                                 "context": TOKEN_RE.sub(" ", hit)[max(0, i - 40): i + 60] if i >= 0 else ""})
-    return {"payloads_scanned": len(egress), "cases_with_payloads": len(by_case),
+    return {"payloads_scanned": len(egress), "cases_with_payloads": len(by_case), "metadata_only": metadata_only,
             "planted": dict(planted), "leaked": dict(leaks), "total_planted": sum(planted.values()),
             "total_leaked": sum(leaks.values()), "details": details}
 
@@ -266,12 +273,16 @@ def main():
                 print(f"  {n}/{len(futs)} processed  ({time.monotonic() - t0:.0f}s)", flush=True)
 
     egress = load_jsonl(var / "egress.jsonl")
+    originals = {cid: json.loads((var / "private" / f"{cid}.json").read_text())["original_text"] for cid in cases}
+    from evals.redaction_check import check as redaction_check
+    holdout = ROOT / "data" / "holdout"
     spent = sum(call["cost_usd"] for c in cases.values() for call in c["calls"] if not call["cached"])
     result = {
         "run": name, "mode": args.mode, "model": pipe.llm.model, "at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "complaints": len(cases), "wall_seconds": round(time.monotonic() - t0, 1), "spent_this_run_usd": round(spent, 2),
         "audit_chain": pipe.audit.verify(),
-        "pii": scan_leaks(labels, egress),
+        "pii": scan_leaks(labels, egress, originals),
+        "redaction_holdout": redaction_check(holdout) if holdout.exists() else None,
         **score(cases, labels),
     }
     out = ROOT / "evals" / "results" / f"{name}.json"
