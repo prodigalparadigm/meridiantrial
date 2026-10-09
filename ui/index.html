@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Complaint Intake Workbench</title>
+<style>
+:root{
+  --ink:#14213d; --ink-2:#3d4a63; --muted:#6b7488; --line:#e3e6ec; --bg:#f5f6f8; --panel:#fff;
+  --navy:#1f3a68; --navy-2:#2c5395; --red:#b42318; --red-bg:#fdecea; --amber:#b54708; --amber-bg:#fff4e5;
+  --green:#067647; --green-bg:#e7f6ee; --blue-bg:#eaf0fb; --gray-bg:#eef0f3; --tok:#6941c6; --tok-bg:#f2edfc;
+  --radius:8px; --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+header{background:var(--ink);color:#fff;padding:0 20px;display:flex;align-items:center;gap:20px;height:56px;position:sticky;top:0;z-index:5}
+header .brand{font-weight:650;letter-spacing:.2px;white-space:nowrap}
+header .brand small{display:block;font-weight:400;opacity:.7;font-size:11px;letter-spacing:.3px}
+nav{display:flex;gap:4px}
+nav button{background:none;border:0;color:#c9d2e3;font:inherit;padding:8px 12px;border-radius:6px;cursor:pointer}
+nav button.on{background:rgba(255,255,255,.12);color:#fff}
+header .spacer{flex:1}
+header .who{display:flex;align-items:center;gap:8px;font-size:12px;color:#c9d2e3}
+header .who input{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:6px;padding:5px 8px;width:150px;font:inherit}
+.proto{font-size:11px;background:#f5c451;color:#2b2100;padding:3px 8px;border-radius:999px;font-weight:600;white-space:nowrap}
+button.primary{background:var(--navy-2);color:#fff;border:0;border-radius:6px;padding:8px 14px;font:inherit;font-weight:600;cursor:pointer}
+button.primary:disabled{background:#9aa5b8;cursor:not-allowed}
+button.ghost{background:#fff;border:1px solid var(--line);border-radius:6px;padding:7px 12px;font:inherit;cursor:pointer;color:var(--ink)}
+button.danger{background:#fff;border:1px solid #f1b5ae;color:var(--red);border-radius:6px;padding:7px 12px;font:inherit;cursor:pointer}
+main{padding:16px 20px 40px}
+.view{display:none}.view.on{display:block}
+.split{display:grid;grid-template-columns:minmax(380px,42%) 1fr;gap:16px;align-items:start}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius)}
+.toolbar{display:flex;gap:8px;align-items:center;padding:10px 12px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.toolbar select,.toolbar input{font:inherit;border:1px solid var(--line);border-radius:6px;padding:6px 8px;background:#fff}
+.toolbar input{flex:1;min-width:120px}
+.list{max-height:calc(100vh - 175px);overflow:auto}
+.row{display:grid;grid-template-columns:44px 1fr;gap:10px;padding:10px 12px;border-bottom:1px solid var(--line);cursor:pointer}
+.row:hover{background:#fafbfc}.row.sel{background:var(--blue-bg)}
+.row .meta{display:flex;gap:6px;align-items:center;font-size:12px;color:var(--muted);flex-wrap:wrap}
+.row .sum{margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pri{font-weight:700;font-size:12px;border-radius:6px;text-align:center;padding:4px 0;height:fit-content}
+.P1{background:var(--red-bg);color:var(--red)}.P2{background:var(--amber-bg);color:var(--amber)}.P3{background:var(--gray-bg);color:var(--ink-2)}
+.chip{display:inline-block;font-size:11px;font-weight:600;padding:2px 7px;border-radius:999px;background:var(--gray-bg);color:var(--ink-2);white-space:nowrap}
+.chip.reg{background:var(--red);color:#fff}.chip.warn{background:var(--amber-bg);color:var(--amber)}.chip.ok{background:var(--green-bg);color:var(--green)}
+.chip.info{background:var(--blue-bg);color:var(--navy)}
+.mono{font-family:var(--mono);font-size:12px}
+.detail{padding:0}
+.detail .head{padding:14px 16px;border-bottom:1px solid var(--line)}
+.detail .head h2{margin:0 0 4px;font-size:17px}
+.banner{margin:12px 16px 0;padding:10px 12px;border-radius:6px;font-size:13px}
+.banner.reg{background:var(--red-bg);border:1px solid #f4c7c2;color:#7a1a12}
+.banner.warn{background:var(--amber-bg);border:1px solid #f6d7a8;color:#7a3306}
+.banner.info{background:var(--blue-bg);border:1px solid #cfdcf3;color:var(--navy)}
+section{padding:14px 16px;border-bottom:1px solid var(--line)}
+section h3{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-bottom:8px}
+.seg button{border:0;background:#fff;padding:5px 10px;font:inherit;font-size:12px;cursor:pointer}
+.seg button.on{background:var(--ink);color:#fff}
+pre.text{white-space:pre-wrap;font:13px/1.5 var(--mono);background:#fafbfc;border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:0;max-height:300px;overflow:auto}
+.tok{background:var(--tok-bg);color:var(--tok);border-radius:4px;padding:0 2px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:600}
+td.q{color:var(--ink-2);font-style:italic}
+.kv{display:grid;grid-template-columns:140px 1fr;gap:4px 12px;font-size:13px}
+.kv div:nth-child(odd){color:var(--muted)}
+textarea,input.full{width:100%;font:13px/1.5 inherit;border:1px solid var(--line);border-radius:6px;padding:8px 10px}
+textarea{min-height:230px;resize:vertical;font-family:inherit}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;font-size:12px;margin-top:8px}
+.checks .f{color:var(--red)}.checks .p{color:var(--green)}
+.actions{display:flex;gap:8px;align-items:center;margin-top:10px;flex-wrap:wrap}
+.hint{font-size:12px;color:var(--muted)}
+.audit{font-size:12px}.audit td{padding:4px 6px}
+.empty{padding:40px;text-align:center;color:var(--muted)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:16px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:14px}
+.kpi .v{font-size:26px;font-weight:700;letter-spacing:-.5px}
+.kpi .l{font-size:12px;color:var(--muted)}
+.bars .b{display:grid;grid-template-columns:190px 1fr 40px;gap:8px;align-items:center;font-size:13px;margin:5px 0}
+.bars .track{background:var(--gray-bg);border-radius:4px;height:12px}
+.bars .fill{background:var(--navy-2);height:12px;border-radius:4px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pad{padding:14px 16px}
+dialog{border:0;border-radius:10px;padding:0;width:min(640px,94vw);box-shadow:0 20px 60px rgba(0,0,0,.25)}
+dialog .pad h2{margin:0 0 10px;font-size:17px}
+dialog label{display:block;font-size:12px;color:var(--muted);margin:8px 0 3px}
+dialog select,dialog input{font:inherit;border:1px solid var(--line);border-radius:6px;padding:7px 9px;width:100%}
+.stages{font-size:13px;color:var(--ink-2);margin-top:10px}
+.spin{display:inline-block;width:12px;height:12px;border:2px solid var(--line);border-top-color:var(--navy-2);border-radius:50%;animation:s 1s linear infinite;vertical-align:-2px;margin-right:6px}
+@keyframes s{to{transform:rotate(360deg)}}
+details summary{cursor:pointer;font-size:13px;color:var(--navy-2)}
+.egress{font:12px/1.45 var(--mono);white-space:pre-wrap;background:#0f172a;color:#d6e2ff;border-radius:6px;padding:10px;max-height:260px;overflow:auto;margin-top:6px}
+@media (max-width:980px){.split,.grid2{grid-template-columns:1fr}.list{max-height:none}header{flex-wrap:wrap;height:auto;padding:8px 16px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">Meridian Harbor Bank<small>Complaint intake workbench</small></div>
+  <nav>
+    <button data-view="queue" class="on">Analyst queue</button>
+    <button data-view="compliance">Compliance</button>
+    <button data-view="ops">Operations</button>
+  </nav>
+  <div class="spacer"></div>
+  <span class="proto">Prototype · synthetic data</span>
+  <div class="who">Signed as <input id="who" placeholder="Your name" autocomplete="off"></div>
+  <button class="primary" id="newBtn">New complaint</button>
+</header>
+
+<main>
+  <!-- Analyst queue -->
+  <div class="view on" id="v-queue">
+    <div class="split">
+      <div class="panel">
+        <div class="toolbar">
+          <select id="policy" title="Which definition of 'serious' orders the queue"></select>
+          <select id="filter">
+            <option value="all">All open</option><option value="reg">Regulatory</option>
+            <option value="attn">Draft needs attention</option><option value="manual">Manual triage</option>
+            <option value="approved">Approved</option>
+          </select>
+          <input id="q" placeholder="Search summary or ID">
+        </div>
+        <div class="list" id="list"></div>
+      </div>
+      <div class="panel detail" id="detail"><div class="empty">Select a complaint</div></div>
+    </div>
+  </div>
+
+  <!-- Compliance -->
+  <div class="view" id="v-compliance">
+    <div class="kpis" id="c-kpis"></div>
+    <div class="split">
+      <div class="panel">
+        <div class="toolbar"><select id="c-filter"><option value="open">Open</option><option value="acknowledged">Acknowledged</option><option value="cleared">Cleared</option><option value="all">All flags</option></select>
+          <button class="ghost" id="verify">Verify audit chain</button><span class="hint" id="verifyOut"></span></div>
+        <div class="list" id="c-list"></div>
+      </div>
+      <div class="panel detail" id="c-detail"><div class="empty">Select a flagged complaint</div></div>
+    </div>
+  </div>
+
+  <!-- Operations -->
+  <div class="view" id="v-ops">
+    <div class="kpis" id="o-kpis"></div>
+    <div class="grid2">
+      <div class="panel pad"><h3 style="margin-top:0">Where complaints go</h3><div class="bars" id="o-dept"></div></div>
+      <div class="panel pad"><h3 style="margin-top:0">"Serious," three ways</h3><div id="o-pri"></div>
+        <p class="hint">Priority comes from facts the model extracts, run through a policy file the analysts own. Change the file, not a prompt.</p></div>
+    </div>
+    <div class="panel pad" style="margin-top:16px"><h3 style="margin-top:0">Calibration agenda: where the two senior analysts' definitions disagree</h3>
+      <div id="o-dis"></div></div>
+  </div>
+</main>
+
+<dialog id="newDlg"><div class="pad">
+  <h2>New complaint</h2>
+  <p class="hint">Runs the full pipeline: local redaction and tripwire, then the screener, triage and router agents in parallel, then draft and review. Nothing is sent to the customer.</p>
+  <div class="grid2">
+    <div><label>Channel</label><select id="n-ch"><option value="email">Email</option><option value="web_form">Web form</option><option value="call_note">Call-center note</option></select></div>
+    <div><label>Customer name</label><input id="n-name" placeholder="e.g. Margaret Okafor"></div>
+    <div><label>Email</label><input id="n-email" placeholder="name@example.com"></div>
+    <div><label>Phone</label><input id="n-phone" placeholder="555-0142"></div>
+  </div>
+  <label>Subject (email)</label><input id="n-subj">
+  <label>Complaint text</label><textarea id="n-text" style="min-height:160px"></textarea>
+  <div class="actions"><button class="primary" id="n-go">Process</button><button class="ghost" id="n-cancel">Cancel</button></div>
+  <div class="stages" id="n-stage"></div>
+</div></dialog>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const toks = s => esc(s).replace(/⟦[A-Z_]+_\d+⟧/g, m => `<span class="tok">${m}</span>`);
+const api = async (p, opt) => { const r = await fetch(p, opt); const j = await r.json(); if (!r.ok) throw new Error(j.error || r.status); return j; };
+const post = (p, body) => api(p, {method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(body)});
+const fmt = iso => iso ? new Date(iso).toLocaleString([], {month:"short", day:"numeric", hour:"numeric", minute:"2-digit"}) : "—";
+const CH = {email:"Email", web_form:"Web form", call_note:"Call note"};
+let CFG, ROWS = [], SEL = null, CSEL = null;
+
+const who = $("#who");
+try { who.value = localStorage.getItem("mh_who") || ""; } catch {}
+who.addEventListener("change", () => { try { localStorage.setItem("mh_who", who.value); } catch {} });
+const me = () => who.value.trim();
+
+document.querySelectorAll("nav button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("nav button").forEach(x => x.classList.toggle("on", x === b));
+  document.querySelectorAll(".view").forEach(v => v.classList.toggle("on", v.id === "v-" + b.dataset.view));
+  if (b.dataset.view === "compliance") loadCompliance();
+  if (b.dataset.view === "ops") loadOps();
+});
+const dept = id => (CFG.departments.find(d => d.id === id) || {name: id || "—"}).name;
+const cat = id => id === "unscreened" ? "Could not screen" : (CFG.taxonomy.categories.find(c => c.id === id) || {name: id}).name;
+
+async function init() {
+  CFG = await api("/api/config");
+  $("#policy").innerHTML = Object.entries(CFG.policies).map(([k, v]) => `<option value="${k}" ${k === "interim" ? "selected" : ""}>${esc(v)}</option>`).join("");
+  ["policy", "filter"].forEach(id => $("#" + id).onchange = loadQueue);
+  $("#q").oninput = renderQueue;
+  await loadQueue();
+}
+
+// ------------------------------------------------------------ queue
+async function loadQueue() {
+  ROWS = await api("/api/cases?policy=" + $("#policy").value);
+  renderQueue();
+}
+function renderQueue() {
+  const f = $("#filter").value, q = $("#q").value.toLowerCase();
+  let rows = ROWS.filter(r => {
+    if (f === "approved") return r.status === "approved";
+    if (r.status === "approved") return false;
+    if (f === "reg") return r.flagged;
+    if (f === "attn") return r.draft_state === "needs_attention";
+    if (f === "manual") return r.status === "manual_triage";
+    return true;
+  }).filter(r => !q || r.id.toLowerCase().includes(q) || r.summary.toLowerCase().includes(q));
+  const ORD = {"—": 0, P1: 1, P2: 2, P3: 3};   // manual triage first: it needs a person before anything else
+  rows.sort((a, b) => ORD[a.priority] - ORD[b.priority] || (b.flagged - a.flagged) || a.received_at.localeCompare(b.received_at));
+  $("#list").innerHTML = rows.map(r => `
+    <div class="row ${r.id === SEL ? "sel" : ""}" data-id="${r.id}">
+      <div class="pri ${r.priority}">${r.priority}</div>
+      <div>
+        <div class="meta"><span class="mono">${r.id}</span><span>${CH[r.channel]}</span><span>${fmt(r.received_at)}</span>
+          ${r.flagged ? `<span class="chip reg">REGULATORY</span>` : ""}
+          ${r.injection ? `<span class="chip warn">AI-directed text</span>` : ""}
+          ${r.status === "manual_triage" ? `<span class="chip warn">Manual triage</span>` : ""}
+          ${r.draft_state === "needs_attention" ? `<span class="chip warn">Draft needs attention</span>` : ""}
+          ${r.status === "approved" ? `<span class="chip ok">Approved</span>` : ""}</div>
+        <div class="sum">${esc(r.summary || "(not triaged: see case)")}</div>
+        <div class="meta" style="margin-top:3px">${esc(dept(r.route))}${r.language && r.language !== "English" ? ` · ${esc(r.language)}` : ""}</div>
+      </div>
+    </div>`).join("") || `<div class="empty">Nothing here</div>`;
+  document.querySelectorAll("#list .row").forEach(el => el.onclick = () => openCase(el.dataset.id));
+}
+
+async function openCase(id, target = "#detail") {
+  if (target === "#detail") { SEL = id; renderQueue(); } else { CSEL = id; }
+  const d = await api("/api/cases/" + id);
+  const c = d.case, reg = c.regulatory, tri = c.triage, pol = $("#policy").value;
+  const el = $(target);
+  const banners = [];
+  if (reg.flagged) {
+    const src = Object.entries(reg.sources).filter(([k, v]) => k === "tripwire" ? v.length : v && v.potential_regulatory).map(([k]) => k === "tripwire" ? "Compliance tripwire" : "model screener");
+    if (c.failures.some(f => f.stage === "screener")) src.push("screen could not run");
+    banners.push(`<div class="banner reg"><b>Regulatory flag</b> · ${reg.categories.map(x => esc(cat(x))).join(", ")}<br>
+      Raised by ${src.join(" + ")} · ${reg.seconds_to_flag ? `${reg.seconds_to_flag}s after receipt` : "at intake"} · Compliance due ${fmt(reg.due_at)} ·
+      status <b>${esc(reg.status)}</b>${reg.actioned_by ? ` by ${esc(reg.actioned_by)}` : ""}</div>`);
+  }
+  if (c.injection_suspected) banners.push(`<div class="banner warn"><b>This complaint contains text addressed to an AI system.</b> It was treated as part of the complaint, not as an instruction.</div>`);
+  if (c.status === "manual_triage") banners.push(`<div class="banner warn"><b>Manual triage.</b> ${c.failures.map(f => esc(`${f.stage}: ${f.reason.replace(/_/g, " ")}${f.kinds ? " (" + f.kinds.join(", ") + ")" : ""}`)).join("; ")}. Nothing was sent to a model for the blocked stage.</div>`);
+
+  const facts = tri ? `<table><tr><th>Fact</th><th>Value</th><th>Quoted from complaint</th></tr>${
+      Object.entries(tri.facts).map(([k, v]) => `<tr><td>${esc(k.replace(/_/g, " "))}</td><td><b>${esc(String(v.value).replace(/_/g, " "))}</b></td><td class="q">${toks(v.evidence) || "—"}</td></tr>`).join("")}</table>
+      <div class="actions">${Object.entries(c.priority).map(([p, r]) => `<span class="chip ${p === pol ? "info" : ""}">${esc(CFG.policies[p])}: <b>${r.priority}</b></span>`).join(" ")}</div>` : `<div class="hint">Not triaged.</div>`;
+
+  const dr = c.draft, dh = d.draft_rehydrated;
+  const blocked = reg.flagged && reg.status === "open";
+  const draft = dr ? `
+    <div class="actions" style="margin-top:0"><span class="chip ${dr.state === "ready_for_analyst" ? "ok" : "warn"}">${dr.state === "ready_for_analyst" ? "Passed review" : "Needs attention"}</span>
+      <span class="chip">${esc(dr.mode === "ACKNOWLEDGE ONLY" ? "Acknowledge-only (regulatory)" : "Standard reply")}</span>
+      ${dr.revisions ? `<span class="chip">Revised once by reviewer</span>` : ""}</div>
+    ${dr.notes_for_analyst.length ? `<div class="banner info" style="margin:10px 0"><b>Before sending:</b><ul style="margin:4px 0 0 18px;padding:0">${dr.notes_for_analyst.map(n => `<li>${toks(n)}</li>`).join("")}</ul></div>` : ""}
+    <input class="full" id="d-subj" value="${esc(dh.subject)}" ${c.status === "approved" ? "disabled" : ""}>
+    <textarea id="d-body" style="margin-top:6px" ${c.status === "approved" ? "disabled" : ""}>${esc(c.approval ? c.approval.body : dh.body)}</textarea>
+    <details style="margin-top:6px"><summary>Reviewer checks</summary><div class="checks">${dr.review ? Object.entries(dr.review.checks).map(([k, v]) =>
+      `<div class="${v.pass ? "p" : "f"}" title="${esc(v.note)}">${v.pass ? "✓" : "✗"} ${esc(k.replace(/_/g, " "))}</div>`).join("") : "<div>Reviewer did not run</div>"}</div>
+      ${dr.review && dr.review.verdict === "revise" ? `<p class="hint">${dr.review.revision_instructions.map(esc).join("<br>")}</p>` : ""}
+      ${dr.deterministic.hard_failures.length ? `<p class="hint" style="color:var(--red)">Rule failures: ${dr.deterministic.hard_failures.join(", ")}</p>` : ""}</details>
+    ${c.status === "approved" ? `<div class="banner info" style="margin:10px 0 0">Approved by <b>${esc(c.approval.by)}</b> ${fmt(c.approval.at)} · ${Math.round(c.approval.similarity_to_draft * 100)}% unchanged from draft. Handed to the bank's existing outbound process; this system cannot send.</div>` :
+      `<div class="actions"><button class="primary" id="approve" ${blocked ? "disabled" : ""}>Approve reply</button>
+        <span class="hint">${blocked ? "Compliance must acknowledge the regulatory flag first." : "Your name is recorded with the exact text you approve."}</span></div>`}` : `<div class="hint">No draft. This complaint needs a manual reply.</div>`;
+
+  el.innerHTML = `
+    <div class="head"><div class="meta" style="display:flex;gap:8px;font-size:12px;color:var(--muted)"><span class="mono">${c.id}</span><span>${CH[c.channel]}</span><span>received ${fmt(c.received_at)}</span><span>model ${esc(c.model)}</span></div>
+      <h2>${esc(tri ? tri.summary : "Complaint " + c.id)}</h2>
+      <div class="meta" style="font-size:12px;color:var(--muted)">From ${esc(d.sender.name || "unknown")}${c.customer_id ? ` · customer ${esc(c.customer_id)}` : " · not matched to a customer record"}</div></div>
+    ${banners.join("")}
+    <section><h3>Complaint</h3>
+      <div class="seg"><button class="on" data-t="orig">As received</button><button data-t="red">What the model saw</button></div>
+      <pre class="text" id="ctext">${esc(d.original_text)}</pre>
+      <div class="hint" style="margin-top:6px">Redacted locally: ${Object.entries(c.redaction_counts).map(([k, v]) => `${v} ${k.toLowerCase().replace(/_/g, " ")}`).join(", ") || "nothing"}.</div></section>
+    ${target === "#c-detail" ? complianceSection(c) : ""}
+    <section><h3>Facts that set priority</h3>${tri && tri.issues.length ? `<div style="margin-bottom:8px">${tri.issues.map(i => `<span class="chip" style="margin:0 4px 4px 0">${toks(i)}</span>`).join("")}</div>` : ""}${facts}</section>
+    <section><h3>Routing</h3>${c.route ? `<div class="kv"><div>Owner</div><div><b>${esc(dept(c.route.primary))}</b>${c.route.overridden_by ? ` (changed by ${esc(c.route.overridden_by)})` : ""}</div>
+      <div>Also involves</div><div>${c.route.secondary && c.route.secondary !== "none" ? esc(dept(c.route.secondary)) : "—"}</div>
+      <div>Why</div><div>${toks(c.route.rationale || "")}</div></div>
+      <div class="actions"><select id="rr">${CFG.departments.map(x => `<option value="${x.id}" ${x.id === c.route.primary ? "selected" : ""}>${esc(x.name)}</option>`).join("")}</select><button class="ghost" id="rrgo">Reroute</button></div>` : `<div class="hint">Not routed.</div>`}</section>
+    ${target === "#detail" ? `<section><h3>Draft reply</h3>${draft}</section>` : ""}
+    <section><h3>What left the bank</h3><details id="eg"><summary>Show every payload sent to the model for this complaint</summary><div id="egbody" class="hint">Loading…</div></details></section>
+    <section><h3>Audit trail</h3><table class="audit">${d.audit.map(a => `<tr><td class="mono">#${a.seq}</td><td>${fmt(a.at)}</td><td>${esc(a.actor)}</td><td>${esc(a.event)}</td></tr>`).join("")}</table></section>`;
+
+  el.querySelectorAll(".seg button").forEach(b => b.onclick = () => {
+    el.querySelectorAll(".seg button").forEach(x => x.classList.toggle("on", x === b));
+    el.querySelector("#ctext").innerHTML = b.dataset.t === "orig" ? esc(d.original_text) : toks(c.redacted_text);
+  });
+  el.querySelector("#eg").ontoggle = async e => {
+    if (!e.target.open) return;
+    const rows = await api("/api/egress/" + c.id);
+    el.querySelector("#egbody").innerHTML = rows.length ? rows.map(r => `<div style="margin-top:8px"><b>${esc(r.agent)}</b> · ${fmt(r.at)} · ${r.sent_to_model ? "sent to " + esc(r.model) : "served from recorded response (not sent)"}<div class="egress">${toks(r.user)}</div></div>`).join("") : "Nothing was sent for this complaint.";
+  };
+  const rr = el.querySelector("#rrgo");
+  if (rr) rr.onclick = async () => { if (!me()) return alert("Enter your name at the top first."); await post(`/api/cases/${c.id}/reroute`, {analyst: me(), department: el.querySelector("#rr").value}); openCase(c.id, target); loadQueue(); };
+  const ap = el.querySelector("#approve");
+  if (ap) ap.onclick = async () => {
+    if (!me()) return alert("Enter your name at the top. Approval is recorded against it.");
+    try { await post(`/api/cases/${c.id}/approve`, {reviewer: me(), subject: el.querySelector("#d-subj").value, body: el.querySelector("#d-body").value}); }
+    catch (e) { return alert(e.message); }
+    await loadQueue(); openCase(c.id, target);
+  };
+  if (target === "#c-detail") wireCompliance(el, c);
+}
+
+// ------------------------------------------------------------ compliance
+function complianceSection(c) {
+  const reg = c.regulatory, s = reg.sources.screener;
+  return `<section><h3>Why it was flagged</h3><table><tr><th>Check</th><th>Category</th><th>Evidence</th></tr>
+    ${reg.sources.tripwire.map(h => `<tr><td>Tripwire</td><td>${esc(cat(h.category))}</td><td class="q">matched “${esc(h.matched)}”</td></tr>`).join("")}
+    ${s ? s.categories.map(x => `<tr><td>Screener</td><td>${esc(cat(x.id))}</td><td class="q">“${toks(x.evidence)}”<br><span style="font-style:normal">${toks(x.why)}</span></td></tr>`).join("") : `<tr><td>Screener</td><td colspan="2">Did not run. Treat as unscreened.</td></tr>`}
+    </table>
+    ${reg.status === "open" ? `<div class="actions"><button class="primary" id="ack">Acknowledge</button><input class="full" id="clr-why" placeholder="Reason, required to clear the flag" style="flex:1;min-width:180px"><button class="danger" id="clr">Clear flag</button></div>
+      <p class="hint">Acknowledging lets an analyst approve a reply. Only Compliance can clear a flag; nothing in the pipeline can.</p>` :
+      `<p class="hint">${esc(reg.status)} by ${esc(reg.actioned_by)} ${fmt(reg.actioned_at)}${reg.cleared_reason ? ` · reason: ${esc(reg.cleared_reason)}` : ""}</p>`}</section>`;
+}
+function wireCompliance(el, c) {
+  const act = async (action, reason = "") => {
+    if (!me()) return alert("Enter your name at the top first.");
+    try { await post(`/api/cases/${c.id}/compliance`, {officer: me(), action, reason}); } catch (e) { return alert(e.message); }
+    loadCompliance(); openCase(c.id, "#c-detail");
+  };
+  const a = el.querySelector("#ack"); if (a) a.onclick = () => act("acknowledge");
+  const k = el.querySelector("#clr"); if (k) k.onclick = () => act("clear", el.querySelector("#clr-why").value);
+}
+async function loadCompliance() {
+  const [rows, st] = await Promise.all([api("/api/cases?policy=interim"), api("/api/stats")]);
+  $("#c-kpis").innerHTML = kpi(st.flagged, "complaints flagged for Compliance") + kpi(st.flags_open, "flags still open") +
+    kpi(st.median_seconds_to_flag != null ? st.median_seconds_to_flag + "s" : "—", "median receipt → flag") +
+    kpi("~6 days", "receipt → first read before (queue)");
+  const f = $("#c-filter").value;
+  const list = rows.filter(r => r.flagged && (f === "all" || r.reg_status === f)).sort((a, b) => (a.due_at || "").localeCompare(b.due_at || ""));
+  $("#c-list").innerHTML = list.map(r => `<div class="row ${r.id === CSEL ? "sel" : ""}" data-id="${r.id}"><div class="pri ${r.priority}">${r.priority}</div><div>
+    <div class="meta"><span class="mono">${r.id}</span><span>due ${fmt(r.due_at)}</span><span class="chip ${r.reg_status === "open" ? "reg" : "ok"}">${esc(r.reg_status)}</span>${r.injection ? `<span class="chip warn">AI-directed text</span>` : ""}</div>
+    <div class="sum">${esc(r.summary || "(not triaged)")}</div>
+    <div class="meta" style="margin-top:3px">${r.categories.map(x => `<span class="chip">${esc(cat(x))}</span>`).join(" ")}</div></div></div>`).join("") || `<div class="empty">No flags in this view</div>`;
+  document.querySelectorAll("#c-list .row").forEach(el => el.onclick = () => { CSEL = el.dataset.id; loadCompliance(); openCase(el.dataset.id, "#c-detail"); });
+}
+$("#c-filter").onchange = loadCompliance;
+$("#verify").onclick = async () => { const v = await api("/api/audit/verify"); $("#verifyOut").textContent = v.ok ? `Intact: ${v.entries} entries, every hash links to the one before.` : `BROKEN at entry #${v.broken_at_seq}`; };
+
+// ------------------------------------------------------------ ops
+const kpi = (v, l) => `<div class="kpi"><div class="v">${esc(v)}</div><div class="l">${esc(l)}</div></div>`;
+async function loadOps() {
+  const st = await api("/api/stats");
+  $("#o-kpis").innerHTML = kpi(st.total, "complaints processed") + kpi(st.statuses.awaiting_analyst, "waiting for an analyst") +
+    kpi(st.statuses.manual_triage, "routed to manual triage") + kpi(`${st.drafts.ready}/${st.drafts.total}`, "drafts that passed review") +
+    kpi(st.flagged, "flagged for Compliance") + kpi(st.cost_per_complaint != null ? "$" + st.cost_per_complaint.toFixed(2) : "—", "model cost per complaint");
+  const max = Math.max(...Object.values(st.by_department));
+  $("#o-dept").innerHTML = Object.entries(st.by_department).map(([k, v]) => `<div class="b"><span>${esc(k === "manual" ? "Manual triage" : dept(k))}</span><div class="track"><div class="fill" style="width:${100 * v / max}%"></div></div><span>${v}</span></div>`).join("");
+  $("#o-pri").innerHTML = `<table><tr><th>Policy</th><th>P1</th><th>P2</th><th>P3</th></tr>${Object.entries(st.priority).map(([p, r]) => `<tr><td>${esc(CFG.policies[p])}</td><td>${r.P1}</td><td>${r.P2}</td><td>${r.P3}</td></tr>`).join("")}</table>`;
+  $("#o-dis").innerHTML = `<p class="hint">${st.disagreements.length} complaints get a different priority depending on whose definition you use. Rank these together once and the policy file is settled.</p>
+    <table><tr><th>Complaint</th><th>Summary</th><th>A (money first)</th><th>B (customer first)</th><th>Facts that split them</th></tr>${st.disagreements.slice(0, 25).map(x => `<tr><td class="mono"><a href="#" data-id="${x.id}">${x.id}</a></td><td>${esc(x.summary)}</td><td><span class="pri ${x.A}" style="padding:2px 8px">${x.A}</span></td><td><span class="pri ${x.B}" style="padding:2px 8px">${x.B}</span></td><td class="hint">${esc(Object.entries(x.facts || {}).filter(([k, v]) => k !== "is_complaint" && v && v !== "none" && v !== false).map(([k, v]) => v === true ? k.replace(/_/g, " ") : `${k.replace(/_/g, " ")}: ${String(v).replace(/_/g, " ")}`).join(" · "))}</td></tr>`).join("")}</table>`;
+  document.querySelectorAll("#o-dis a").forEach(a => a.onclick = e => { e.preventDefault(); document.querySelector('nav button[data-view="queue"]').click(); openCase(a.dataset.id); });
+}
+
+// ------------------------------------------------------------ new complaint
+$("#newBtn").onclick = () => { $("#n-stage").textContent = ""; $("#newDlg").showModal(); };
+$("#n-cancel").onclick = () => $("#newDlg").close();
+$("#n-go").onclick = async () => {
+  const body = {channel: $("#n-ch").value, name: $("#n-name").value, email: $("#n-email").value, phone: $("#n-phone").value, subject: $("#n-subj").value, text: $("#n-text").value};
+  if (!body.text.trim()) return;
+  $("#n-go").disabled = true;
+  const steps = ["Redacting on this machine", "Tripwire check", "Screening, triage and routing in parallel", "Drafting a reply", "Reviewing the draft"];
+  let i = 0; $("#n-stage").innerHTML = `<span class="spin"></span>${steps[0]}…`;
+  const t = setInterval(() => { i = Math.min(i + 1, steps.length - 1); $("#n-stage").innerHTML = `<span class="spin"></span>${steps[i]}…`; }, 6000);
+  try { const r = await post("/api/intake", body); $("#newDlg").close(); document.querySelector('nav button[data-view="queue"]').click(); $("#filter").value = "all"; await loadQueue(); openCase(r.case.id); }
+  catch (e) { $("#n-stage").textContent = "Failed: " + e.message; }
+  finally { clearInterval(t); $("#n-go").disabled = false; }
+};
+init();
+</script>
+</body>
+</html>

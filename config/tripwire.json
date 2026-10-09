@@ -1,0 +1,48 @@
+{
+  "_owner": "Compliance Officer",
+  "_note": "Deterministic tripwire. Runs locally on the ORIGINAL complaint text (nothing leaves the bank), case-insensitive regular expressions. Any hit raises a regulatory flag on its own, independent of the model. Broad on purpose: a false flag costs Compliance a minute; a miss costs a regulatory finding. Tune here; evals/ reports what each change does to recall and queue load. Written before the test data was seen.",
+  "terms": {
+    "error_resolution": [
+      "unauthori[sz]ed", "(didn'?t|did not|never) authori[sz]e", "(don'?t|do not|didn'?t) recogni[sz]e",
+      "never (made|did|bought|ordered|purchased)", "\\bdisput", "charged (me )?twice", "double[- ]charg", "duplicate (charge|transaction|debit|withdrawal)",
+      "(atm|machine) (didn'?t|did not|never) (give|dispense|pay)", "(didn'?t|did not|never) (dispense|get (the|my) (cash|money))",
+      "\\bfraud", "\\bscam", "stolen", "hacked", "(money|funds|transfer|deposit|payment) (never|didn'?t|did not) (arrive|show|post|go through)",
+      "never (received|got) (the|my) (money|funds|transfer|deposit|refund)", "wrong amount", "chargeback", "taken out of my account",
+      "no reconozco", "no autoric", "\\bfraude", "\\bestafa", "cargo no autorizado", "me robaron"
+    ],
+    "fee_practices": [
+      "overdraft", "\\bnsf\\b", "insufficient funds", "returned item", "\\bod fee", "fees? (were|was|got)? ?(charged|assessed|applied|taken|hit)",
+      "charged (me )?(a |an |two |three |\\d+ )?(\\$[\\d,.]+ )?(\\w+ )?fees?", "hidden fees?", "junk fees?", "(never|not) (told|disclosed|informed|warned)",
+      "free checking", "maintenance fee", "monthly fee", "service charge", "late fee", "interest charge",
+      "sobregiro", "comisi[oó]n", "cargo por"
+    ],
+    "unfair_treatment": [
+      "discriminat", "racis", "sexis", "\\bunfair", "treated (me )?(differently|like)", "profil(ed|ing)",
+      "because (i'?m|i am|of my|she'?s|he'?s) (a |an )?(black|white|hispanic|latin[oa]|asian|muslim|jewish|woman|female|old|elderly|disabled|immigrant|foreign|accent|age|race|religion|disability)",
+      "my (race|religion|age|accent|disability|gender|skin)", "\\baccent\\b", "mislead|misled|lied to me|lying to me|deceptive|bait and switch",
+      "pressur", "opened .{0,30}without (my )?(consent|permission|knowledge|authori[sz]ation)", "never (signed up|applied|agreed|consented)",
+      "without (my )?(consent|permission)", "public assistance|food stamps|\\bsnap\\b|\\bssi\\b|disability (check|payment|benefits)",
+      "injusto", "discrimina", "porque (soy|hablo)"
+    ],
+    "credit_reporting": [
+      "credit (report|score|bureau|history|file)", "equifax", "experian", "transunion", "reported (me |it |this )?(as )?(late|delinquent|past due)"
+    ],
+    "collections_conduct": [
+      "collect(ion|or)s?\\b", "harass", "threaten", "called (my )?(job|work|employer|boss|mother|family|neighbor|sister|brother)",
+      "calling (me )?(at|every|all) (night|hour|day)", "\\b(9|10|11) ?pm\\b", "debt collector"
+    ],
+    "privacy_incident": [
+      "(sent|mailed|gave|given|shared|disclosed|emailed) .{0,50}(wrong (person|address|customer)|someone else|another (person|customer)|my ex|a stranger)",
+      "someone else'?s (statement|account|information|info|mail|card)", "wrong address", "privacy", "my (personal )?information (was|to)", "data breach",
+      "discussed my account"
+    ],
+    "servicing_error": [
+      "escrow", "misappl", "applied (it |my payment )?to the wrong", "forbearance", "loan modification",
+      "payoff (amount|quote|letter|figure)", "payment (wasn'?t|was not|never|didn'?t) (applied|credited|posted)"
+    ],
+    "vulnerable_exploitation": [
+      "power of attorney", "\\bpoa\\b", "caregiver", "\\baide\\b", "taking (money|advantage)", "took (money|advantage)", "exploit",
+      "\\belder", "dementia", "alzheimer", "gift cards?", "my (elderly |\\d+[- ]year[- ]old )?(mother|father|mom|dad|grandmother|grandfather|aunt|uncle)"
+    ]
+  }
+}

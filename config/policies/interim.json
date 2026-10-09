@@ -1,0 +1,5 @@
+{
+  "name": "Interim - higher of A and B",
+  "_note": "Used until the analysts agree. Takes the more urgent of the two views, so nothing either analyst would call serious is ranked down.",
+  "max_of": ["analyst_a", "analyst_b"]
+}

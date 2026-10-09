@@ -1,0 +1,24 @@
+{
+  "_owner": "Head of Retail Operations",
+  "_note": "Routing catalog. The Router agent may only choose from these ids. Edit descriptions here, not in prompts.",
+  "departments": [
+    {"id": "deposit_ops", "name": "Deposit Operations",
+     "owns": "Checking and savings accounts: overdraft and NSF fees, maintenance fees, deposit holds, account opening/closing, statements, interest on deposits."},
+    {"id": "card_services", "name": "Card Services",
+     "owns": "Debit and credit cards: declines, replacement cards, credit card billing and interest, credit limits, rewards. Not unauthorized charges (Fraud & Disputes)."},
+    {"id": "fraud_disputes", "name": "Fraud & Disputes",
+     "owns": "Unauthorized or disputed transactions, ATM cash not dispensed, scams, identity theft, account takeover, chargebacks, Zelle/P2P fraud."},
+    {"id": "consumer_lending", "name": "Consumer Lending",
+     "owns": "Auto loans, personal loans and lines of credit: applications, denials, rates, payments, payoff letters."},
+    {"id": "mortgage_servicing", "name": "Mortgage Servicing",
+     "owns": "Mortgage and HELOC payments, escrow, taxes and insurance, forbearance and modification, payoff, mortgage applications."},
+    {"id": "digital_banking", "name": "Digital Banking",
+     "owns": "Mobile app and online banking: login, outages, bill pay, transfers that fail for technical reasons, alerts, mobile deposit."},
+    {"id": "branch_contact_center", "name": "Branch & Contact Center",
+     "owns": "Staff conduct, wait times, branch hours or closures, phone hold times, service quality, ATM physical condition."},
+    {"id": "collections", "name": "Collections & Recoveries",
+     "owns": "Past-due accounts, collection calls and letters, payment plans, charge-offs, repossession."},
+    {"id": "privacy_office", "name": "Privacy Office",
+     "owns": "Misdirected mail or statements, information disclosed to the wrong person, data-sharing and marketing opt-out requests."}
+  ]
+}

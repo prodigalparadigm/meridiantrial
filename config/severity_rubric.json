@@ -1,0 +1,19 @@
+{
+  "_owner": "Senior analysts, jointly",
+  "_note": "The model extracts FACTS against these dimensions, with a quote for each. It never decides 'serious'. Priority is computed from the facts by a policy file in config/policies/, which the analysts own. Regulatory exposure is deliberately NOT a dimension: it is a separate track with its own clock.",
+  "dimensions": [
+    {"id": "financial_impact", "type": "enum",
+     "values": ["none", "under_100", "100_to_1000", "over_1000", "unknown"],
+     "question": "How much money is at stake for the customer (disputed amount, fees charged, funds unavailable)? Use the total. 'unknown' if money is clearly involved but no amount is given."},
+    {"id": "vulnerability_indicated", "type": "bool",
+     "question": "Does the complaint indicate the customer may be vulnerable: advanced age, bereavement, serious illness or disability, financial hardship (can't pay rent/bills, food), limited English, or abuse/coercion?"},
+    {"id": "harm_ongoing", "type": "bool",
+     "question": "Is the harm still happening: funds currently unavailable, account frozen or locked, charges or fees recurring, calls continuing?"},
+    {"id": "time_sensitive", "type": "bool",
+     "question": "Does the customer name a near-term deadline or consequence (rent or mortgage due, closing date, payroll, travel, medical bill, eviction)?"},
+    {"id": "escalation_threat", "type": "bool",
+     "question": "Does the customer say they will (or did) go to a lawyer, regulator, the CFPB, an attorney general, the media or social media, or close their accounts?"},
+    {"id": "repeat_contact", "type": "bool",
+     "question": "Does the customer say they already raised this before (calls, visits, emails) without resolution?"}
+  ]
+}

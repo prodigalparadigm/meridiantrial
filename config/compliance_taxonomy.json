@@ -1,0 +1,23 @@
+{
+  "_owner": "Compliance Officer",
+  "_note": "What counts as a potential regulatory issue. The first three come from the brief; the rest are PROPOSED for Compliance to confirm or strike on Friday. The screener reads descriptions from here verbatim.",
+  "sla_hours": 48,
+  "categories": [
+    {"id": "error_resolution", "name": "Disputed or unauthorized transaction / billing error", "source": "brief",
+     "description": "Customer says a transaction is wrong, unauthorized, duplicated, for the wrong amount, or not received - including card charges they don't recognize, ATM cash not dispensed, transfers that never arrived, or money taken by a scammer. Electronic-transfer and credit-billing error rules may set investigation deadlines."},
+    {"id": "fee_practices", "name": "Fee practices", "source": "brief",
+     "description": "Overdraft or NSF fees (especially more than one for the same item, or fees caused by the order transactions were posted), fees the customer says were never disclosed, fees on an account they were told was free, unexpected interest or penalty charges."},
+    {"id": "unfair_treatment", "name": "Unfair, deceptive or abusive treatment / discrimination", "source": "brief",
+     "description": "Customer suggests they were treated differently because of race, ethnicity, national origin, sex, age, disability, religion, marital status, or receipt of public assistance; was misled by staff or marketing; was pressured into a product; or had an account or product opened without consent."},
+    {"id": "credit_reporting", "name": "Credit reporting accuracy", "source": "proposed",
+     "description": "Bank reported incorrect information to a credit bureau (e.g., a late payment the customer says was on time, an account that isn't theirs)."},
+    {"id": "collections_conduct", "name": "Collection practices", "source": "proposed",
+     "description": "Harassing, threatening or deceptive collection contact; contacting the customer's employer, family or neighbors; calls at unreasonable hours."},
+    {"id": "privacy_incident", "name": "Privacy / data handling", "source": "proposed",
+     "description": "Customer information sent or disclosed to the wrong person, statements mailed to the wrong address, staff discussing an account with someone not authorized."},
+    {"id": "servicing_error", "name": "Loan servicing error", "source": "proposed",
+     "description": "Mortgage or loan payment misapplied, escrow miscalculated, forbearance or modification not honored, payoff amount wrong."},
+    {"id": "vulnerable_exploitation", "name": "Suspected exploitation of a vulnerable customer", "source": "proposed",
+     "description": "Signs that an elderly or vulnerable customer is being financially exploited by a caregiver, relative or scammer, or that the bank's handling put such a customer at risk."}
+  ]
+}

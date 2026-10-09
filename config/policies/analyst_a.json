@@ -1,0 +1,15 @@
+{
+  "name": "Senior Analyst A - money first",
+  "_note": "Illustrative reconstruction of one side of the disagreement heard in discovery. Replace with the analyst's own ranking after Friday. Conditions inside one {} must ALL hold; a priority applies if ANY of its {} holds. First matching priority wins.",
+  "rules": {
+    "P1": [
+      {"financial_impact": ["over_1000"]},
+      {"harm_ongoing": true, "financial_impact": ["100_to_1000"]}
+    ],
+    "P2": [
+      {"financial_impact": ["100_to_1000", "unknown"]},
+      {"escalation_threat": true}
+    ]
+  },
+  "default": "P3"
+}

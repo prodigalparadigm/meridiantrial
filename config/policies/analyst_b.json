@@ -1,0 +1,17 @@
+{
+  "name": "Senior Analyst B - customer first",
+  "_note": "Illustrative reconstruction of the other side of the disagreement. Replace with the analyst's own ranking after Friday.",
+  "rules": {
+    "P1": [
+      {"vulnerability_indicated": true},
+      {"harm_ongoing": true, "time_sensitive": true}
+    ],
+    "P2": [
+      {"harm_ongoing": true},
+      {"time_sensitive": true},
+      {"repeat_contact": true},
+      {"escalation_threat": true}
+    ]
+  },
+  "default": "P3"
+}

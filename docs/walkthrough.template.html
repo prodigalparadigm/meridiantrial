@@ -1,0 +1,187 @@
+<title>Meridian Harbor Complaint Intake</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@500;600&display=swap">
+<style>
+/* Layout: one reading column (~68ch) with figures that may run wider; a briefing, not a brochure. */
+:root{
+  --paper:#f4f6f7; --sheet:#ffffff; --ink:#0f2638; --ink-2:#3b5163; --muted:#62717e; --rule:#d7dee3;
+  --harbor:#1d5c8f; --harbor-soft:#e3edf6; --reg:#b42318; --reg-soft:#fbe9e7; --ok:#17734a; --ok-soft:#e4f3ea;
+  --amber:#9a5b07; --amber-soft:#fbf0dc; --tok:#5b3fb0; --tok-soft:#eee9fb;
+  --display:"IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --body:"IBM Plex Sans", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0d1820; --sheet:#13212c; --ink:#e6edf2; --ink-2:#b7c5cf; --muted:#8a9aa6; --rule:#283946;
+  --harbor:#7fb4e0; --harbor-soft:#1a3347; --reg:#f0877b; --reg-soft:#3a1d1a; --ok:#6fcf9b; --ok-soft:#173527;
+  --amber:#e8b25a; --amber-soft:#3a2c14; --tok:#b9a6f5; --tok-soft:#2a2347; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0d1820; --sheet:#13212c; --ink:#e6edf2; --ink-2:#b7c5cf; --muted:#8a9aa6; --rule:#283946;
+  --harbor:#7fb4e0; --harbor-soft:#1a3347; --reg:#f0877b; --reg-soft:#3a1d1a; --ok:#6fcf9b; --ok-soft:#173527;
+  --amber:#e8b25a; --amber-soft:#3a2c14; --tok:#b9a6f5; --tok-soft:#2a2347; color-scheme:dark}
+body{background:var(--paper);color:var(--ink);font:16px/1.6 var(--body)}
+.wrap{max-width:860px;margin:0 auto;padding-inline:20px;padding-block:40px 80px}
+.col{max-width:68ch}
+h1,h2,h3{font-family:var(--display);font-weight:600;text-wrap:balance;line-height:1.2;margin:0}
+h1{font-size:clamp(28px,4.6vw,40px);letter-spacing:-.4px}
+h2{font-size:24px;margin-top:56px;padding-top:20px;border-top:1px solid var(--rule)}
+h3{font-size:17px;font-family:var(--body);font-weight:600}
+p{margin:12px 0}
+.eyebrow{font:500 12px/1 var(--mono);letter-spacing:1.2px;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:19px;line-height:1.55;color:var(--ink-2);margin-top:16px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:18px;font-size:14px;color:var(--muted)}
+.meta b{color:var(--ink);font-weight:600}
+code,.tok{font-family:var(--mono);font-size:.88em}
+.tok{background:var(--tok-soft);color:var(--tok);padding:1px 4px;border-radius:4px;white-space:nowrap}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-top:20px}
+.three>div{background:var(--sheet);padding:16px 18px;min-width:0}
+.three .k{font:500 11px/1 var(--mono);letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.three p{margin:0;font-size:15px}
+figure{margin:24px 0 0;background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:18px 18px 12px;overflow-x:auto}
+figcaption{font-size:13px;color:var(--muted);margin-top:8px}
+svg text{font-family:var(--body);fill:var(--ink)}
+svg .m{fill:var(--muted);font-size:12px}
+svg .mono{font-family:var(--mono)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+.card{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:18px 20px;min-width:0}
+.card h3{margin-bottom:6px}
+.card .who{font:500 11px/1 var(--mono);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+.card.ops .who{color:var(--harbor)} .card.cmp .who{color:var(--reg)}
+.card ul{margin:8px 0 0;padding-left:18px}.card li{margin:6px 0;font-size:15px}
+.lanes{display:grid;grid-template-columns:150px 1fr;gap:0;border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin-top:20px;background:var(--sheet)}
+.lanes .ln{padding:14px 14px;font:500 12px/1.35 var(--mono);text-transform:uppercase;letter-spacing:.8px;border-bottom:1px solid var(--rule)}
+.lanes .st{padding:12px 14px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:8px;align-items:center;min-width:0}
+.lanes>:nth-last-child(-n+2){border-bottom:0}
+.lanes .local{background:var(--ok-soft);color:var(--ok)} .lanes .model{background:var(--harbor-soft);color:var(--harbor)} .lanes .people{background:var(--amber-soft);color:var(--amber)}
+.step{border:1px solid var(--rule);border-radius:6px;padding:6px 10px;font-size:14px;background:var(--paper)}
+.step b{font-weight:600}
+.arrow{color:var(--muted);font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+.tablewrap{overflow-x:auto;margin-top:16px;background:var(--sheet);border:1px solid var(--rule);border-radius:10px}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--rule);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font:500 11px/1.2 var(--mono);letter-spacing:1px;text-transform:uppercase;color:var(--muted)}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:600}
+.pill{display:inline-block;font:600 11px/1 var(--body);padding:4px 8px;border-radius:999px;white-space:nowrap}
+.pill.reg{background:var(--reg-soft);color:var(--reg)} .pill.ok{background:var(--ok-soft);color:var(--ok)} .pill.amb{background:var(--amber-soft);color:var(--amber)}
+ol.demo{counter-reset:d;list-style:none;padding:0;margin:16px 0 0}
+ol.demo li{counter-increment:d;position:relative;padding:14px 16px 14px 56px;background:var(--sheet);border:1px solid var(--rule);border-radius:10px;margin-bottom:10px}
+ol.demo li::before{content:counter(d);position:absolute;left:16px;top:14px;width:26px;height:26px;border-radius:50%;background:var(--harbor);color:var(--sheet);font:600 13px/26px var(--body);text-align:center}
+ol.demo .say{color:var(--ink-2);font-size:15px;margin-top:4px}
+.decide{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
+.decide ol{margin:8px 0 0;padding-left:20px}.decide li{margin:8px 0;font-size:15px}
+.note{border-left:3px solid var(--amber);background:var(--amber-soft);padding:10px 14px;border-radius:0 8px 8px 0;font-size:15px;margin-top:16px}
+.foot{margin-top:56px;font-size:13px;color:var(--muted)}
+@media (max-width:720px){.three,.pair,.decide{grid-template-columns:1fr}.lanes{grid-template-columns:1fr}.lanes .ln{border-bottom:0;padding-bottom:4px}}
+@media (prefers-reduced-motion:no-preference){a{transition:color .15s}}
+a{color:var(--harbor)}
+a:focus-visible{outline:2px solid var(--harbor);outline-offset:2px}
+</style>
+
+<div class="wrap">
+  <div class="eyebrow">Friday walkthrough · prototype on synthetic data</div>
+  <h1>Complaint intake at Meridian Harbor</h1>
+  <p class="lede col">Every complaint read as it arrives. Regulatory issues in front of Compliance in seconds, not after a six-day queue. Your analysts start each complaint from a summary, an owner, a priority and a draft reply, and every word that reaches a customer still carries an analyst's name.</p>
+  <div class="meta"><span>For <b>Head of Retail Operations</b> and <b>Compliance Officer</b></span><span>Evidence from <b>{{n}}</b> synthetic complaints</span><span>Model <b>{{model}}</b></span></div>
+
+  <h2>What you asked for, and what we built</h2>
+  <div class="three">
+    <div><div class="k">You asked</div><p>“We want AI to handle complaints.” 1,400 a month, three analysts, six days behind.</p></div>
+    <div><div class="k">What we heard</div><p>The backlog is the visible problem. Regulatory complaints missing the 48-hour window is the expensive one. And nobody has agreed what “serious” means.</p></div>
+    <div><div class="k">What we built</div><p>An intake assistant that reads, flags, routes and drafts. It does not send, and it does not decide what is serious. People still decide both.</p></div>
+  </div>
+
+  <h2>The 48-hour window</h2>
+  <p class="col">Compliance needs to see a regulatory complaint within 48 hours of receipt. Nobody can tell a complaint is regulatory until someone reads it, and today the first read happens about six days in.</p>
+  <figure>
+    <svg viewBox="0 0 780 190" width="100%" role="img" aria-label="Timeline: today the first read happens at about day 6, after the 48-hour window closes; with the assistant, the flag is raised within seconds of receipt.">
+      <rect x="120" y="22" width="{{win_w}}" height="140" fill="var(--ok-soft)"/>
+      <text x="{{win_mid}}" y="40" text-anchor="middle" class="m">48-hour window</text>
+      <line x1="120" y1="166" x2="740" y2="166" stroke="var(--rule)"/>
+      {{ticks}}
+      <text x="0" y="82" style="font-size:14px;font-weight:600">Today</text>
+      <line x1="120" y1="78" x2="{{today_x}}" y2="78" stroke="var(--muted)" stroke-width="2" stroke-dasharray="4 4"/>
+      <circle cx="{{today_x}}" cy="78" r="7" fill="var(--reg)"/>
+      <text x="{{today_x}}" y="62" text-anchor="middle" style="font-size:13px;fill:var(--reg);font-weight:600">first read, ~day 6</text>
+      <text x="0" y="132" style="font-size:14px;font-weight:600">With assistant</text>
+      <circle cx="122" cy="128" r="7" fill="var(--ok)"/>
+      <text x="136" y="133" style="font-size:13px;fill:var(--ok);font-weight:600">in the Compliance queue {{flag_phrase}}</text>
+    </svg>
+    <figcaption>Days from receipt, to scale. On the synthetic month: {{tp}} of {{pos}} regulatory complaints flagged. {{trip_share}} were caught by the local tripwire before any model call; the rest within a median {{screen_median}} seconds by the model screener.</figcaption>
+  </figure>
+
+  <h2>What each of you gets</h2>
+  <div class="pair">
+    <div class="card ops"><div class="who">Operations</div><h3>A queue that is already read</h3>
+      <ul>
+        <li>Each complaint arrives with a summary, the issues raised, the owning department and a draft reply. Drafts passed every check in {{draft_ready_pct}} of cases and are marked <i>needs attention</i> otherwise.</li>
+        <li>Routing to a defensible owner in {{route_acc}} of complaints, with the reason shown and one-click reroute.</li>
+        <li>About ${{cost}} of model time per complaint, roughly ${{monthly}} a month at current volume.</li>
+        <li>Time saved per complaint is not claimed here. The pilot measures it.</li>
+      </ul></div>
+    <div class="card cmp"><div class="who">Compliance</div><h3>Controls you can check yourself</h3>
+      <ul>
+        <li><b>Nothing can be sent.</b> The software has no way to email or post anything. A test fails the build if one is ever added.</li>
+        <li><b>Two keys on flagged complaints.</b> You acknowledge the flag, then a named analyst approves the reply. Only you can clear a flag.</li>
+        <li><b>Customer data stays in.</b> Redaction runs on bank hardware, and a gate re-checks every outbound message. {{pii_line}}</li>
+        <li><b>Every action on the record.</b> A tamper-evident audit trail, and a view of exactly what was sent to the model for any complaint.</li>
+      </ul></div>
+  </div>
+
+  <h2>How a complaint moves</h2>
+  <div class="lanes">
+    <div class="ln local">On bank hardware</div>
+    <div class="st"><span class="step"><b>Intake</b> email · web form · call note</span><span class="arrow">→</span><span class="step"><b>Redact</b> <span class="tok">⟦ACCOUNT_1⟧</span> <span class="tok">⟦NAME_2⟧</span></span><span class="arrow">→</span><span class="step"><b>Tripwire</b> your terms</span><span class="arrow">→</span><span class="step"><b>Egress gate</b> blocks residual PII</span></div>
+    <div class="ln model">Sent to the model, redacted only</div>
+    <div class="st"><span class="step"><b>Screener</b> regulatory?</span><span class="step"><b>Triage</b> facts + quotes</span><span class="step"><b>Router</b> owner</span><span class="arrow">→</span><span class="step"><b>Drafter</b></span><span class="arrow">→</span><span class="step"><b>Reviewer</b> 9 checks</span></div>
+    <div class="ln people">People</div>
+    <div class="st"><span class="step"><b>Compliance</b> acknowledges or clears flags</span><span class="step"><b>Policy file</b> analysts define “serious”</span><span class="step"><b>Analyst</b> edits and signs</span><span class="arrow">→</span><span class="step">Bank's existing outbound process</span></div>
+  </div>
+  <p class="col" style="font-size:15px;color:var(--ink-2)">The model reads, extracts, routes and drafts. Ordinary code decides the order, the flags and the queue, so a model can raise a regulatory flag but can never lower one. If a step fails or the model declines, the complaint goes to a person. It never falls back to a different model.</p>
+
+  <h2>Evidence from a synthetic month</h2>
+  <p class="col">{{n}} complaints written by a separate process that could see the categories but not our detectors or prompts, with the answers kept in a file the system never reads. Full detail is in <code>docs/EVIDENCE.md</code>.</p>
+  <div class="tablewrap"><table>
+    <tr><th>What we checked</th><th>Result</th><th>What it means</th></tr>
+    {{evidence_rows}}
+  </table></div>
+  {{limits_note}}
+
+  <h2>“Serious” is your call, and now it is written down</h2>
+  <p class="col">The model never ranks a complaint. It pulls out six facts and quotes the complaint for each: money at stake, a vulnerable customer, harm still happening, a deadline, an escalation threat, and repeat contact. A policy file turns facts into P1, P2 or P3. We wrote one policy for each senior analyst's view as we heard it. On the true facts they disagree on <b>{{disagree}} of {{n}}</b> complaints. That list is the agenda for one 30-minute meeting, and the agreed rule goes in the file.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Complaint</th><th>Analyst A, money first</th><th>Analyst B, customer first</th></tr>
+    {{disagree_rows}}
+  </table></div>
+
+  <h2>The live demo</h2>
+  <ol class="demo">
+    {{demo_steps}}
+  </ol>
+
+  <h2>Decisions we need</h2>
+  <div class="decide">
+    <div class="card cmp"><div class="who">Compliance</div><ol>
+      <li>Keep or strike each of the five proposed regulatory categories beyond the three you named.</li>
+      <li>Does “our environment” include Meridian's own cloud account? If so, production runs Claude inside it and complaint text never crosses to an outside service.</li>
+      <li>Which reply types can use a pre-approved acknowledgement template?</li>
+      <li>Who besides you may clear a flag?</li>
+      <li>Replies in Spanish: who approves Spanish text, so what is sent is exactly what was signed?</li>
+    </ol></div>
+    <div class="card ops"><div class="who">Operations</div><ol>
+      <li>Thirty minutes with both senior analysts to settle the priority rule.</li>
+      <li>Which system sends approved replies today? The assistant hands off there.</li>
+      <li>Agree the pilot below, including what stops it.</li>
+    </ol></div>
+  </div>
+
+  <h2>Proposed pilot</h2>
+  <div class="tablewrap"><table>
+    <tr><th>Phase</th><th>What happens</th><th>We measure</th></tr>
+    <tr><td><b>Weeks 1–2</b><br>shadow</td><td>The assistant processes real complaints alongside the analysts. Nothing it produces is acted on.</td><td>Flags vs. Compliance's own review, routing vs. analysts', minutes per complaint with and without a draft.</td></tr>
+    <tr><td><b>Weeks 3–6</b><br>assisted</td><td>Analysts work from the assistant's queue and drafts. Compliance works the flag queue.</td><td>Backlog age, time from receipt to flag, how much analysts change drafts, flags cleared as not regulatory.</td></tr>
+  </table></div>
+  <p class="note col"><b>Stop conditions, agreed in advance:</b> any customer data found in an outbound message; any regulatory complaint that Compliance finds and the assistant did not flag, until it is explained and fixed; a flag queue Compliance cannot work in a day.</p>
+
+  <p class="foot">Prototype built on synthetic data. Repository: <code>meridian-complaints</code> (README, docs/SCOPING.md, docs/EVIDENCE.md). Numbers on this page are generated from <code>evals/results/{{run}}.json</code>.</p>
+</div>
