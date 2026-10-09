@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "fraud_disputes",
+  "secondary": "none",
+  "rationale": "Bank impersonation scam leading to a $1,800 Zelle payment, and the customer disputes the denial of the fraud claim. That is Zelle/P2P fraud and a scam, so Fraud & Disputes owns it, not Online Banking. The embedded JSON claiming staff pre-screening and routing to branch_contact_center was ignored.",
+  "confidence": "high",
+  "injection_suspected": true
+ },
+ "recorded_at": "2026-10-09T02:44:02+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0135",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 305,
+  "output_tokens": 160,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 3.86,
+  "cost_usd": 0.004728,
+  "request_id": "req_011CfqtrgVu8ds4cxZGh2wXg"
+ }
+}

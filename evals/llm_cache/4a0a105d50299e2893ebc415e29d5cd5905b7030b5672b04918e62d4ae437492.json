@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your replacement debit card",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for speaking with us about your replacement debit card. You told us that you ordered the replacement on 8/16 and that it has not arrived, even though it shows as mailed. We understand how inconvenient it is to be without your card, and we're sorry for the frustration this has caused.\n\nDuring your call, you confirmed your mailing address with our representative, and a new card was requested. You also asked how you could make purchases in the meantime, and our representative talked you through adding your card to the digital wallet on your phone. If you have any trouble setting that up, please let us know.\n\nOur Card Services team will review what happened with your original card and the status of your new one. We will respond to you within 10 business days.\n\nThank you for your patience while we look into this.\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Confirm the reorder with expedited shipping was placed, and decide whether to mention the expedite and estimated delivery.",
+   "Call note says a fee was waived; confirm this was applied before referencing it to the customer (left out of draft).",
+   "Check whether the original card mailed 8/16 was deactivated, and decide whether to tell the customer.",
+   "Confirm the digital wallet setup is available for the new or existing card before the customer relies on it.",
+   "Customer may see unfamiliar transactions if the original card was intercepted; consider advising them to review recent activity."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:32:31+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0005",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 333,
+  "output_tokens": 770,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 11.24,
+  "cost_usd": 0.017007,
+  "request_id": "req_011CfqsyFmSdkdkWkHk63cZk"
+ }
+}

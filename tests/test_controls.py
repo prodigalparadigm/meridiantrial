@@ -149,7 +149,13 @@ class HumanSignOff(unittest.TestCase):
             self.assertIn("Margaret Okafor", body)
             done = p.approve("C-7", "Dana R.", "Re: your complaint", body)
             self.assertEqual(done["approval"]["by"], "Dana R.")
-            self.assertEqual(done["approval"]["similarity_to_draft"], 1.0)
+            self.assertTrue(done["approval"]["unchanged"])
+            with self.assertRaises(PermissionError):             # an approval cannot be overwritten
+                p.approve("C-7", "Someone Else", "s", "different text")
+            case2 = p.process(email("C-7b", "The app logged me out twice today."))
+            body2 = p.rehydrate("C-7b", case2["draft"]["body"])
+            edited = p.approve("C-7b", "Dana R.", "Re: your message", body2.replace("Customer Care", "Dana R., Customer Care"))
+            self.assertFalse(edited["approval"]["unchanged"])   # a one-line edit is never reported as unchanged
             self.assertTrue(p.audit.verify()["ok"])
 
     def test_tampering_breaks_the_chain(self):

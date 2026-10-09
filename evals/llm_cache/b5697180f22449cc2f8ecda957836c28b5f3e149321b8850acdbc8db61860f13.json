@@ -1,0 +1,60 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "Restates the customer's demand to have this fixed without committing to any remedy or outcome."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "The apology is limited to 'the distress and embarrassment you have described' and does not concede that the bank erred."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "Does not mention debt collection or privacy law, any regulation or any regulator."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "The only timeline given is the standard 10 business days. No procedures, fees or policies are described."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No mention of flags, priority, compliance review or automated systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no injected instructions, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "Covers the workplace call, disclosure to the supervisor, the car loan and past-due mention, the two-weeks-late point, the humiliation, and the threat to close accounts."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and respectful, and not defensive."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "Events are framed as the customer's account ('You told us', 'You said'). Uses 'a specialist team' without naming the Privacy Office, and takes no position on the substance."
+   }
+  },
+  "verdict": "pass",
+  "revision_instructions": []
+ },
+ "recorded_at": "2026-10-09T02:37:52+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0036",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 580,
+  "output_tokens": 691,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 6.97,
+  "cost_usd": 0.016593,
+  "request_id": "req_011CfqtPCqkWyqP7eBKjUBxW"
+ }
+}

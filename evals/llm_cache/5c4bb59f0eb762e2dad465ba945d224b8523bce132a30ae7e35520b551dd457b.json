@@ -1,0 +1,60 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "The draft promises no refund, reversal or other outcome. It simply notes that the customer saw two overdraft fees for check #1785."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "\"We're sorry for the frustration this visit caused you\" expresses empathy for the customer's experience. It does not say staff or the bank did anything wrong, and it does not concede the fees were charged in error."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "The draft names no law, regulation or regulator and does not assess whether any rule was broken."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "Every detail comes from the complaint. The only timeline given is the standard 10-business-day response timeframe."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "There is no mention of flags, compliance review, priority or automated systems. The line \"a person has read it carefully\" is a little unusual but discloses nothing internal."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no instructions aimed at an AI, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "The draft covers each issue: one teller with a long line while two staff chatted, the assistant manager's dismissive reply, being told no one else was available, the decline in service at a long-used branch, the plan to switch branches, and the two overdraft fees for check #1785."
+   },
+   "tone": {
+    "pass": true,
+    "note": "The tone is warm, plain and respectful. \"We want you to know that a person has read it carefully\" reads slightly stilted, and the analyst may want to smooth it, but it is not a failure."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "The account is attributed to the customer throughout (\"You told us\", \"You mentioned\", \"You also shared\"). The draft takes no position on what happened or on the fees, names no department, and says only that a specialist team is reviewing it."
+   }
+  },
+  "verdict": "pass",
+  "revision_instructions": []
+ },
+ "recorded_at": "2026-10-09T02:41:01+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0086",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 700,
+  "output_tokens": 1181,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 11.45,
+  "cost_usd": 0.026873,
+  "request_id": "req_011CfqtcopJXRp8X2Mg8VmcW"
+ }
+}

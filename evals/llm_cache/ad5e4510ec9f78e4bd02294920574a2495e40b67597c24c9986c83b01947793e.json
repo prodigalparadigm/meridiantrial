@@ -1,0 +1,58 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "Customer's vehicle was repossessed after admitted missed payments; customer needs personal items (work tools, child car seat) retrieved, as tools are needed for a new job starting 9/13. Storage lot info provided.",
+  "issues": [
+   "Vehicle repossessed",
+   "Personal items (work tools, child car seat) inside repossessed vehicle"
+  ],
+  "customer_requests": [
+   "Retrieve personal items from repossessed vehicle"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "cx vehicle repossessed, cx acknowledges behind on pmts"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": "cx acknowledges behind on pmts"
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "cx needs personal items from car (work tools, child car seat)"
+   },
+   "time_sensitive": {
+    "value": true,
+    "evidence": "cx starts new job 9/13 and needs tools"
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "calm",
+  "language": "en",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:37:42+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0038",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 115,
+  "output_tokens": 390,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.8,
+  "cost_usd": 0.008712,
+  "request_id": "req_011CfqtNjFpGKLY3T2bC6fhi"
+ }
+}

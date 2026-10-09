@@ -1,0 +1,30 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your complaint about the Lantern Hill branch",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for contacting us. We have received your complaint, and we understand how serious and upsetting this is, especially given what you have shared about your circumstances.\n\nYou told us that on Thursday, September 10, your ex-husband visited our Lantern Hill branch and that a teller told him your account balance and that you had just deposited your settlement check. You mentioned that you have been divorced since 2023, that he is not on your account, and that there is a protective order against him. You also told us he texted you about it about an hour later.\n\nYou asked how this could happen, and you want to know who gave him your information.\n\nA specialist team is reviewing your complaint and will respond to you within 10 business days.\n\nWe're very sorry to hear how worried and distressed you are, and we want you to know we are taking your concerns seriously. If you ever feel your safety is at immediate risk, please contact your local emergency services.\n\nKind regards,\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Customer reports a protective order against the ex-husband; consider whether urgent account-security or safety contact is needed before the 10-day response.",
+   "Confirm whether the closing line about emergency services is appropriate or should be replaced with approved wording.",
+   "Customer asks for the identity of the teller; decide what, if anything, can be disclosed.",
+   "Customer asks for an explanation of how the disclosure happened; no position taken in this draft.",
+   "Verify the date (Thursday, September 10) and branch against branch records.",
+   "Reply is acknowledgment only; no specialist team named, per mode."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:39:43+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0063",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 1232,
+  "output_tokens": 760,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 6.96,
+  "cost_usd": 0.020403,
+  "request_id": "req_011CfqtXPRU1ixA8uCDEQ567"
+ }
+}

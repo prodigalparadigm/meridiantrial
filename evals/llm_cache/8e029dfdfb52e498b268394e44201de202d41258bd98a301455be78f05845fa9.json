@@ -1,0 +1,60 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "Elderly customer (93) disputes a $2.00 paper statement fee charged without notice, does not use a computer, and asks for the fee to be refunded and not charged again.",
+  "issues": [
+   "Paper statement fee charged",
+   "No notice of new fee",
+   "Customer cannot use electronic statements"
+  ],
+  "customer_requests": [
+   "Refund the $2.00 fee",
+   "Stop charging the paper statement fee"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "under_100",
+    "evidence": "This month there is a charge of $2.00 that says PAPER STMT FEE."
+   },
+   "vulnerability_indicated": {
+    "value": true,
+    "evidence": "I am 93 years old"
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "Please take it off and do not charge it again."
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "calm",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:31:53+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0004",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 199,
+  "output_tokens": 351,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 2205,
+  "latency_s": 4.54,
+  "cost_usd": 0.018841,
+  "request_id": "req_011Cfqsw2UwACfEwkSiXtJbE"
+ }
+}

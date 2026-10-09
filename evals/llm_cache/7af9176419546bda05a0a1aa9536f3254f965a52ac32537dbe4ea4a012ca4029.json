@@ -1,0 +1,60 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer, a wheelchair user, reports the Depot Square branch accessible entrance has been blocked by a planter for months; on September 23 the manager refused help and told them to return with someone.",
+  "issues": [
+   "Accessible entrance blocked by planter for months",
+   "Branch manager refused assistance to wheelchair user",
+   "Unable to access branch"
+  ],
+  "customer_requests": [
+   "Clear the accessible entrance",
+   "Ability to enter the branch without a chaperone"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "I ended up doing my banking in the parking lot on my phone."
+   },
+   "vulnerability_indicated": {
+    "value": true,
+    "evidence": "I use a wheelchair."
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "The accessible entrance at the Depot Square branch has been blocked by a big planter for months"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:45:07+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0155",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 201,
+  "output_tokens": 380,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.71,
+  "cost_usd": 0.008856,
+  "request_id": "req_011CfqtwUrJj2A3syo5nQ8iy"
+ }
+}

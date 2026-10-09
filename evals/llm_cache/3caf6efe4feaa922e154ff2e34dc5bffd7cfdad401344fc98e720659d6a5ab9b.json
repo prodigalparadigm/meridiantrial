@@ -1,0 +1,58 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer saw an unrecognized charge, learned their child made the purchase, and is not disputing it. They suggest the app show which card (theirs or the child's) was used.",
+  "issues": [
+   "Merchant descriptor unclear, mistaken for fraud",
+   "App does not show which card was used for a transaction"
+  ],
+  "customer_requests": [
+   "Show in the app which card was used for each transaction"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "Not disputing it"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "calm",
+  "language": "English",
+  "is_complaint": false,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:41:37+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0103",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 133,
+  "output_tokens": 301,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.56,
+  "cost_usd": 0.007004,
+  "request_id": "req_011Cfqtg4STEpEF1peQuYaeh"
+ }
+}

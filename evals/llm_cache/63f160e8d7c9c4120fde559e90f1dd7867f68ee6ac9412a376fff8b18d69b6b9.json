@@ -1,0 +1,63 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "Acknowledges the requests to stop calls and to send written confirmation ('We have noted both requests') without promising either."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "'We're sorry for the stress and disruption you've described' expresses sympathy and is tied to the customer's account. It does not concede that the bank erred."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": false,
+    "note": "Two details are not in the note. 'The calls continued after that' is not stated; the note only says the customer told the collector on 9/14 they would pay on the 15th. 'One came at 7am on a Sunday' adds a count; the note says only 'sun 7am'."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No mention of flags, compliance, priority or automated systems. The rep's internal account note is not disclosed."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The note contains no instructions aimed at an AI, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "Covers the call volume, the after-9pm and Sunday 7am calls, the payment commitment, the newborn being woken, the request to stop calls, and the request for written confirmation."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and specific, without sounding defensive or scripted."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "Events are framed as the customer's account ('As you told us', 'You mentioned'). The draft says a specialist team is reviewing without naming a department, and takes no position on the substance."
+   }
+  },
+  "verdict": "revise",
+  "revision_instructions": [
+   "In the third bullet, remove 'and the calls continued after that'. Restate only what the note records, e.g. 'You mentioned that on 14 September you told the collector you would make a payment on the 15th.'",
+   "In the second bullet, replace 'one came at 7am on a Sunday' with wording that does not set a count, e.g. 'and you have received a call as early as 7am on a Sunday.'"
+  ]
+ },
+ "recorded_at": "2026-10-09T02:42:33+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0111",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 593,
+  "output_tokens": 1386,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 13.31,
+  "cost_usd": 0.030545,
+  "request_id": "req_011CfqtjR9iypHXVzLkLXmoC"
+ }
+}

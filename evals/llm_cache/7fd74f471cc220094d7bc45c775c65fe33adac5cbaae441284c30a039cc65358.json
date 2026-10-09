@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer questions the $1,000 daily Zelle limit, which forced splitting a contractor payment over three days, and asks whether the limit can be raised.",
+  "issues": [
+   "Daily Zelle transfer limit of $1,000 considered too low",
+   "Contractor payment had to be split over three days"
+  ],
+  "customer_requests": [
+   "Raise Zelle daily limit",
+   "Explanation of why the limit is $1,000"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "Why is the Zelle limit $1,000 a day?"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": "had to split it over three days"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:42:45+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0118",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 101,
+  "output_tokens": 333,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.4,
+  "cost_usd": 0.007516,
+  "request_id": "req_011Cfqtm39hk8tyYeiT6rPKU"
+ }
+}

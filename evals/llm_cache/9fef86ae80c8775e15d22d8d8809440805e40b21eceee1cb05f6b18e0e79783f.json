@@ -1,0 +1,30 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We have received your complaint about the $312.45 charge on your debit card",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for speaking with us about the charge on your debit card. We have received your complaint, and we want to confirm what you told us.\n\nYou told us that a transaction of $312.45 to SP * LUXEWATCHOUTLET appeared on your debit card on 9/13 and that you did not authorize it. You mentioned that the card was in your possession at the time. During your call, the card was closed, a replacement was ordered, and a claim was filed.\n\nYou also told us that you emailed us about this on 9/17 and did not receive a reply. We understand how frustrating it is to reach out and not hear back, especially about an unexpected charge on your account.\n\nA specialist team is now reviewing your complaint and will respond to you within 10 business days. If you have any further information you would like us to consider, please reply to this message.\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "The call note says the representative told the customer to expect a provisional credit within 10 business days. Decide whether to confirm this, since the draft deliberately does not mention it.",
+   "Check whether the customer's 9/17 email was received, and decide how to address the reported lack of response.",
+   "Confirm the status of the claim that was filed on the call. The claim number has been left out of the draft.",
+   "Confirm that the replacement card was issued, before keeping that statement in the reply.",
+   "Intake lists a refund request, but the call note does not record the customer asking for one. The draft does not mention a refund or any outcome.",
+   "Check that the 10-business-day response timeframe fits alongside the provisional credit timeframe the representative quoted, so the customer is not confused."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:42:23+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0104",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 1202,
+  "output_tokens": 845,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 11.27,
+  "cost_usd": 0.021983,
+  "request_id": "req_011CfqtiryUK7TtUWH5rZF2K"
+ }
+}

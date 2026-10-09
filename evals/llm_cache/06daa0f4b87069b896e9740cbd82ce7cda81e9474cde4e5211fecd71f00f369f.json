@@ -1,0 +1,62 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "Nothing promises or implies a release of funds, a shorter hold or any other outcome."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "The apology covers only the customer's frustration and does not concede that the hold or the missed reply was an error."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "No hold policies, check-clearing procedures or timelines are described beyond the standard 10-business-day response window."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No flags, compliance review, priority or automated systems are mentioned."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no AI-directed instructions, and the draft does nothing unusual."
+   },
+   "addresses_each_issue": {
+    "pass": false,
+    "note": "The draft covers the hold, the amount and dates, the customer's confidence in the check, feeling treated like a kiter, and the unanswered September 9 secure message. However, it says the customer asked us to 'release the funds'. The customer only asked why the check is being held, so this misstates their request."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and respectful, and it acknowledges their long relationship with the bank without sounding defensive."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "Events are framed as the customer's account, no position is taken on whether the hold is appropriate, and no department is named."
+   }
+  },
+  "verdict": "revise",
+  "revision_instructions": [
+   "In the sentence 'You have asked us to explain why the check is being held and to release the funds,' delete 'and to release the funds.' The customer asked why the check is being held, not for the funds to be released. For example: 'You have asked us to explain why the check is being held.'"
+  ]
+ },
+ "recorded_at": "2026-10-09T02:39:39+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0064",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 520,
+  "output_tokens": 1076,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 10.99,
+  "cost_usd": 0.024053,
+  "request_id": "req_011CfqtWp6VTX5K6YK5L9kPP"
+ }
+}

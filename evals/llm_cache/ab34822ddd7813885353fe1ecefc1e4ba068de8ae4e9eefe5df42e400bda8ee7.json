@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer has a credit card charged off in 2023 and wants to settle the debt; asks whom to contact and requests written settlement terms before paying.",
+  "issues": [
+   "Charged-off credit card debt settlement inquiry",
+   "Unclear contact point for settlement"
+  ],
+  "customer_requests": [
+   "Contact information for settling charged-off account",
+   "Written settlement agreement before payment"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "unknown",
+    "evidence": "My old credit card with you was charged off in 2023."
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": "I'm in a better place now"
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "calm",
+  "language": "English",
+  "is_complaint": false,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:32:56+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0007",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 92,
+  "output_tokens": 319,
+  "cache_read_tokens": 2205,
+  "cache_write_tokens": 0,
+  "latency_s": 3.49,
+  "cost_usd": 0.007189,
+  "request_id": "req_011Cfqt1eQXBSmEKecgkSTC7"
+ }
+}

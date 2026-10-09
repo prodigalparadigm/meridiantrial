@@ -1,0 +1,39 @@
+{
+ "agent": "regulatory_screener",
+ "model": "claude-opus-5-5",
+ "output": {
+  "potential_regulatory": true,
+  "categories": [
+   {
+    "id": "servicing_error",
+    "evidence": "applied as a principal-only payment instead of my regular monthly payment",
+    "why": "The customer says their auto loan payment was misapplied, which put the account past due."
+   },
+   {
+    "id": "fee_practices",
+    "evidence": "I got a $25 late fee",
+    "why": "The customer was charged a late fee that resulted from the bank's alleged misapplication of the payment."
+   },
+   {
+    "id": "credit_reporting",
+    "evidence": "it's showing as 30 days late on my credit report",
+    "why": "The bank may have reported an inaccurate late payment to the credit bureaus, since the customer says the payment was made on time."
+   }
+  ],
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:38:07+00:00",
+ "usage": {
+  "agent": "regulatory_screener",
+  "case_id": "C-0046",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 197,
+  "output_tokens": 232,
+  "cache_read_tokens": 1823,
+  "cache_write_tokens": 0,
+  "latency_s": 2.44,
+  "cost_usd": 0.005793,
+  "request_id": "req_011CfqtQbur7FRYGudyBwFjp"
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer closed a savings account on Aug 17; the $846.10 cashier's check was issued in the wrong name and cannot be deposited. The branch says research is needed before reissuing.",
+  "issues": [
+   "Closing cashier's check issued with incorrect payee name",
+   "Check cannot be deposited at other bank",
+   "Delay in reissuing check pending branch research"
+  ],
+  "customer_requests": [
+   "Reissue the cashier's check with the correct name"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "100_to_1000",
+    "evidence": "The cashier's check for the balance ($846.10)"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "My other bank won't take it with the wrong name on it. The branch says they have to \"research\" it before they can reissue."
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": true,
+    "evidence": "The branch says they have to \"research\" it before they can reissue."
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:37:09+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0030",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 239,
+  "output_tokens": 395,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.83,
+  "cost_usd": 0.009308,
+  "request_id": "req_011CfqtLHbun5r7AVLzyoWSS"
+ }
+}

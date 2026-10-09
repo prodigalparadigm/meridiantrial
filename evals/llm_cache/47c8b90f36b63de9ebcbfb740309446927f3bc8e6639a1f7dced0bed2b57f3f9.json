@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer needs a 10-day auto loan payoff letter for a trade-in; requested online Sept 1 and by phone Sept 6 without receiving it. Dealer deadline is September 11.",
+  "issues": [
+   "Payoff letter not provided after multiple requests",
+   "Risk of losing vehicle trade-in deal"
+  ],
+  "customer_requests": [
+   "Provide 10-day payoff letter for auto loan",
+   "Email letter to customer or send directly to dealer"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "I need a 10-day payoff letter for my auto loan (loan # \u27e6ACCOUNT_1\u27e7)"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": true,
+    "evidence": "The dealer needs it by September 11 or the deal falls apart."
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": true,
+    "evidence": "I requested it online on Sept 1 and again by phone on Sept 6."
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:37:57+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0041",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 162,
+  "output_tokens": 408,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 4.85,
+  "cost_usd": 0.00926,
+  "request_id": "req_011CfqtPjCsGPwTMXFRTDNiV"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your request about the August service charge",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for getting in touch, and thank you for 31 years of banking with us. That is a long relationship, and we don't take it for granted.\n\nWe've received your message. You told us your balance dipped below the minimum in August after you moved money out to cover a car repair and forgot to move it back, and that a $12 service charge followed. You were clear that you aren't disputing the charge itself. You're asking whether we could waive it this one time, given how long you've been with us.\n\nYour request is now with a specialist team, who will review it and respond to you within 10 business days. We can't say what the outcome will be until they have looked at it, but we wanted you to know your message reached a person and is being considered.\n\nWe hope the car repair went smoothly. If you'd like to add anything in the meantime, please let us know.\n\nKind regards,\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "This is a goodwill request, not a dispute: the customer accepts the charge was valid under the rules.",
+   "Decide whether to grant the one-time $12 courtesy waiver.",
+   "Verify the customer's stated 31-year tenure.",
+   "Confirm the amount and date of the August service charge.",
+   "Check for prior waivers or other minimum-balance charges that may affect the decision.",
+   "Intake set ACKNOWLEDGE ONLY for a simple request; consider whether a direct answer would serve the customer better."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:44:44+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0145",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 314,
+  "output_tokens": 1061,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 10.34,
+  "cost_usd": 0.022751,
+  "request_id": "req_011CfqtuJg4zfCwrCyvSbiwU"
+ }
+}

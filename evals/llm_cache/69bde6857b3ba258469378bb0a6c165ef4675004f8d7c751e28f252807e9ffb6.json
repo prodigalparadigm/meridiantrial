@@ -1,0 +1,58 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer's debit card was locked after three incorrect PIN attempts at an ATM. The representative reset the attempts and a new PIN was set; the customer was unhappy needing to call.",
+  "issues": [
+   "Debit card locked after wrong PIN attempts",
+   "Unable to reset PIN at ATM; had to call"
+  ],
+  "customer_requests": [
+   "Ability to reset PIN at ATM in future"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "CX LOCKED OUT OF DEBIT CARD AFTER 3 WRONG PIN ATTEMPTS AT ATM"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": "RESET PIN ATTEMPTS, CX SET NEW PIN AT IVR"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:43:58+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0134",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 190,
+  "output_tokens": 382,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.55,
+  "cost_usd": 0.008852,
+  "request_id": "req_011CfqtrQFMD5LDgQUTFv7SR"
+ }
+}

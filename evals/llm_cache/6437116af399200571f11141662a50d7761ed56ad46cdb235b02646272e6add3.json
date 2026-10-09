@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "digital_banking",
+  "secondary": "none",
+  "rationale": "The customer reports that the mobile app and website have been down since morning, which blocks them from sending a time-sensitive rent payment through bill pay. Outages and bill pay both fall under Digital Banking, and no other team's issue is raised.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:41:25+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0100",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 101,
+  "output_tokens": 118,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.02,
+  "cost_usd": 0.003072,
+  "request_id": "req_011CfqtfFYuYDyXHupT7Ksv8"
+ }
+}

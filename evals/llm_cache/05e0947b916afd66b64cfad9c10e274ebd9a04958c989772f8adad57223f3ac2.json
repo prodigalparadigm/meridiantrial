@@ -1,0 +1,58 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer attempted a $500 savings-to-checking transfer in the app four times and received an error each time; no funds moved. The customer used an ATM instead and asks for the app to be fixed.",
+  "issues": [
+   "Mobile app transfer failing with generic error",
+   "Unable to move funds between own accounts online"
+  ],
+  "customer_requests": [
+   "Fix the app"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "Nothing moved, which I guess is good"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": "I ended up driving to an ATM at 11pm"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:44:13+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0139",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 118,
+  "output_tokens": 319,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.28,
+  "cost_usd": 0.007304,
+  "request_id": "req_011CfqtsYCrmEVa2NiEcF9t3"
+ }
+}

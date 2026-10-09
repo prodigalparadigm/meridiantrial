@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "branch_contact_center",
+  "secondary": "none",
+  "rationale": "Complaint is about branch upkeep and supplies (broken pen, no deposit slips) at the Quarry Rd branch, a service-quality issue owned by Branch & Contact Center. The threat to close accounts is an expression of frustration, not a separate account-closing request needing Deposit Operations.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:44:02+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0136",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 179,
+  "output_tokens": 142,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.65,
+  "cost_usd": 0.003864,
+  "request_id": "req_011CfqtrmkAZssjyVDBiQHDz"
+ }
+}

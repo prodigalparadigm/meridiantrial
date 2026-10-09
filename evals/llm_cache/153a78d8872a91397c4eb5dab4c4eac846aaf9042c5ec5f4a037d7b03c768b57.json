@@ -1,0 +1,30 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your complaint about your low-balance alerts",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for writing to us, and we're sorry for the frustration this has caused.\n\nWe have received your complaint. You told us that the low-balance alerts you had set at $100 for years stopped arriving sometime in August, by both text and push notification. You mentioned that your settings still show the alerts as on, and that you reinstalled the app and toggled notifications off and on on your iPhone 14, but the alerts haven't returned. You asked for someone to look into the problem, and you'd like the alerts working again before the holidays.\n\nYou also told us that because you didn't receive an alert, your account went negative on 9/20 and you were charged a $34 overdraft fee. You've asked for that fee to be removed.\n\nA specialist team is reviewing your complaint, and we will respond within 10 business days.\n\nThank you for describing the troubleshooting you've already tried; it's helpful to have those details.\n\nKind regards,\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Check the alert configuration and text/push delivery records for this customer from August onward.",
+   "Confirm whether a wider alert delivery problem affected other customers in that period.",
+   "Verify the 9/20 negative balance and the $34 overdraft fee on the account.",
+   "Decide whether to reverse the $34 overdraft fee; the customer links it to the missed alert.",
+   "The customer gave a cell number in the complaint; confirm the preferred contact method before replying.",
+   "The customer hopes the alerts will be fixed before the holidays; consider whether a fix timeline can be shared in the final response."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:44:46+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0144",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 501,
+  "output_tokens": 1253,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 12.54,
+  "cost_usd": 0.027339,
+  "request_id": "req_011CfqtuLmq8fgnxc2T6Boh3"
+ }
+}

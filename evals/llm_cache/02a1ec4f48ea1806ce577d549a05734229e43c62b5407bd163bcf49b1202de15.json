@@ -1,0 +1,31 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your complaint about your savings rate",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for contacting us about your savings account. We have received your complaint, and we want you to know it has been read carefully.\n\nYou told us you moved $10,000 from another bank because of a 4.25% savings promotion, and that you still have the postcard advertising it. You mentioned that when you opened your account on 7/28/2026, nobody told you about any catch, yet you are being paid 0.40%. You estimate the difference at roughly $215 over the promotional period, and you said this looks like bait and switch to you. We understand you expected to earn the rate you saw advertised.\n\nWe're sorry for the frustration this has caused, especially after you went to the effort of moving your savings to us.\n\nA specialist team is now reviewing your complaint, and we will respond within 10 business days.\n\nThank you for your patience while we look into this.\n\nKind regards,\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Confirm the terms, eligibility conditions and dates of the 4.25% savings promotion on the postcard.",
+   "Check whether the account opened on 7/28/2026 qualified for the promotion and what rate has been applied since opening.",
+   "Check what promotional terms or disclosures the customer received at account opening.",
+   "Verify the customer's estimate of a roughly $215 difference over the promo period.",
+   "Decide whether the customer should receive the 4.25% rate or any other remedy.",
+   "Consider asking the customer for a copy or photo of the postcard.",
+   "The customer alleges bait and switch (misleading advertising); handle according to the specialist review."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:37:28+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0033",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 369,
+  "output_tokens": 1180,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 12.0,
+  "cost_usd": 0.025351,
+  "request_id": "req_011CfqtM5pmK6p4C9VcFHkxC"
+ }
+}

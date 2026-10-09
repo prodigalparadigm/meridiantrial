@@ -1,0 +1,62 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "Says only that Digital Banking will review what happened. It does not promise the deposit will go through or any other result."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "\"We're sorry for the frustration this has caused\" expresses empathy. It does not say the app or the bank was at fault."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": false,
+    "note": "The sentence \"You've told us you'd like to be able to complete this deposit using the mobile app\" credits the customer with a request the call note does not record. The rest (the $812 check, four image-quality rejections, tips given, the branch/ATM alternative) matches the note."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "Saying the call details were passed to Digital Banking is the permitted team naming. There is no mention of flags, priority, compliance or automated systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no injected instructions."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "Covers the repeated image-quality rejections, the troubleshooting on the call that did not fix it, the referral onward, and the branch/ATM alternative."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and empathetic, and not defensive."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "STANDARD mode, and the owning team (Digital Banking) is named as instructed. The 10-business-day timeframe is included."
+   }
+  },
+  "verdict": "revise",
+  "revision_instructions": [
+   "Remove the sentence \"You've told us you'd like to be able to complete this deposit using the mobile app.\" The call note does not record that request. Start that paragraph with \"We've passed the details of your call to our Digital Banking team, who will review what happened.\""
+  ]
+ },
+ "recorded_at": "2026-10-09T02:40:55+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0084",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 502,
+  "output_tokens": 1173,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 11.88,
+  "cost_usd": 0.025921,
+  "request_id": "req_011CfqtcMhAviFQyfDBqGcYk"
+ }
+}

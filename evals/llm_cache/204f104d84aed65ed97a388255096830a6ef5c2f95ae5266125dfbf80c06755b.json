@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "fraud_disputes",
+  "secondary": "digital_banking",
+  "rationale": "This is an account takeover: the customer's email address was changed without their knowledge and $7,925.50 was transferred out without authorization. Account takeover, unauthorized transfers and identity theft belong to Fraud & Disputes. The customer is also still locked out of online banking, and restoring that access is a separate problem for Digital Banking. The bank's slow response and the threat to leave are secondary to both.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:37:33+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0037",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 251,
+  "output_tokens": 177,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 3.51,
+  "cost_usd": 0.004852,
+  "request_id": "req_011CfqtN4h5VhzdxbWGrhNyX"
+ }
+}

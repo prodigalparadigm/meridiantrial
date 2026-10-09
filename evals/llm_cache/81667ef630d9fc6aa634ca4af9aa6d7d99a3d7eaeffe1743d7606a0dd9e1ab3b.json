@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Thank you for your kind words about our card team",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for taking the time to write to us. We were so pleased to read your message.\n\nYou told us that your wallet was stolen at the county fair on September 9, and that the colleague on our card team you mentioned had your cards locked and replacements on the way in about ten minutes. You also mentioned that they called you back the next day to check that nothing had gone through, and that it was the best customer service call you've had in years.\n\nWe're sorry to hear your wallet was stolen. That's a stressful thing to go through, especially on what should have been a fun day out. We're glad the call helped make a difficult day a little easier.\n\nMessages like yours mean a great deal to our team, and we appreciate you taking the time to share this. A specialist team is reviewing your message, and we will respond within 10 business days.\n\nIf anything else comes up with your cards or your replacements, please don't hesitate to get in touch.\n\nWith thanks again,\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "This is a compliment, not a complaint, but the mode is ACKNOWLEDGE ONLY. Confirm the specialist-review line and 10-business-day timeframe are appropriate for this message.",
+   "The staff member's name is withheld from the draft. Add it if you want the reply to thank them by name.",
+   "The reply does not commit to passing the thanks along. Add that commitment if the feedback will be shared with the staff member or their manager.",
+   "The reply does not confirm whether any unauthorized transactions occurred. Check the account if you want to address this.",
+   "Check that the replacement cards were issued and received, and that no fraud follow-up is outstanding from the September 9 theft."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:42:41+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0109",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 1211,
+  "output_tokens": 969,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 8.16,
+  "cost_usd": 0.024499,
+  "request_id": "req_011CfqtkSb53ktyqR1XEsVf8"
+ }
+}

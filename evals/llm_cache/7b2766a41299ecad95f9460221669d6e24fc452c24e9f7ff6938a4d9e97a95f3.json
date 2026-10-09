@@ -1,0 +1,63 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer reports account takeover: email changed without authorization, $7,925.50 transferred to an unknown account. The customer is now locked out with no timeline for access restoration or refund.",
+  "issues": [
+   "Unauthorized access to online banking",
+   "Unauthorized email address change",
+   "Unauthorized transfer of $7,925.50",
+   "Locked out of account",
+   "No timeline for access or reimbursement"
+  ],
+  "customer_requests": [
+   "Restore account access",
+   "Refund stolen funds",
+   "Response this week"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "over_1000",
+    "evidence": "$7,925.50 had been transferred out to an account I've never heard of"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "Now I'm locked out and nobody can tell me when I'll get access back or when I'll get my money back."
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": true,
+    "evidence": "If I don't hear back this week I'm moving my accounts to the credit union down the street."
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "distressed",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:37:35+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0037",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 251,
+  "output_tokens": 414,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 5.35,
+  "cost_usd": 0.009736,
+  "request_id": "req_011CfqtN4gbJ8h55PHYYsAfo"
+ }
+}

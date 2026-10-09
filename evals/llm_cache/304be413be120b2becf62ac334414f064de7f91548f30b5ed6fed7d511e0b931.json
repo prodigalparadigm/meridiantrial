@@ -1,0 +1,62 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer's $412.37 auto loan payment on August 21 was applied as principal-only, causing past-due status, a $25 late fee, collection calls, and a 30-day late credit report entry during a home refinance.",
+  "issues": [
+   "Payment misapplied as principal-only",
+   "$25 late fee charged",
+   "Past-due notices and calls",
+   "30-day late reported to credit bureau",
+   "Credit score drop affecting refinance"
+  ],
+  "customer_requests": [
+   "Reapply payment as regular monthly payment",
+   "Remove late fee"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "100_to_1000",
+    "evidence": "My auto loan payment of $412.37 on August 21st was applied as a principal-only payment"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "I'm getting notices and calls"
+   },
+   "time_sensitive": {
+    "value": true,
+    "evidence": "right when I'm trying to refinance my house"
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:38:08+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0046",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 197,
+  "output_tokens": 401,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 4.25,
+  "cost_usd": 0.00926,
+  "request_id": "req_011CfqtQbwqgefiWY2wGF7gV"
+ }
+}

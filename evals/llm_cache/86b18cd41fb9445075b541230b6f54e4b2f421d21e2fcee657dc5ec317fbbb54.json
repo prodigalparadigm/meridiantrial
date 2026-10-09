@@ -1,0 +1,61 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer's mortgage closing is set for 10/9 with rate lock expiring 10/4/2026; loan officer unresponsive for a week and underwriting repeatedly requests documents already uploaded. $15,000 deposit at risk.",
+  "issues": [
+   "Loan officer unresponsive for a week",
+   "Underwriting repeatedly requesting same documents",
+   "Rate lock expiring before closing",
+   "Risk of losing deposit if closing missed"
+  ],
+  "customer_requests": [
+   "Assistance completing underwriting before closing",
+   "Contact from responsive bank staff"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "over_1000",
+    "evidence": "If we miss the closing date we lose our $15,000 deposit."
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "hasn't returned a call or email in a week, underwriting keeps asking for the same documents"
+   },
+   "time_sensitive": {
+    "value": true,
+    "evidence": "We're supposed to close on our first house on 10/9."
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": true,
+    "evidence": "I've uploaded our tax returns three times now"
+   }
+  },
+  "sentiment": "distressed",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:45:35+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0163",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 227,
+  "output_tokens": 439,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 4.39,
+  "cost_usd": 0.01014,
+  "request_id": "req_011CfqtyW3ZBfmpa86FrpGDH"
+ }
+}

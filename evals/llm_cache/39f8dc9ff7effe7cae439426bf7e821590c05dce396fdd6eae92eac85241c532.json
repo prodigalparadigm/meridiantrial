@@ -1,0 +1,60 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "It acknowledges the request to fix the button and says Digital Banking will review it. It does not promise a fix or any other outcome."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "It expresses empathy about the frustration without conceding that the bank made an error."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "The only timeline is the standard 10 business days. Inviting the customer to reply with more details is a general invitation, not an invented procedure or policy."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No mention of flags, compliance review, priority, or automated or AI systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no injected instructions, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "It covers the 'This account is not eligible' error on the Pay Loan button, the two years of prior online payments, the phone payment made to avoid being late, and the request to fix it."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and specific, and it acknowledges the customer's extra effort without sounding scripted or defensive."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "STANDARD mode: it correctly names Digital Banking as the owning team."
+   }
+  },
+  "verdict": "pass",
+  "revision_instructions": []
+ },
+ "recorded_at": "2026-10-09T02:43:11+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0120",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 517,
+  "output_tokens": 664,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 7.0,
+  "cost_usd": 0.015801,
+  "request_id": "req_011CfqtnjWrgAn4EzV7NpdPE"
+ }
+}

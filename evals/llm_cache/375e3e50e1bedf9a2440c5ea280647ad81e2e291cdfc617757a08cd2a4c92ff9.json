@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your complaint about fees on your checking account",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for contacting us about the fees on your checking account. We have received your complaint, and we want to confirm what you've told us.\n\nYou mentioned that on 9/8 your $425 Bellwether Insurance autopay came through when your balance was short, and that you were charged a $34 fee, which you said you accept. You told us the same payment was then returned and presented again on September 10th, and that you were charged a second $34 fee for it, bringing the total to $68 for a single payment. You've asked us to refund what you see as the duplicate fee.\n\nWe understand how frustrating it is to see two charges connected to one payment, and we appreciate you setting out the dates and amounts so clearly. It makes your concern easy to follow.\n\nA specialist team is now reviewing your complaint and will respond to you within 10 business days.\n\nKind regards,\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Acknowledge-only reply: no position taken on whether the second $34 fee was correctly charged.",
+   "Confirm the dates and amounts of both $34 fees and both presentments of the $425 Bellwether Insurance payment against the account history.",
+   "Decide whether a fee on a re-presented item is permitted under the account terms that apply to this customer.",
+   "Decide on the customer's request to refund the second $34 fee; the draft does not promise one.",
+   "Customer accepts the first 9/8 fee; only the September 10th fee is disputed."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:40:06+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0074",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 367,
+  "output_tokens": 964,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 9.68,
+  "cost_usd": 0.021023,
+  "request_id": "req_011CfqtYqnW6MoxybM61Zb74"
+ }
+}

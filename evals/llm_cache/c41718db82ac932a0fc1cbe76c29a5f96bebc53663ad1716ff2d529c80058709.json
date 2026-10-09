@@ -1,0 +1,58 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer reports Coastline Auto Body charged their credit card twice ($1,260.00 each) on August 27; merchant sees only one charge and referred the customer to the bank. Requests duplicate removal.",
+  "issues": [
+   "Duplicate credit card charge",
+   "Merchant unable to resolve, referred to bank"
+  ],
+  "customer_requests": [
+   "Remove the duplicate $1,260.00 charge"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "over_1000",
+    "evidence": "two charges of $1,260.00 a few minutes apart"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "Please remove the duplicate."
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "calm",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:35:26+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0002",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 136,
+  "output_tokens": 336,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 2259,
+  "latency_s": 4.33,
+  "cost_usd": 0.018559,
+  "request_id": "req_011CfqtCjnnXuLenMGPTNK9u"
+ }
+}

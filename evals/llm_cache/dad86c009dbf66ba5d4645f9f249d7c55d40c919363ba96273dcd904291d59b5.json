@@ -1,0 +1,57 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer reports receiving a phishing text impersonating the bank with a fake login link. The customer did not click it and reports no money missing.",
+  "issues": [
+   "Phishing text message impersonating the bank"
+  ],
+  "customer_requests": [
+   "Bank to be aware of impersonation attempts"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "No money missing that I can see."
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "calm",
+  "language": "English",
+  "is_complaint": false,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:40:37+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0087",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 157,
+  "output_tokens": 272,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 2.64,
+  "cost_usd": 0.00652,
+  "request_id": "req_011Cfqtbh4DQH3EgDPnMgQd1"
+ }
+}

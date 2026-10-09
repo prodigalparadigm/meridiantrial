@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer requested a 10-day auto loan payoff letter for the third time; dealer needs it by 9/8. Representative generated and emailed the letter; dealer copy requires signed third-party authorization.",
+  "issues": [
+   "Payoff letter not provided after prior requests",
+   "Dealer copy requires third-party authorization"
+  ],
+  "customer_requests": [
+   "10-day payoff letter for auto loan",
+   "Send copy of payoff letter to dealer"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": ""
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": true,
+    "evidence": "dealer \u27e6NAME_1\u27e7 Point Motors needs by 9/8"
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": true,
+    "evidence": "this is 3rd request (online 8/27, phone 8/31)"
+   }
+  },
+  "sentiment": "calm",
+  "language": "en",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:36:30+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0021",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 168,
+  "output_tokens": 366,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 6.43,
+  "cost_usd": 0.008444,
+  "request_id": "req_011CfqtHADaVVMzbZ4a3VDpL"
+ }
+}

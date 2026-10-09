@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We have received your feedback about your recent call",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for taking the time to share your experience with us. We want to confirm that we have received your complaint about your recent call.\n\nYou told us you were upset about how long you waited on hold before you could speak with someone. You also mentioned that you had called with a question about your escrow balance, and that this question was resolved once you reached a representative.\n\nWe understand how frustrating it can be to spend a long time waiting when you simply need an answer, and we're sorry for the frustration this experience caused you. Your feedback matters to us, and we appreciate you letting us know how the wait affected you.\n\nA specialist team is now reviewing your complaint, and we will respond to you within 10 business days. If there is anything else you would like us to know in the meantime, please feel free to reply to this message.\n\nThank you again for bringing this to our attention.\n\nKind regards,\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "The hold duration in the call note is partly redacted (\"112 \u27e6NAME_1\u27e7\"); confirm the actual wait time from call records before referencing it.",
+   "Draft does not state the wait length; add it if appropriate once verified.",
+   "Confirm the escrow balance question was fully resolved, as the note indicates.",
+   "Customer made no specific request; decide whether any further response or gesture is warranted.",
+   "Check the date and time of the call to review queue conditions if needed."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:43:43+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0130",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 283,
+  "output_tokens": 713,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 8.63,
+  "cost_usd": 0.015667,
+  "request_id": "req_011CfqtpxoNRcJnEX2NcZcL4"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your feedback about the online banking redesign",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for taking the time to contact us about online banking. We have received your complaint.\n\nYou told us that the redesign has made paying a bill much harder, and that what used to take one tap now takes five. You mentioned that you feel the change is a way to push customers into the branch. You also asked who tested the new design and whether anyone over 40 tried it before it was launched.\n\nWe understand how frustrating it is when something you rely on regularly suddenly takes more effort, and we're sorry for the frustration this has caused.\n\nA specialist team is now reviewing your complaint, including the questions you raised about how the redesign was tested. We will respond to you within 10 business days.\n\nThank you again for sharing your experience with us.\n\nKind regards,\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Customer did not request a specific remedy; confirm whether any follow-up beyond a response is expected.",
+   "Customer questions whether usability testing was done and asks who tested it; decide what, if anything, can be shared about testing.",
+   "Customer's 'over 40' remark may signal an age or accessibility concern; consider whether accessibility support or alternatives should be offered.",
+   "Customer alleges the redesign is intended to push customers into branches; the reply restates this as their view only and takes no position.",
+   "Confirm whether the bill payment steps described (one tap previously, five now) match the current app before the substantive reply."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:39:19+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0057",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 994,
+  "output_tokens": 695,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 6.53,
+  "cost_usd": 0.018151,
+  "request_id": "req_011CfqtVcgcwx8FqWYBv4bb5"
+ }
+}

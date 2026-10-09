@@ -1,0 +1,60 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer disputes four overdraft fees totaling $136 from 9/18, stating a $612.88 debit posted before four earlier smaller debit card purchases, maximizing fees. Customer has consulted an attorney; escalated to supervisor.",
+  "issues": [
+   "Four overdraft fees charged on 9/18",
+   "Transaction posting order (large debit posted before earlier small purchases)",
+   "Customer believes posting order is designed to maximize fees"
+  ],
+  "customer_requests": [
+   "Refund of the four overdraft fees totaling $136",
+   "Review of transaction posting order"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "100_to_1000",
+    "evidence": "total fees $136"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "cx disputing 4 od fees from 9/18"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": true,
+    "evidence": "cx mentioned atty, says already spoke to one"
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:43:04+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0122",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 180,
+  "output_tokens": 403,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 4.73,
+  "cost_usd": 0.009232,
+  "request_id": "req_011CfqtnLVGkrx88Rb1Zctd7"
+ }
+}

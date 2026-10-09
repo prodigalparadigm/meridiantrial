@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "digital_banking",
+  "secondary": "none",
+  "rationale": "This is a feature request for the mobile app (a dark mode and a balance widget), not a complaint about an error. The mobile app experience is owned by Digital Banking. There is no second issue that would need another team.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:41:54+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0106",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 80,
+  "output_tokens": 107,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.02,
+  "cost_usd": 0.002768,
+  "request_id": "req_011CfqthPHJKLVWsEy2Ld2Vq"
+ }
+}

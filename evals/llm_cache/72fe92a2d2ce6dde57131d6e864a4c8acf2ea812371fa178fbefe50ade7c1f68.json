@@ -1,0 +1,30 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your recent visit to our Lantern Hill branch",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for taking the time to tell us about your visit to our Lantern Hill branch, and thank you for your 30 years as a customer of Meridian Harbor Bank.\n\nYou told us that when you asked a simple question about a cashier's check, a member of staff rolled their eyes and told you \"it's on the website.\" You mentioned that you found this rude, and that you would like somebody to have a word about how you were treated. We're sorry for the frustration this experience has caused, and we understand why it left you feeling let down after such a long relationship with us.\n\nYour complaint has been passed to our Branch & Contact Center team, who will review what you've described, including your request that the staff member's behavior be addressed. We will respond to you within 10 business days.\n\nIf your question about the cashier's check is still unanswered, you're welcome to reply with it, and we'll make sure it is passed along with your complaint.\n\nKind regards,\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "The complaint names the staff member (\u27e6NAME_1\u27e7). The draft deliberately says only 'a member of staff'.",
+   "Decide what, if anything, to tell the customer about follow-up with the staff member, given staff confidentiality.",
+   "The customer's original cashier's check question was not answered. Consider answering it directly in the reply.",
+   "The customer reports 30 years as a customer. Verify tenure if you plan to reference it beyond acknowledgement.",
+   "The customer selected the topic 'Other'. Confirm the complaint is categorized as staff conduct.",
+   "No date or time of the visit was given beyond 'today'. Check the submission date if the branch needs to identify the interaction."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:44:51+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0146",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 319,
+  "output_tokens": 1260,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 12.17,
+  "cost_usd": 0.026751,
+  "request_id": "req_011CfqtuimRA8maNZDR3sSkH"
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your complaint about your Riverside Dr branch visit",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for contacting us and for taking the time to explain what happened during your visit to our Riverside Dr branch. We have received your complaint, and we want to be sure we have understood each of your concerns.\n\nYou told us that a teller was rude to you and refused to cash your check without a second form of ID. You mentioned that you waited about 45 minutes with only one teller window open, and that when you asked to speak with a manager, you were told none was available. You also told us that you were charged two overdraft fees for the same check.\n\nWe understand you would like a call back from the branch manager, and we have noted that request.\n\nA specialist team is now reviewing your complaint and will respond within 10 business days. We're sorry for the frustration this experience has caused, and we appreciate your patience while it is reviewed.\n\nKind regards,\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Customer asked for a call back from the branch manager; the draft notes the request but does not promise it. Decide whether to commit to a call.",
+   "Check whether two overdraft fees were charged for the same check (check #1102 per the call note) and decide on any fee outcome before replying on substance.",
+   "Confirm the second-ID requirement for check cashing and whether it was applied correctly at Riverside Dr.",
+   "Review the teller conduct allegation (teller identified in the call note) with the branch manager.",
+   "Verify staffing and manager availability at Riverside Dr on the date of the visit; the visit date is not in the note.",
+   "The rep told the customer feedback would be forwarded to the branch manager; confirm that was done.",
+   "Source is a rep's call summary, so confirm the details with the customer if needed."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:33:32+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0010",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 414,
+  "output_tokens": 1119,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 11.29,
+  "cost_usd": 0.024311,
+  "request_id": "req_011Cfqt3hJTaskv1MK9nM8GW"
+ }
+}

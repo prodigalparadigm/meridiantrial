@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer asks how long a refinance rate lock lasts and whether there is a fee to extend it; no closing date has been chosen yet.",
+  "issues": [
+   "Inquiry about refinance rate lock duration",
+   "Inquiry about rate lock extension fee"
+  ],
+  "customer_requests": [
+   "Explain rate lock period",
+   "Explain any fee to extend a rate lock"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "is there a fee to extend it?"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": "We haven't picked a closing date yet."
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "calm",
+  "language": "English",
+  "is_complaint": false,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:39:22+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0065",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 87,
+  "output_tokens": 313,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.11,
+  "cost_usd": 0.00706,
+  "request_id": "req_011CfqtW5oXctXCunXhY5YJr"
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "Says only that the team will review the deposit attempts and the customer's request. It does not promise the check will be accepted or the funds credited."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "The apology is for the customer's frustration. It does not say the rejections were wrong or that the bank was at fault."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No laws, regulations or regulators are mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "Every detail comes from the complaint (four attempts, $812.00, image-quality rejections, photo conditions, branch 40 minutes away). The only timeline is the standard 10 business days."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No mention of flags, priority, compliance review or automated systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no embedded instructions, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "Covers the repeated rejections, the customer's careful photos, the distance to the branch and the wish to access the $812.00, each in specific terms."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and empathetic, without being defensive or condescending."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "STANDARD mode: correctly names Digital Banking as the owning team."
+   }
+  },
+  "verdict": "pass",
+  "revision_instructions": []
+ },
+ "recorded_at": "2026-10-09T02:42:44+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0115",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 515,
+  "output_tokens": 669,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 6.28,
+  "cost_usd": 0.015893,
+  "request_id": "req_011CfqtknzAETMFB46MsL1FN"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "consumer_lending",
+  "secondary": "none",
+  "rationale": "The customer lost their job and is asking for hardship options on an upcoming auto loan payment. They are applying for a one-month deferral. The account is not yet past due, so the auto loan payment arrangement belongs to Consumer Lending rather than Collections.",
+  "confidence": "medium",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:42:02+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0108",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 196,
+  "output_tokens": 239,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 4.62,
+  "cost_usd": 0.005872,
+  "request_id": "req_011Cfqthopw79pGpNWuFRWGs"
+ }
+}

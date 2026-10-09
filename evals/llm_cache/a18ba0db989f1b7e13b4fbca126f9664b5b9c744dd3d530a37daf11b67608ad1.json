@@ -1,0 +1,29 @@
+{
+ "agent": "regulatory_screener",
+ "model": "claude-opus-5-5",
+ "output": {
+  "potential_regulatory": true,
+  "categories": [
+   {
+    "id": "servicing_error",
+    "evidence": "I have a $742.50 shortage",
+    "why": "The customer says the escrow analysis used an incorrect property tax figure, producing a shortage and a higher mortgage payment, which is an escrow miscalculation."
+   }
+  ],
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:41:14+00:00",
+ "usage": {
+  "agent": "regulatory_screener",
+  "case_id": "C-0097",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 169,
+  "output_tokens": 114,
+  "cache_read_tokens": 1823,
+  "cache_write_tokens": 0,
+  "latency_s": 2.01,
+  "cost_usd": 0.003321,
+  "request_id": "req_011CfqteUQJMU7YzochZf72o"
+ }
+}

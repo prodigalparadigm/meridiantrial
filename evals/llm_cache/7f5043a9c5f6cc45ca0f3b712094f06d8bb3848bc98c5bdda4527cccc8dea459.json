@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer ordered checks online on September 18 for $28.00; they arrived printed with an address that was never the customer's. The customer wants a free reprint and an explanation.",
+  "issues": [
+   "Checks printed with incorrect address",
+   "Unusable checks paid for"
+  ],
+  "customer_requests": [
+   "Reprint checks at no charge",
+   "Explain how the wrong address got on the order"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "under_100",
+    "evidence": "paid $28.00"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "calm",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:44:17+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0140",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 190,
+  "output_tokens": 300,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.1,
+  "cost_usd": 0.007212,
+  "request_id": "req_011CfqtstMZTAazz8Pkp6fFi"
+ }
+}

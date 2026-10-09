@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your replacement debit card",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for calling us about your replacement debit card. You told us that you ordered it on 3 September and paid a $15 expedite fee, and that although the card shows as mailed, it has not reached you. We understand how worrying that is, especially with your trip coming up on 27 September. We're sorry for the frustration and inconvenience this has caused.\n\nDuring your call, our representative confirmed your mailing address with you and placed a new expedited order for a replacement card. You also asked how to use your card in the meantime, and our representative went through how to add it to the digital wallet on your phone. If anything about that setup didn't work as expected, please let us know.\n\nWe have passed the details of what happened with your original order, including the expedite fee you paid, to our Card Services team for review. They will respond to you within 10 business days.\n\nThank you for your patience, and we hope your travel plans go smoothly.\n\nKind regards,\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Decide whether the $15 expedite fee on the original, undelivered order should be addressed; the customer paid it, but the call note does not record an explicit refund request.",
+   "Confirm the reordered card's status and tracking, and whether it can arrive before the customer travels on 27 September.",
+   "Confirm the original card was deactivated or blocked, since it shows as mailed but was not received.",
+   "Check whether the customer added the card to their digital wallet successfully.",
+   "The draft does not mention the fee waiver on the reorder; decide whether to confirm it in writing."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:43:05+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0121",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 476,
+  "output_tokens": 745,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 8.69,
+  "cost_usd": 0.017079,
+  "request_id": "req_011Cfqtn9EMXJXEoBUGamdnh"
+ }
+}

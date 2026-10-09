@@ -1,0 +1,64 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "Promises only a review and a reply. Offering help with access or the rent payment does not commit to a refund, fee waiver or other outcome."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "The apology is sympathetic ('sorry you've had such a frustrating and worrying experience') and does not say the bank erred or caused a loss."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": false,
+    "note": "Saying the complaint goes to 'Our Digital Banking team' describes internal routing that the call note does not support. The 10-business-day timeframe is the standard one and is fine."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No mention of flags, priority, compliance review or automated systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The note contains no injected instructions, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "Covers the outage since that morning, the 5pm rent deadline and the offer to process the transfer by phone. The customer's own response to that offer is masked in the note (\u27e6NAME_1\u27e7), so leaving it out is acceptable."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm and plain overall. Two small issues: 'especially stressful' puts a feeling in the customer's mouth that the note does not record, and 'You mentioned that our representative offered' reads oddly because the representative made the offer during the call itself."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "In STANDARD mode, naming a department is not restricted by mode. The draft takes no position on the substance."
+   }
+  },
+  "verdict": "revise",
+  "revision_instructions": [
+   "Replace 'Our Digital Banking team will review what you've told us and respond to you within 10 business days' with a version that names no team, for example: 'We will review what you've told us and respond to you within 10 business days.'",
+   "Rephrase 'You mentioned that our representative offered to process the transfer by phone' so it reflects the call accurately, for example: 'During the call, we offered to process the transfer for you by phone.'",
+   "Optionally, change 'this was especially stressful because' to 'this mattered because', so the draft does not describe feelings the customer did not express."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:32:53+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0001",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 506,
+  "output_tokens": 1546,
+  "cache_read_tokens": 2159,
+  "cache_write_tokens": 0,
+  "latency_s": 17.82,
+  "cost_usd": 0.033376,
+  "request_id": "req_011CfqszKt2Qob3ffcSwXKmU"
+ }
+}

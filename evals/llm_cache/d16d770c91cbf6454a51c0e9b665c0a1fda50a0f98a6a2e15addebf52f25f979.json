@@ -1,0 +1,58 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer was locked out of the mobile app after an update because one-time passcodes went to an old phone number. Representative verified identity, updated the phone number; login succeeded during the call.",
+  "issues": [
+   "Locked out of mobile app after update",
+   "One-time passcode sent to outdated phone number"
+  ],
+  "customer_requests": [
+   "Restore mobile app access"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": ""
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": "CX ABLE TO LOG IN WHILE ON CALL"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "calm",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:41:01+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0092",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 176,
+  "output_tokens": 307,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.2,
+  "cost_usd": 0.007296,
+  "request_id": "req_011CfqtdNvsFhWKvhN7ftVr9"
+ }
+}

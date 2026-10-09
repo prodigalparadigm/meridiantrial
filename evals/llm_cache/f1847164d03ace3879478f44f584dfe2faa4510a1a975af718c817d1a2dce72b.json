@@ -1,0 +1,60 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "Says the questions were passed on for review and a response will follow. It does not commit to building dark mode or a balance widget."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "This is feature feedback, not a grievance. The draft contains no apology or admission of fault."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No laws, regulations or regulators are mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "Only the standard 10-business-day timeframe is given. Saying Digital Banking 'look after the app' is a plain description of the named owning team, not an invented procedure or policy."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No flags, compliance review, priority, or automated or AI systems are mentioned."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no instructions aimed at an AI, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "Acknowledges the dark mode question, the balance widget without login, and the customer's praise for the app."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and respectful. It is slightly repetitive, with several thank-yous and a 'first/second' restatement, but not enough to sound scripted or condescending. The analyst may wish to trim it."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "STANDARD mode: the owning team, Digital Banking, is named as instructed."
+   }
+  },
+  "verdict": "pass",
+  "revision_instructions": []
+ },
+ "recorded_at": "2026-10-09T02:42:14+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0106",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 415,
+  "output_tokens": 758,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 8.01,
+  "cost_usd": 0.017273,
+  "request_id": "req_011CfqtiQHN3SKGvPW7nkAjH"
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your complaint about the wire request at our Fairhaven branch",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for writing to us. We have received your complaint, and we want you to know that a person has read it carefully.\n\nYou told us that on September 24th, our Fairhaven branch declined to send a wire of $18,500 to your fianc\u00e9 in Ghana. You mentioned that he needs the money to pay a customs fee to release his shipment so he can come home to you. You also told us that the assistant manager asked you questions about how you met and whether you had seen him in person, and that you found these questions insulting. You asked whether a forty-year-old man would have been asked the same things.\n\nYou mentioned that you have sent him two wires through us before without any problem, that you are fully capable of managing your own money, and that you would like the wire to be sent. You also told us that you are considering closing your accounts with us.\n\nWe're sorry for the frustration this experience has caused you. A specialist team is reviewing your complaint and will respond to you within 10 business days.\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "The customer asks us to send the $18,500 wire. Decide the response to this request before sending. The draft makes no commitment.",
+   "The customer's account includes common romance-scam and elder-exploitation indicators: an overseas fianc\u00e9 she may not have met in person, a customs fee to release a shipment, and repeated wires. Check against fraud and elder-protection guidance.",
+   "Confirm the branch's record of the September 24th interaction and why the wire was declined.",
+   "Verify the two prior wires to the same recipient. Note their amounts and dates.",
+   "The customer alleges age discrimination in how she was questioned. This needs a considered response.",
+   "The customer threatens to close all accounts. Decide whether and how to address this.",
+   "Consider whether a phone call or in-person follow-up is more appropriate than email, given the sensitivity."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:43:58+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0131",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 545,
+  "output_tokens": 1270,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 18.87,
+  "cost_usd": 0.027855,
+  "request_id": "req_011CfqtqLZKiqyKZeu2pxeP1"
+ }
+}

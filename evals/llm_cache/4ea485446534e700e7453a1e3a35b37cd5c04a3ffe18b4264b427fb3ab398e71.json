@@ -1,0 +1,58 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer complains that the Quarry Rd branch has had a broken chained pen for months and had no deposit slips today; states intent to close all accounts and contact Channel 8.",
+  "issues": [
+   "Broken pen at branch for months",
+   "No deposit slips available at branch"
+  ],
+  "customer_requests": [
+   "Fix branch supplies and equipment"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "today there were NO DEPOSIT SLIPS AT ALL"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": true,
+    "evidence": "I'm closing every account I have and calling Channel 8 so everyone knows how you run things."
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "angry",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:44:02+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0136",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 179,
+  "output_tokens": 333,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.2,
+  "cost_usd": 0.007828,
+  "request_id": "req_011CfqtrmmA7qbE7zbZGhqdB"
+ }
+}

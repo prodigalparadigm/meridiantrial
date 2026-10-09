@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer asks whether savings can be linked to checking for overdraft protection and whether a fee applies, wanting to set it up proactively.",
+  "issues": [
+   "Inquiry about overdraft protection linking savings to checking",
+   "Question about fee for overdraft transfer service"
+  ],
+  "customer_requests": [
+   "Link savings to checking for overdraft protection",
+   "Information on any fee for the service"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "I'd rather set it up now before something happens."
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "calm",
+  "language": "English",
+  "is_complaint": false,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:41:02+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0091",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 96,
+  "output_tokens": 308,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 5.19,
+  "cost_usd": 0.006996,
+  "request_id": "req_011CfqtdN9yz9vXvLFVd1yzZ"
+ }
+}

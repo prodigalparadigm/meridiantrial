@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your online car loan payment issue",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for letting us know about the trouble you've had paying your car loan through online banking.\n\nYou told us that when you select the \"Pay Loan\" button, you see the message \"This account is not eligible\" for your car loan. You mentioned that you've paid this same loan through online banking for the past two years. You also said you made this payment by phone instead so that it wouldn't be late. We appreciate you taking that extra step, and we understand how frustrating it is when something that has always worked suddenly stops.\n\nYou've asked us to fix the online payment option. We've passed the details you gave us to our Digital Banking team, who will review what is happening with the \"Pay Loan\" button for your loan. We will respond to you within 10 business days.\n\nIn the meantime, if you notice anything else, such as a different message or other accounts affected, please reply to this message and we'll add it to your complaint.\n\nThank you for your patience.\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Confirm the customer's phone payment was received and posted on time.",
+   "Check why the car loan shows as not eligible for online payment (loan status, account linking, system change).",
+   "Decide whether to tell the customer about other payment options before their next due date.",
+   "Check whether other customers are reporting the same 'not eligible' error.",
+   "Do not confirm a fix or a fix date until Digital Banking has reviewed the issue."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:43:04+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0120",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 297,
+  "output_tokens": 982,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 10.33,
+  "cost_usd": 0.021103,
+  "request_id": "req_011CfqtmyBMk2r5qUjEkbC6V"
+ }
+}

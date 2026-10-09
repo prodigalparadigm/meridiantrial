@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "deposit_ops",
+  "secondary": "none",
+  "rationale": "Customer is receiving 0.40% instead of the advertised 4.25% promotional savings rate on a newly opened savings account; interest on deposits and account opening terms are owned by Deposit Operations.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:37:15+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0033",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 140,
+  "output_tokens": 109,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.34,
+  "cost_usd": 0.003048,
+  "request_id": "req_011CfqtLpmtq2Eo8DCNx6xKU"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "digital_banking",
+  "secondary": "consumer_lending",
+  "rationale": "Customer could not make an auto loan payment online due to an 'account not eligible' error. This is a technical online-payment failure for Digital Banking to investigate. The payment was already taken by phone and the fee was waived. Consumer Lending is secondary in case the eligibility flag sits on the loan account setup.",
+  "confidence": "medium",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:41:03+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0093",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 144,
+  "output_tokens": 147,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.81,
+  "cost_usd": 0.003824,
+  "request_id": "req_011CfqtdbQTXku7wC48vhgVY"
+ }
+}

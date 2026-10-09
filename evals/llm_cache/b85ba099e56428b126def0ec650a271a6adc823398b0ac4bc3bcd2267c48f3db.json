@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your feedback about the Bridge St drive-through",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for getting in touch with us about the Bridge St drive-through.\n\nYou told us that the lollipops your family used to receive at the drive-through are no longer there, and that your kids looked forward to them every Saturday. We can hear how much that small tradition meant to your family, and we understand why the change felt like a letdown, especially as a loyal customer. We're sorry for the disappointment this has caused.\n\nYou also mentioned that you intend to raise a complaint with an outside agency. That is entirely your choice, and it does not change how carefully we will look at your concern.\n\nWe have passed your message to our Branch & Contact Center team, who will review what you've shared about the Bridge St drive-through. We will respond to you within 10 business days.\n\nThank you for taking the time to tell us how much these Saturday visits matter to you and your kids.\n\nKind regards,\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Confirm with the Bridge St branch whether lollipops were discontinued, and if so, why (e.g. temporary supply issue or deliberate change).",
+   "Decide whether to tell the customer the lollipops will return; the draft makes no commitment either way.",
+   "The customer said they will file a complaint with a regulator. Decide whether this needs any additional handling under your procedures.",
+   "The customer's request to restore the lollipops is implied, not stated; the draft acknowledges the disappointment without promising restoration.",
+   "If there is a food-allergy or safety reason for the change, consider explaining it in the final reply."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:40:36+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0082",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 290,
+  "output_tokens": 1061,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 11.43,
+  "cost_usd": 0.022655,
+  "request_id": "req_011Cfqtaw8XBiRmK2MU4Lp3i"
+ }
+}

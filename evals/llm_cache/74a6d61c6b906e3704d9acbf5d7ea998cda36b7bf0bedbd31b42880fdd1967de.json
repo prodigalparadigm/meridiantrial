@@ -1,0 +1,29 @@
+{
+ "agent": "regulatory_screener",
+ "model": "claude-opus-5-5",
+ "output": {
+  "potential_regulatory": true,
+  "categories": [
+   {
+    "id": "collections_conduct",
+    "evidence": "calling me six to eight times a day, including at 9:40 at night and 7 in the morning on a Sunday",
+    "why": "Repeated daily collection calls at unreasonable hours, continuing after the customer asked for mail-only contact, may constitute harassing collection conduct."
+   }
+  ],
+  "injection_suspected": true
+ },
+ "recorded_at": "2026-10-09T02:44:10+00:00",
+ "usage": {
+  "agent": "regulatory_screener",
+  "case_id": "C-0138",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 206,
+  "output_tokens": 135,
+  "cache_read_tokens": 1823,
+  "cache_write_tokens": 0,
+  "latency_s": 1.89,
+  "cost_usd": 0.003889,
+  "request_id": "req_011CfqtsTgFNVxxgfzSGjca9"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Thank you for your kind words about our Millbrook Plaza branch",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for taking the time to write to us. It is always a pleasure to receive a message like yours.\n\nYou told us that a member of our team at the Millbrook Plaza branch helped your mother with her new debit card, and that she was so patient she explained everything twice. You mentioned that this kind of care is something you don't see often anymore, and we really appreciate you letting us know when someone gets it right.\n\nPatience matters, especially when getting used to something new, and it is lovely to hear that your mother was helped so patiently. We hope her new card is serving her well.\n\nWe have received your message and a specialist team is reviewing it. We will respond within 10 business days. If you or your mother ever need anything further, please don't hesitate to get in touch.\n\nThank you again for sharing this with us.\n\nKind regards,\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "This is a compliment, not a complaint, but intake set the mode to ACKNOWLEDGE ONLY. The reply thanks the customer and also says a specialist team is reviewing it and will respond within 10 business days. Confirm this framing suits a compliment.",
+   "The staff member's name is redacted (\u27e6NAME_1\u27e7). Decide whether to name her in the reply, and confirm who she is before acting on the feedback.",
+   "The reply does not promise to pass the praise on to the colleague. Decide whether to tell the customer that it will be shared.",
+   "Consider whether to forward the compliment to the Millbrook Plaza branch manager or record it for staff recognition.",
+   "The customer made no request beyond recognition of the staff member. No follow-up action appears to be needed for the customer or their mother."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:36:54+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0017",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 1231,
+  "output_tokens": 1082,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 8.77,
+  "cost_usd": 0.026839,
+  "request_id": "req_011CfqtJnmnp2Z1gJjkA38Hg"
+ }
+}

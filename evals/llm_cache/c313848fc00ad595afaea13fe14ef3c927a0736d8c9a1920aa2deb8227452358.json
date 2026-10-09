@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "branch_contact_center",
+  "secondary": "none",
+  "rationale": "The complaint concerns the physical condition of a branch ATM (cracked screen, out of service for more than two weeks), with no transaction problem. Branch & Contact Center owns ATM physical condition.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:39:52+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0073",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 95,
+  "output_tokens": 109,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 3.0,
+  "cost_usd": 0.002868,
+  "request_id": "req_011CfqtYJkCSPjBgkBqwjj3d"
+ }
+}

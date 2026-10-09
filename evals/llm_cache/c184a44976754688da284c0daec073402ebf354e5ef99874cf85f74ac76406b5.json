@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "Customer reports Cold Spring Rd branch staff refused to cash a payroll check on 9/5 without two IDs, while a white customer ahead was served without ID; alleges racial discrimination; paid $18 elsewhere.",
+  "issues": [
+   "Refusal to cash payroll check without two forms of ID",
+   "Alleged racial discrimination by branch staff",
+   "$18 check cashing fee incurred elsewhere"
+  ],
+  "customer_requests": [
+   "Written response"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "under_100",
+    "evidence": "paid $18 fee"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:38:20+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0047",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 169,
+  "output_tokens": 335,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.13,
+  "cost_usd": 0.007828,
+  "request_id": "req_011CfqtRXxFMof5g9CGtMban"
+ }
+}

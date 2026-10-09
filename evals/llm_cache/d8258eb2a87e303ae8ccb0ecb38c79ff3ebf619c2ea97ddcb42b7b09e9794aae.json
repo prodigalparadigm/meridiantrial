@@ -1,0 +1,30 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your request to opt out of marketing and affiliate information sharing",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for contacting Meridian Harbor Bank, and for letting us know your preferences so clearly.\n\nYou asked us to do two things. First, you would like to stop receiving marketing by mail and by email. Second, you asked that your information not be shared with affiliates. We have received your request, and our Privacy Office will review both parts of it.\n\nWe will respond within 10 business days to let you know where things stand with each part of your request. If your preferences change in the meantime, or if there is anything you would like to add, please reply to this message and we will include it with your request.\n\nThank you again for taking the time to get in touch. We appreciate you telling us how you would like to hear from us.\n\nKind regards,\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "This is a preference request, not a complaint; confirm it should be handled through the complaints process at all.",
+   "Verify the customer's identity and which accounts or relationships the opt-outs should apply to.",
+   "Decide whether to confirm the opt-outs as completed in the reply, and add any timing for when they take effect.",
+   "Decide whether to tell the customer which communications, such as service or account messages, will continue after a marketing opt-out.",
+   "The customer mentioned mail and email only; decide whether to ask about phone or text marketing preferences.",
+   "Add any specifics about affiliate information sharing that the customer needs to know before sending."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:37:23+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0032",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 248,
+  "output_tokens": 1117,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 11.84,
+  "cost_usd": 0.023607,
+  "request_id": "req_011CfqtLij1KYuHnpZ2GC3sX"
+ }
+}

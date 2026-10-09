@@ -1,0 +1,29 @@
+{
+ "agent": "regulatory_screener",
+ "model": "claude-opus-5-5",
+ "output": {
+  "potential_regulatory": true,
+  "categories": [
+   {
+    "id": "error_resolution",
+    "evidence": "$612.35 HOLLIS & GRANT FURNITURE MERCH NOT RECVD",
+    "why": "Customer disputes a charge for merchandise not received, and the note says no provisional credit or letter has been issued since the 8/15 dispute, which may implicate billing-error investigation deadlines."
+   }
+  ],
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:44:57+00:00",
+ "usage": {
+  "agent": "regulatory_screener",
+  "case_id": "C-0153",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 250,
+  "output_tokens": 146,
+  "cache_read_tokens": 1823,
+  "cache_write_tokens": 0,
+  "latency_s": 2.17,
+  "cost_usd": 0.004285,
+  "request_id": "req_011CfqtvsgisCXhnoAbUFQn3"
+ }
+}

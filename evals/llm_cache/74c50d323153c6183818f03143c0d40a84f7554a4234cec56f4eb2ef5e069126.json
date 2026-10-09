@@ -1,0 +1,64 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "It says the customer asked for access and clear document information, but does not promise either."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "The condolences and 'sorry for the added stress and frustration' express sympathy without saying the branch gave wrong information. It is borderline because 'this has caused' could be read as attributing the stress to the bank's handling, but it stops short of admitting fault."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "No new procedures, fees or policies, and only the standard 10-business-day timeframe. The phrase 'this has still not been resolved' is not in the note but is framed as the customer's account."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "It does not mention the escalation to the branch manager, flags, priority or automated systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no injected instructions."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "It covers the account restriction after the death notification, the need for access as surviving joint owner, the three branch visits with a different document list each time, and the request for consistent information. It does not mention the checklist already emailed during the call, which would show the call was read, but this is not required."
+   },
+   "tone": {
+    "pass": false,
+    "note": "The greeting 'Dear \u27e6CUSTOMER_NAME_1\u27e7' uses the token attached to the deceased spouse, Layla, in the note. Addressing a newly widowed customer by the late spouse's name would be painful and could suggest the letter is meant for the deceased. Otherwise the tone is warm and compassionate."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "It names no department and takes no position on the substance. Events are restated as the customer's account ('You told us', 'You mentioned')."
+   }
+  },
+  "verdict": "revise",
+  "revision_instructions": [
+   "Replace the greeting 'Dear \u27e6CUSTOMER_NAME_1\u27e7'. In the note that token refers to the deceased spouse, Layla, so do not use it to address the customer. Use a token that refers to the customer, if one is available, or a neutral greeting.",
+   "Optional: change 'we're sorry for the added stress and frustration this has caused' to something like 'we're sorry you've had this added stress at such a difficult time'. This keeps the sympathy without implying the bank caused it.",
+   "Optional: add a line acknowledging that a document checklist was emailed to the customer during the call, without commenting on what it says or whether it is correct."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:41:41+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0094",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 733,
+  "output_tokens": 1837,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 18.52,
+  "cost_usd": 0.040125,
+  "request_id": "req_011CfqtfG4RbXkW47ucus1bV"
+ }
+}

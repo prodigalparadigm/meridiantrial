@@ -1,0 +1,60 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer was transferred three times this week from the main line to a specialist and each call dropped with no callback; the customer only wants to order checks and asks for a working direct number.",
+  "issues": [
+   "Calls dropped during transfer to specialist",
+   "No callback received",
+   "Unable to get help ordering checks"
+  ],
+  "customer_requests": [
+   "Working direct phone number",
+   "Help ordering checks"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "I have a simple question about ordering checks."
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": true,
+    "evidence": "Three times this week I've been transferred from the main line to \"a specialist\" and the call just drops. No callback."
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:40:04+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0075",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 96,
+  "output_tokens": 340,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.86,
+  "cost_usd": 0.007636,
+  "request_id": "req_011CfqtZCvFASTG9eakC9poN"
+ }
+}

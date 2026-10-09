@@ -1,0 +1,60 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "The draft promises no outcome. It says only that Mortgage Servicing will review the concerns and gives the standard timeframe. Nothing implies the closing will be saved or the deposit protected."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "'We're sorry for the worry and frustration this has caused' expresses sympathy for the situation. It does not concede that the loan officer or underwriting did anything wrong."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "All dates and amounts (10/9, 10/4/2026, $15,000, three uploads) come from the complaint. The only added timeframe is the standard 10 business days."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No mention of flags, priority, compliance review or automated systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no injected instructions, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "The draft covers the unresponsive loan officer, the repeated document requests and tax-return uploads, the rate-lock expiry, the closing date and the deposit at risk."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm and plain, and it shows the complaint was read carefully. It is not defensive or condescending."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "STANDARD mode: the draft names the owning team, Mortgage Servicing, as instructed, and frames the customer's account as theirs."
+   }
+  },
+  "verdict": "pass",
+  "revision_instructions": []
+ },
+ "recorded_at": "2026-10-09T02:45:58+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0163",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 656,
+  "output_tokens": 979,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 9.67,
+  "cost_usd": 0.022657,
+  "request_id": "req_011CfqtzqkzPMJ9WadetcTaf"
+ }
+}

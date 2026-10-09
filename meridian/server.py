@@ -32,12 +32,32 @@ def _load_crm() -> dict:
     return json.loads(p.read_text()) if p.exists() else {"customers": []}
 
 
-def _row(c: dict, pol: str) -> dict:
-    tri = c.get("triage") or {}
+def _rehydrate(obj, vault: dict):
+    """Fill tokens back in for people inside the bank. Model outputs stay tokenized on disk."""
+    from .redact import TOKEN_RE
+    if isinstance(obj, str):
+        return TOKEN_RE.sub(lambda m: vault.get(m.group(0), m.group(0)), obj)
+    if isinstance(obj, list):
+        return [_rehydrate(x, vault) for x in obj]
+    if isinstance(obj, dict):
+        return {k: _rehydrate(v, vault) for k, v in obj.items()}
+    return obj
+
+
+def _for_people(c: dict, vault: dict) -> dict:
+    out = dict(c)
+    for k in ("triage", "route", "draft"):
+        out[k] = _rehydrate(c.get(k), vault)
+    out["regulatory"] = {**c["regulatory"], "sources": _rehydrate(c["regulatory"]["sources"], vault)}
+    return out
+
+
+def _row(c: dict, pol: str, vault: dict | None = None) -> dict:
+    tri = _rehydrate(c.get("triage") or {}, vault or {})
     pri = (c.get("priority") or {}).get(pol, {}).get("priority")
     return {"id": c["id"], "channel": c["channel"], "received_at": c["received_at"], "summary": tri.get("summary", ""),
             "priority": pri or "—", "route": (c.get("route") or {}).get("primary"), "status": c["status"],
-            "flagged": c["regulatory"]["flagged"], "reg_status": c["regulatory"]["status"],
+            "flagged": c["regulatory"]["flagged"], "reg_status": c["regulatory"]["status"], "lane": c["regulatory"].get("lane"),
             "categories": c["regulatory"]["categories"], "due_at": c["regulatory"]["due_at"],
             "draft_state": (c.get("draft") or {}).get("state"), "injection": c.get("injection_suspected", False),
             "language": tri.get("language", ""), "failures": c.get("failures", [])}
@@ -46,6 +66,8 @@ def _row(c: dict, pol: str) -> dict:
 def _stats(cases: list[dict]) -> dict:
     flagged = [c for c in cases if c["regulatory"]["flagged"]]
     secs = sorted(c["regulatory"].get("seconds_to_flag") or 0 for c in flagged if c["regulatory"].get("seconds_to_flag"))
+    model_secs = sorted(c["regulatory"]["seconds_to_flag"] for c in flagged
+                        if not c["regulatory"]["sources"]["tripwire"] and c["regulatory"].get("seconds_to_flag"))
     by_dept: dict = {}
     for c in cases:
         d = (c.get("route") or {}).get("primary") or "manual"
@@ -67,6 +89,7 @@ def _stats(cases: list[dict]) -> dict:
         "flagged": len(flagged),
         "flags_open": sum(c["regulatory"]["status"] == "open" for c in flagged),
         "median_seconds_to_flag": secs[len(secs) // 2] if secs else None,
+        "median_seconds_to_flag_model": model_secs[len(model_secs) // 2] if model_secs else None,
         "max_seconds_to_flag": secs[-1] if secs else None,
         "by_department": dict(sorted(by_dept.items(), key=lambda kv: -kv[1])),
         "priority": pri, "disagreements": disagree,
@@ -117,13 +140,31 @@ class Handler(BaseHTTPRequestHandler):
             return self._static(UI / "index.html")
         if u.path.startswith("/ui/"):
             return self._static(UI / u.path[4:])
+        if u.path == "/walkthrough":   # the stakeholder page, offline copy
+            page = config.ROOT / "docs" / "walkthrough.html"
+            if not page.exists():
+                return self.send_error(404, "run python3 -m evals.build_walkthrough")
+            body = ('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" '
+                    'content="width=device-width, initial-scale=1"></head><body style="margin:0">' + page.read_text() + "</body></html>").encode()
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            return self.wfile.write(body)
         if u.path == "/api/config":
             return self._json({"departments": config.departments(), "taxonomy": config.taxonomy(),
                                "policies": {k: v["name"] for k, v in config.policies().items()},
                                "rubric": config.rubric(), "model": pipe.llm.model, "llm_mode": pipe.llm.mode})
         if u.path == "/api/cases":
             pol = q.get("policy", ["interim"])[0]
-            return self._json([_row(c, pol) for c in pipe.store.all()])
+            rows = []
+            for c in pipe.store.all():
+                try:
+                    vault = pipe.store.get_private(c["id"])["vault"]
+                except FileNotFoundError:
+                    vault = {}
+                rows.append(_row(c, pol, vault))
+            return self._json(rows)
         m = re.fullmatch(r"/api/cases/([\w\-]+)", u.path)
         if m:
             cid = m.group(1)
@@ -134,7 +175,7 @@ class Handler(BaseHTTPRequestHandler):
                 return self._json({"error": "not found"}, 404)
             draft = c.get("draft") or {}
             return self._json({
-                "case": c,
+                "case": {**_for_people(c, priv["vault"]), "redacted_text": c["redacted_text"]},
                 "original_text": priv["original_text"],     # local display only
                 "sender": priv["sender"],
                 "draft_rehydrated": {"subject": pipe.rehydrate(cid, draft.get("subject", ""), priv),

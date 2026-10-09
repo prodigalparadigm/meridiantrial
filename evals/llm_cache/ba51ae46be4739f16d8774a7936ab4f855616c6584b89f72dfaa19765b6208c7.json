@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "card_services",
+  "secondary": "deposit_ops",
+  "rationale": "The customer wants a replacement debit card sent to their new address. That is time-sensitive and owned by Card Services, since a card mailed to the old address could be lost or misused. The general address change on the account is account maintenance, owned by Deposit Operations. No misdirected mail or disclosure has happened yet, so this is not a Privacy Office matter.",
+  "confidence": "medium",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:40:07+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0076",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 109,
+  "output_tokens": 158,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.77,
+  "cost_usd": 0.003904,
+  "request_id": "req_011CfqtZSL8yU2J6gDos6NCj"
+ }
+}

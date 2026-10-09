@@ -1,0 +1,30 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your message about an email meant for someone else",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for taking the time to let us know about this. We have received your message, and we want to confirm what you told us.\n\nYou mentioned that today you received an email from our mortgage department that appeared to be meant for someone else. You told us it was addressed to another person by name and included what looked like their loan number, monthly payment and property address. You also let us know that you don't have a mortgage with us and that you have deleted the email.\n\nYou asked that we be made aware of this, and that the person the email was intended for be told about it. We appreciate you raising both points, and we appreciate the care you took in deleting the message.\n\nA specialist team is reviewing your message and will respond to you within 10 business days. If there is anything further you would like to add in the meantime, you are welcome to reply to this email.\n\nThank you again for bringing this to our attention.\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "The sender says they have no mortgage with us. Confirm whether they hold any other relationship with the bank before you treat them as a customer.",
+   "Check why the sender's email address received another person's mortgage correspondence, for example whether it is recorded against the wrong mortgage record.",
+   "The sender asked that the intended recipient be told. Decide what, if anything, the reply should say about that.",
+   "Decide whether to ask the sender to confirm the email is also gone from their deleted or trash folder, and that it was not forwarded.",
+   "The complaint names the addressee as \u27e6NAME_1\u27e7 and the person to be told as \u27e6NAME_2\u27e7. Check whether these are the same person.",
+   "The draft deliberately leaves out the addressee's name, loan number, payment and address. Keep those details out of any edits."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:41:46+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0101",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 414,
+  "output_tokens": 1386,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 14.19,
+  "cost_usd": 0.029651,
+  "request_id": "req_011CfqtfsxvMZNyGmUFJJjNE"
+ }
+}

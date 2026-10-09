@@ -1,0 +1,31 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your dispute about your Hollis & Grant Furniture purchase",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for speaking with us again about your dispute. We want to confirm that we have your complaint.\n\nYou told us that you opened a dispute on August 15 about a $612.35 purchase from Hollis & Grant Furniture, which you said you never received. You mentioned that this was your third call about it, that you have not received a provisional credit, and that no letter about the dispute has reached you. You asked for the dispute to be resolved and for a provisional credit of $612.35.\n\nWe understand how frustrating it is to have to call more than once about the same issue, and we're sorry for the frustration this has caused.\n\nA specialist team is now reviewing your complaint and will respond to you within 10 business days. In the meantime, if you have anything you would like the team to see, such as order confirmations, delivery updates or messages from the merchant, you are welcome to send it to us.\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "The representative told the customer to expect a callback within 2 business days. This draft does not repeat that. Check whether the callback happened before sending, and decide whether to mention it.",
+   "The customer's provisional credit request needs a decision. The draft only acknowledges that they asked for it.",
+   "Confirm whether a dispute letter was ever sent and whether it should be reissued.",
+   "Verify the dispute open date (8/15), the amount ($612.35) and the merchant name against the dispute record.",
+   "The dispute reference number is not included in the draft. Add it if appropriate.",
+   "The customer said they may post on social media and contact the news. The draft does not mention this. Decide whether escalation or outreach is needed.",
+   "This is the customer's third contact on the same dispute. Consider whether the reply should explain what happened on the earlier calls."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:45:12+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0153",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 518,
+  "output_tokens": 1351,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 13.24,
+  "cost_usd": 0.029367,
+  "request_id": "req_011CfqtwCSL3hkHuSad5t7xQ"
+ }
+}

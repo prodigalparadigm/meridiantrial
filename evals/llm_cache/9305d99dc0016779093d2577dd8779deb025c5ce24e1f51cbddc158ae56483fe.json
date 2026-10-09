@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Thank you for your kind words about our contact center agent",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for taking the time to call us back. You told us that you wanted to thank the agent who helped you when you called about your lost wallet last week, and that you would like that agent to be recognized for the way they handled your call.\n\nLosing a wallet can be a stressful experience, and we're glad to hear that the person you spoke with made a difference for you. Feedback like yours means a great deal to our colleagues, and it helps us understand what matters most to our customers.\n\nWe have shared your message with our Branch & Contact Center team so that your thanks reaches the agent and the people they work with.\n\nIf anything else comes up following your lost wallet call, or if there is anything more we can help with, please don't hesitate to get in touch.\n\nThank you again for letting us know.\n\nKind regards,\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "This is a compliment, not a complaint; the draft thanks the customer and does not set a response timeframe.",
+   "The agent's name was replaced with a token, so the draft says 'the agent' rather than naming them; add the agent's name if appropriate.",
+   "Confirm the compliment has reached the agent and their team lead in Branch & Contact Center before sending.",
+   "The draft does not promise any specific recognition outcome; add details only if the team has decided on one.",
+   "Check whether any follow-up from the lost wallet call (e.g., card replacement) is still outstanding for this customer."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:43:53+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0132",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 320,
+  "output_tokens": 913,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 9.9,
+  "cost_usd": 0.019815,
+  "request_id": "req_011CfqtqdZX4jRibKnuU4yte"
+ }
+}

@@ -97,6 +97,24 @@ def model_seconds(case: dict) -> dict:
     return {"to_flag": to_flag, "end_to_end": (max(par) if par else 0) + sum(seq) or None}
 
 
+def tripwire_terms(cases: dict, labels: dict) -> list[dict]:
+    """Per-term record for Compliance: false flags, true flags, and true flags the model screener missed."""
+    from meridian import config
+    stats = defaultdict(lambda: {"false": 0, "true": 0, "true_model_missed": 0})
+    for i, c in cases.items():
+        text = c.get("_original", "")
+        truth = labels[i]["regulatory"]
+        model = bool((c["regulatory"]["sources"]["screener"] or {}).get("potential_regulatory"))
+        for terms in config.tripwire_terms().values():
+            for t in terms:
+                if re.search(t, text, re.I):
+                    s = stats[t]
+                    s["false" if not truth else "true"] += 1
+                    s["true_model_missed"] += truth and not model
+    rows = [{"term": t, **v} for t, v in stats.items()]
+    return sorted(rows, key=lambda r: (-r["false"], r["true"]))
+
+
 def rate(n, d):
     return round(n / d, 4) if d else None
 
@@ -125,8 +143,9 @@ def score(cases: dict, labels: dict) -> dict:
             tp += 1
         elif pred and not truth:
             fp += 1
+            scr_out = c["regulatory"]["sources"]["screener"] or {}
             false_flags.append({"id": i, "scenario": l["scenario"], "tripwire": [h["category"] for h in c["regulatory"]["sources"]["tripwire"]],
-                                "screener": [x["id"] for x in (c["regulatory"]["sources"]["screener"] or {}).get("categories", [])]})
+                                "screener": [x["id"] for x in scr_out.get("categories", [])] or (["unspecified"] if scr_out.get("potential_regulatory") else [])})
         elif truth:
             fn += 1
             missed.append({"id": i, "scenario": l["scenario"], "categories": l["reg_categories"], "tags": l["tags"]})
@@ -134,14 +153,39 @@ def score(cases: dict, labels: dict) -> dict:
             tn += 1
     positives = tp + fn
     secs = [t for c in cases.values() if c["regulatory"]["flagged"] and (t := model_seconds(c)["to_flag"]) is not None]
+    model_only = sorted(model_seconds(c)["to_flag"] for c in cases.values()
+                        if c["regulatory"]["flagged"] and not c["regulatory"]["sources"]["tripwire"] and model_seconds(c)["to_flag"])
+    # Lanes: how flags would split if Compliance takes the two-lane option.
+    lane = Counter()
+    for i in ids:
+        reg_i = cases[i]["regulatory"]
+        if reg_i["flagged"]:
+            lane[(reg_i.get("lane") or "review_48h", labels[i]["regulatory"])] += 1
+    neg_n = max(fp + tn, 1)
+    r_fp = lane[("review_48h", False)] / neg_n
+    t_fp = lane[("tripwire_check", False)] / neg_n
+    lanes = {
+        "review_48h": {"regulatory": lane[("review_48h", True)], "not_regulatory": lane[("review_48h", False)]},
+        "tripwire_check": {"regulatory": lane[("tripwire_check", True)], "not_regulatory": lane[("tripwire_check", False)]},
+        # Monthly load depends on the real share of regulatory complaints, which only the pilot can measure.
+        "monthly_load_by_share": {f"{int(sh * 100)}%": {
+            "review_48h": round(MONTHLY_VOLUME * (sh * rate(lane[("review_48h", True)], positives) + (1 - sh) * r_fp)),
+            "tripwire_check": round(MONTHLY_VOLUME * (sh * rate(lane[("tripwire_check", True)], positives) + (1 - sh) * t_fp))}
+            for sh in (0.15, 0.25, round(positives / len(ids), 2))},
+    }
     out["regulatory"] = {
         "positives": positives, "negatives": fp + tn, "tp": tp, "fp": fp, "fn": fn, "tn": tn,
         "recall": rate(tp, positives), "precision": rate(tp, tp + fp),
         "recall_tripwire_alone": rate(trip_tp, positives), "recall_screener_alone": rate(scr_tp, positives),
         "category_recall": {k: f"{cat_hit[k]}/{cat_total[k]}" for k in sorted(cat_total)},
+        "lanes": lanes, "tripwire_terms": tripwire_terms(cases, labels),
         "missed": missed, "false_flags": false_flags,
         "flag_rate": rate(tp + fp, len(ids)), "projected_monthly_flags": round(MONTHLY_VOLUME * (tp + fp) / len(ids)),
         "median_seconds_to_flag": round(statistics.median(secs), 1) if secs else None,
+        "flags_at_intake": sum(bool(c["regulatory"]["sources"]["tripwire"]) for c in cases.values() if c["regulatory"]["flagged"]),
+        "model_only_flags": len(model_only),
+        "model_only_median_seconds": round(statistics.median(model_only), 1) if model_only else None,
+        "model_only_max_seconds": round(max(model_only), 1) if model_only else None,
         "max_seconds_to_flag": round(max(secs), 1) if secs else None,
     }
 
@@ -274,6 +318,8 @@ def main():
 
     egress = load_jsonl(var / "egress.jsonl")
     originals = {cid: json.loads((var / "private" / f"{cid}.json").read_text())["original_text"] for cid in cases}
+    for cid, c in cases.items():
+        c["_original"] = originals[cid]      # in memory only, for the per-term tripwire table
     from evals.redaction_check import check as redaction_check
     holdout = ROOT / "data" / "holdout"
     spent = sum(call["cost_usd"] for c in cases.values() for call in c["calls"] if not call["cached"])

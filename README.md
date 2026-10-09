@@ -2,7 +2,7 @@
 
 A working prototype of a multi-agent complaint-intake assistant for a 60-branch regional bank. It reads every complaint (email, web form or call-center note) as it arrives, flags possible regulatory issues to Compliance within seconds, routes the complaint to the owning department, extracts the facts that set priority, and prepares a draft reply for an analyst to edit and sign.
 
-It does not send anything to customers, and it does not replace the three analysts. The goal is the backlog and the 48-hour regulatory window. Why this is the right scope: [docs/SCOPING.md](docs/SCOPING.md). How it behaves on a synthetic month: [docs/EVIDENCE.md](docs/EVIDENCE.md). The Friday walkthrough: [docs/WALKTHROUGH.md](docs/WALKTHROUGH.md).
+It does not send anything to customers, and it does not replace the three analysts. The goal is the backlog and the 48-hour regulatory window. Why this is the right scope: [docs/SCOPING.md](docs/SCOPING.md). How it behaves on a synthetic month: [docs/EVIDENCE.md](docs/EVIDENCE.md). The Friday walkthrough for the two stakeholders: [docs/walkthrough.html](docs/walkthrough.html) (also served by the workbench at `/walkthrough`).
 
 ## Run it
 
@@ -10,6 +10,7 @@ Requires Python 3.12 and the `anthropic` SDK. Nothing else: the tests, server an
 
 ```bash
 python3 -m unittest discover -s tests -t .        # controls: redaction, egress gate, no-send path, flag ratchet, sign-off, audit chain
+python3 -m evals.redaction_check                  # redaction only, no model: PII left readable on the month and on a held-out month
 python3 -m evals.run_eval --mode replay           # score the synthetic month offline from recorded model responses
 python3 -m meridian.server --seed --port 8770     # load the month (offline replay) and open http://127.0.0.1:8770
 ```
@@ -65,10 +66,11 @@ All five agents run on `claude-opus-5-5` with effort set per role (low for triag
 config/      stakeholder-owned files: departments, compliance taxonomy, tripwire terms, severity rubric, priority policies
 meridian/    pipeline: intake, redact, gate, tripwire, llm (only model access), agents/, policy, audit, pipeline, server
 ui/          the workbench (one HTML file, no external assets)
-data/        synthetic dataset generator, verifier, and its README (written blind to the detectors)
-evals/       run_eval.py (scoring), report.py (renders docs/EVIDENCE.md), results/, llm_cache/ (recorded responses, redacted)
+data/        synthetic month + held-out month, generator, verifier, README (written blind to the detectors)
+evals/       run_eval.py (scoring), report.py (renders docs/EVIDENCE.md), build_walkthrough.py, redaction_check.py,
+             results/, llm_cache/ (recorded model responses, keyed to redacted payloads; no PII)
 tests/       unittest suite with erosion checks: each safety test is shown to fail when its control is removed
-docs/        SCOPING.md, EVIDENCE.md, WALKTHROUGH.md
+docs/        SCOPING.md, EVIDENCE.md (generated), walkthrough.html (generated from walkthrough.template.html)
 ```
 
 ## Not production

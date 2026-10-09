@@ -1,0 +1,62 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "No outcome is promised or implied. Saying the team 'will respond' is only the standard timeframe."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "The apology is for the customer's worry, not for a bank error. 'May have reached a previous address' is suitably hedged."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned, and there is no conclusion about a privacy breach."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "No procedures, fees, policies or timelines are added beyond the standard 10 business days. Asking the customer to keep the confirmation number handy is a reasonable courtesy, not a procedure."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "There is no mention of flags, compliance review, priority, or automated or AI systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no injected instructions, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": false,
+    "note": "The draft covers the address change on July 18, the confirmation number, the roommate's report, and the two statements showing the full account number and balance. It also acknowledges the question about who has seen the information. However, it says the customer 'asked us to make sure your mailing address is correct'. The customer never made that request, so the draft misstates their complaint."
+   },
+   "tone": {
+    "pass": true,
+    "note": "The tone is warm, plain and empathetic, and not defensive. 'Read it carefully' is slightly stock but acceptable."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "No department is named, and the draft refers only to 'a specialist team'. It frames events as the customer's account ('You told us', 'You mentioned') and takes no position on the substance."
+   }
+  },
+  "verdict": "revise",
+  "revision_instructions": [
+   "Delete the clause 'You asked us to make sure your mailing address is correct, and'. The customer did not make that request. Rewrite the sentence as: 'You want to know who else may have seen your information.'"
+  ]
+ },
+ "recorded_at": "2026-10-09T02:35:51+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0008",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 600,
+  "output_tokens": 1091,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 10.68,
+  "cost_usd": 0.024673,
+  "request_id": "req_011CfqtDyY3o1qVWARKvR99b"
+ }
+}

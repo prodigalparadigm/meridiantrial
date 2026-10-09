@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Following up on your call about the $12 maintenance fee",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for taking the time to speak with us about the $12 maintenance fee on your account. You told us your balance dipped below the minimum in August after you moved money out to cover a car repair, and you asked us to waive the fee. You also mentioned that you have banked with us for four years, and we truly appreciate your loyalty over that time.\n\nAn unexpected car repair is stressful enough without an added charge to think about, and we're sorry for the frustration this has caused.\n\nWe wanted to follow up after your call to make sure you have everything you need. If anything about the fee still feels unresolved, or if there is something else you would like us to consider, please reply to this message. Our Deposit Operations team will pick it up, and we will respond within 10 business days.\n\nThank you again for being a valued customer.\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "The call record says the representative granted a one-time courtesy waiver of the $12 fee and the customer was satisfied. Decide whether and how to confirm this in the reply.",
+   "Check the account to confirm the waiver actually posted before referencing it.",
+   "Decide whether a written follow-up is needed at all, given the note says no further action.",
+   "The minimum balance amount is not given in the complaint. Add it only if you want the reply to reference it.",
+   "Check whether the customer has had earlier courtesy waivers, since the note calls this one a one-time courtesy."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:43:53+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0126",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 1328,
+  "output_tokens": 1119,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 9.43,
+  "cost_usd": 0.027967,
+  "request_id": "req_011CfqtqepBAJzudJTFWURZT"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your request about your auto loan payoff letter",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for contacting us, and for setting out the details so clearly.\n\nYou told us you need a 10-day payoff letter for your auto loan so you can trade your car in at Harbor Falls Auto Mall. You mentioned that you first requested the letter online on September 1 and again by phone on September 6, and that you have not yet received it. You also explained that the dealer needs the letter by September 11 or the deal may fall through, and you asked us to either email the letter to you or send it directly to the dealer.\n\nWe understand how stressful it is to wait on paperwork with a deadline approaching, and we're sorry for the frustration this has caused.\n\nWe have received your complaint, and a specialist team is reviewing it. We will respond within 10 business days.\n\nIf anything changes in the meantime, or if there are further details you would like us to consider, please reply to this message.\n\nKind regards,\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "The customer's dealer deadline of September 11 is likely sooner than the 10-business-day response window. Decide whether to expedite or contact the customer directly before this reply goes out.",
+   "Check whether a payoff letter has already been issued or is in progress. If so, update the reply.",
+   "Verify the customer's account of the September 1 online request and the September 6 phone request.",
+   "The customer offered two delivery options: email to them, or send to Harbor Falls Auto Mall. Decide which to use and confirm any authorization needed to send to the dealer.",
+   "Confirm the email address on file before sending anything by email."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:38:09+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0041",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 398,
+  "output_tokens": 1216,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 11.68,
+  "cost_usd": 0.026187,
+  "request_id": "req_011CfqtQ5tKbDTgNGyypxHPW"
+ }
+}

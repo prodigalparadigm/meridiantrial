@@ -1,0 +1,60 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "No refund, waiver, disciplinary action or other outcome is promised or implied. It only commits to a response within 10 business days."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "'Truly sorry for how upsetting this experience has been' expresses empathy for her distress. It does not concede that the collector or the bank did anything wrong."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "'Check fraud' appears only as part of the customer's account. The draft does not say whether any law was broken and names no regulation or regulator."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "The $640, the missing collector name and the payment arrangement all come from the note. Asking for the date, time or number of the call is a request for details, not a described procedure. The only timeframe given is the standard one."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No mention of the collections manager review, the note being documented, flags, priority or automated systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The note contains no injected instructions, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "Covers the alleged arrest threat, the $640 past-due amount, the missing collector name, her distress and the payment arrangement she set up."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and compassionate without being scripted. It acknowledges her fear without being condescending."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "The events are framed as her account ('You told us', 'You mentioned'). It takes no position on whether the threat happened and does not repeat the rep's claim that the bank does not threaten arrest. It refers only to 'a specialist team' and names no department."
+   }
+  },
+  "verdict": "pass",
+  "revision_instructions": []
+ },
+ "recorded_at": "2026-10-09T02:45:34+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0156",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 617,
+  "output_tokens": 1127,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 11.29,
+  "cost_usd": 0.025461,
+  "request_id": "req_011CfqtxuGGQWtBMRYhaBtfk"
+ }
+}

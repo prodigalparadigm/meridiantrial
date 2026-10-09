@@ -1,0 +1,58 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer reported the app/website outage since the morning, needing to send rent by 5pm today. Rep advised estimated early-afternoon restoration and offered a phone transfer; customer chose to wait for the app.",
+  "issues": [
+   "Mobile app and website outage",
+   "Unable to send rent payment online"
+  ],
+  "customer_requests": [
+   "Restore app/website access to send rent payment"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "unknown",
+    "evidence": "NEEDS TO SEND RENT BY 5PM TODAY"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "APP/WEBSITE OUTAGE SINCE THIS AM"
+   },
+   "time_sensitive": {
+    "value": true,
+    "evidence": "NEEDS TO SEND RENT BY 5PM TODAY"
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "calm",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:35:31+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0001",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 181,
+  "output_tokens": 368,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 2259,
+  "latency_s": 8.73,
+  "cost_usd": 0.019379,
+  "request_id": "req_011CfqtCjk4SZZTeTn9fgGgv"
+ }
+}

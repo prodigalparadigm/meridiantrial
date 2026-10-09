@@ -1,0 +1,57 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer's $812 mobile check deposit was rejected four times for image quality despite troubleshooting; a ticket was opened with digital support and branch/ATM deposit was suggested.",
+  "issues": [
+   "Mobile check deposit repeatedly rejected for image quality"
+  ],
+  "customer_requests": [
+   "Ability to deposit check via mobile app"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "100_to_1000",
+    "evidence": "Customer unable to deposit check $812 via mobile"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "Customer unable to deposit check $812 via mobile, rejected 4x for image quality"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "calm",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:40:32+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0084",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 107,
+  "output_tokens": 337,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.18,
+  "cost_usd": 0.00762,
+  "request_id": "req_011CfqtbJcrPoCkwxjGXwyzw"
+ }
+}

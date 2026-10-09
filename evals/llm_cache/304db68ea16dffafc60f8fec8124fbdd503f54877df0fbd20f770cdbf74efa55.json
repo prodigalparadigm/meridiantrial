@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "card_services",
+  "secondary": "none",
+  "rationale": "Customer disputes a credit card limit reduction from a periodic account review; credit limits are owned by Card Services. No other separate issue raised.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:36:42+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0025",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 119,
+  "output_tokens": 86,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 1.83,
+  "cost_usd": 0.002504,
+  "request_id": "req_011CfqtJRBm4xZ6XUNE4BKkz"
+ }
+}

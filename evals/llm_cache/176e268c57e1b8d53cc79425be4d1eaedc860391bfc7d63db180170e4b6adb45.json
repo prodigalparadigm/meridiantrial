@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "deposit_ops",
+  "secondary": "none",
+  "rationale": "The CD auto-renewed despite the customer's maturity instructions. Deposit Operations owns CD and savings accounts and can move the funds and waive the early withdrawal penalty. The secure message was received; the failure was in carrying out the instruction, not a technical problem.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:45:20+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0159",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 200,
+  "output_tokens": 131,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.58,
+  "cost_usd": 0.003728,
+  "request_id": "req_011CfqtxYCVtXNpW3iCP2Nza"
+ }
+}

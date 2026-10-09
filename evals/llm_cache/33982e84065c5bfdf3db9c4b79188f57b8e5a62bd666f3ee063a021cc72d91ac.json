@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "collections",
+  "secondary": "privacy_office",
+  "rationale": "Non-customer receiving repeated collection calls on a past-due auto loan for someone else, wrong number. Collections owns the call list and calling practices. The caller also disclosed the debtor's balance and repossession plans to a third party, which is a separate privacy problem for the Privacy Office.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:33:05+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0009",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 249,
+  "output_tokens": 137,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.21,
+  "cost_usd": 0.004044,
+  "request_id": "req_011Cfqt2Ro35tvGUMGxkHjhD"
+ }
+}

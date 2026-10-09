@@ -1,0 +1,60 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "No refund, compensation or other outcome is promised. The draft restates the customer's request for an explanation without committing to one."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "\"Sorry for the frustration this has caused you\" expresses empathy without conceding that staff or the bank were wrong."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "It does not say whether the POA was valid under state law and names no regulation or regulator. The state statutory form is mentioned only as the customer's account."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "No procedures, policies or timelines are added beyond the standard 10 business days. One small point: it describes \u27e6NAME_2\u27e7's 50-year relationship as \"your family\" without identifying the token. This is reasonable, and the analyst may want to confirm it."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No mention of flags, priority, compliance review or automated systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no instructions aimed at an AI, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "It covers both refusals at Elm & 4th, the reason given, acceptance on the third visit, the customer covering the bills, the request for an explanation, and the long relationship."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and respectful. It acknowledges the father's age and the family's loyalty without sounding scripted."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "It says a specialist team is reviewing without naming a department. Disputed events are framed as the customer's account (\"You told us\", \"You mentioned\"), and it takes no position on the bank's POA policy."
+   }
+  },
+  "verdict": "pass",
+  "revision_instructions": []
+ },
+ "recorded_at": "2026-10-09T02:45:28+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0154",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 633,
+  "output_tokens": 1087,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 11.5,
+  "cost_usd": 0.024725,
+  "request_id": "req_011CfqtxUtKRYxs9XZFw2uqW"
+ }
+}

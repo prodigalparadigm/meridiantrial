@@ -133,7 +133,7 @@ details summary{cursor:pointer;font-size:13px;color:var(--navy-2)}
     <div class="kpis" id="c-kpis"></div>
     <div class="split">
       <div class="panel">
-        <div class="toolbar"><select id="c-filter"><option value="open">Open</option><option value="acknowledged">Acknowledged</option><option value="cleared">Cleared</option><option value="all">All flags</option></select>
+        <div class="toolbar"><select id="c-filter"><option value="review_48h">Open · 48-hour review</option><option value="tripwire_check">Open · tripwire check</option><option value="acknowledged">Acknowledged</option><option value="cleared">Cleared</option><option value="all">All flags</option></select>
           <button class="ghost" id="verify">Verify audit chain</button><span class="hint" id="verifyOut"></span></div>
         <div class="list" id="c-list"></div>
       </div>
@@ -191,7 +191,8 @@ document.querySelectorAll("nav button").forEach(b => b.onclick = () => {
   if (b.dataset.view === "ops") loadOps();
 });
 const dept = id => (CFG.departments.find(d => d.id === id) || {name: id || "—"}).name;
-const cat = id => id === "unscreened" ? "Could not screen" : (CFG.taxonomy.categories.find(c => c.id === id) || {name: id}).name;
+const cat = id => id === "unscreened" ? "Could not screen" : id === "unspecified" ? "Possible issue, category unclear" : (CFG.taxonomy.categories.find(c => c.id === id) || {name: id}).name;
+const LANE = {review_48h: "48-hour review", tripwire_check: "Tripwire check"};
 
 async function init() {
   CFG = await api("/api/config");
@@ -244,7 +245,7 @@ async function openCase(id, target = "#detail") {
   if (reg.flagged) {
     const src = Object.entries(reg.sources).filter(([k, v]) => k === "tripwire" ? v.length : v && v.potential_regulatory).map(([k]) => k === "tripwire" ? "Compliance tripwire" : "model screener");
     if (c.failures.some(f => f.stage === "screener")) src.push("screen could not run");
-    banners.push(`<div class="banner reg"><b>Regulatory flag</b> · ${reg.categories.map(x => esc(cat(x))).join(", ")}<br>
+    banners.push(`<div class="banner reg"><b>Regulatory flag</b> · ${esc(LANE[reg.lane] || "")} · ${reg.categories.map(x => esc(cat(x))).join(", ")}<br>
       Raised by ${src.join(" + ")} · ${reg.seconds_to_flag ? `${reg.seconds_to_flag}s after receipt` : "at intake"} · Compliance due ${fmt(reg.due_at)} ·
       status <b>${esc(reg.status)}</b>${reg.actioned_by ? ` by ${esc(reg.actioned_by)}` : ""}</div>`);
   }
@@ -268,7 +269,7 @@ async function openCase(id, target = "#detail") {
       `<div class="${v.pass ? "p" : "f"}" title="${esc(v.note)}">${v.pass ? "✓" : "✗"} ${esc(k.replace(/_/g, " "))}</div>`).join("") : "<div>Reviewer did not run</div>"}</div>
       ${dr.review && dr.review.verdict === "revise" ? `<p class="hint">${dr.review.revision_instructions.map(esc).join("<br>")}</p>` : ""}
       ${dr.deterministic.hard_failures.length ? `<p class="hint" style="color:var(--red)">Rule failures: ${dr.deterministic.hard_failures.join(", ")}</p>` : ""}</details>
-    ${c.status === "approved" ? `<div class="banner info" style="margin:10px 0 0">Approved by <b>${esc(c.approval.by)}</b> ${fmt(c.approval.at)} · ${Math.round(c.approval.similarity_to_draft * 100)}% unchanged from draft. Handed to the bank's existing outbound process; this system cannot send.</div>` :
+    ${c.status === "approved" ? `<div class="banner info" style="margin:10px 0 0">Approved by <b>${esc(c.approval.by)}</b> ${fmt(c.approval.at)} · ${c.approval.unchanged ? "approved without changes" : `edited before approval (${Math.floor(c.approval.similarity_to_draft * 100)}% of the draft kept)`}. Handed to the bank's existing outbound process; this system cannot send.</div>` :
       `<div class="actions"><button class="primary" id="approve" ${blocked ? "disabled" : ""}>Approve reply</button>
         <span class="hint">${blocked ? "Compliance must acknowledge the regulatory flag first." : "Your name is recorded with the exact text you approve."}</span></div>`}` : `<div class="hint">No draft. This complaint needs a manual reply.</div>`;
 
@@ -317,7 +318,8 @@ function complianceSection(c) {
   const reg = c.regulatory, s = reg.sources.screener;
   return `<section><h3>Why it was flagged</h3><table><tr><th>Check</th><th>Category</th><th>Evidence</th></tr>
     ${reg.sources.tripwire.map(h => `<tr><td>Tripwire</td><td>${esc(cat(h.category))}</td><td class="q">matched “${esc(h.matched)}”</td></tr>`).join("")}
-    ${s ? s.categories.map(x => `<tr><td>Screener</td><td>${esc(cat(x.id))}</td><td class="q">“${toks(x.evidence)}”<br><span style="font-style:normal">${toks(x.why)}</span></td></tr>`).join("") : `<tr><td>Screener</td><td colspan="2">Did not run. Treat as unscreened.</td></tr>`}
+    ${s ? (s.potential_regulatory ? (s.categories.length ? s.categories.map(x => `<tr><td>Screener</td><td>${esc(cat(x.id))}</td><td class="q">“${toks(x.evidence)}”<br><span style="font-style:normal">${toks(x.why)}</span></td></tr>`).join("") : `<tr><td>Screener</td><td colspan="2">Possible issue; no category named.</td></tr>`)
+        : `<tr><td>Screener</td><td colspan="2">Read it as <b>not regulatory</b>. Only the tripwire fired, so this sits in the tripwire-check lane.</td></tr>`) : `<tr><td>Screener</td><td colspan="2">Did not run. Treat as unscreened.</td></tr>`}
     </table>
     ${reg.status === "open" ? `<div class="actions"><button class="primary" id="ack">Acknowledge</button><input class="full" id="clr-why" placeholder="Reason, required to clear the flag" style="flex:1;min-width:180px"><button class="danger" id="clr">Clear flag</button></div>
       <p class="hint">Acknowledging lets an analyst approve a reply. Only Compliance can clear a flag; nothing in the pipeline can.</p>` :
@@ -334,13 +336,15 @@ function wireCompliance(el, c) {
 }
 async function loadCompliance() {
   const [rows, st] = await Promise.all([api("/api/cases?policy=interim"), api("/api/stats")]);
-  $("#c-kpis").innerHTML = kpi(st.flagged, "complaints flagged for Compliance") + kpi(st.flags_open, "flags still open") +
-    kpi(st.median_seconds_to_flag != null ? st.median_seconds_to_flag + "s" : "—", "median receipt → flag") +
+  const open = rows.filter(r => r.flagged && r.reg_status === "open");
+  $("#c-kpis").innerHTML = kpi(open.filter(r => r.lane === "review_48h").length, "open in 48-hour review") +
+    kpi(open.filter(r => r.lane === "tripwire_check").length, "open tripwire-only checks") +
+    kpi(st.median_seconds_to_flag_model != null ? `<1 s · ${Math.round(st.median_seconds_to_flag_model)} s` : "—", "receipt → flag: tripwire · model (median)") +
     kpi("~6 days", "receipt → first read before (queue)");
   const f = $("#c-filter").value;
-  const list = rows.filter(r => r.flagged && (f === "all" || r.reg_status === f)).sort((a, b) => (a.due_at || "").localeCompare(b.due_at || ""));
+  const list = rows.filter(r => r.flagged && (f === "all" || r.reg_status === f || (r.reg_status === "open" && r.lane === f))).sort((a, b) => (a.due_at || "").localeCompare(b.due_at || ""));
   $("#c-list").innerHTML = list.map(r => `<div class="row ${r.id === CSEL ? "sel" : ""}" data-id="${r.id}"><div class="pri ${r.priority}">${r.priority}</div><div>
-    <div class="meta"><span class="mono">${r.id}</span><span>due ${fmt(r.due_at)}</span><span class="chip ${r.reg_status === "open" ? "reg" : "ok"}">${esc(r.reg_status)}</span>${r.injection ? `<span class="chip warn">AI-directed text</span>` : ""}</div>
+    <div class="meta"><span class="mono">${r.id}</span><span>due ${fmt(r.due_at)}</span><span class="chip ${r.reg_status === "open" ? "reg" : "ok"}">${esc(r.reg_status)}</span><span class="chip">${esc(LANE[r.lane] || "")}</span>${r.injection ? `<span class="chip warn">AI-directed text</span>` : ""}</div>
     <div class="sum">${esc(r.summary || "(not triaged)")}</div>
     <div class="meta" style="margin-top:3px">${r.categories.map(x => `<span class="chip">${esc(cat(x))}</span>`).join(" ")}</div></div></div>`).join("") || `<div class="empty">No flags in this view</div>`;
   document.querySelectorAll("#c-list .row").forEach(el => el.onclick = () => { CSEL = el.dataset.id; loadCompliance(); openCase(el.dataset.id, "#c-detail"); });

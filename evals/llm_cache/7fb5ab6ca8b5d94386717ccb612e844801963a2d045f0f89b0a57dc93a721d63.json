@@ -1,0 +1,58 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer reports that staff member \u27e6NAME_1\u27e7 at the Lantern Hill branch was rude, rolling eyes and referring them to the website when asked about a cashier's check.",
+  "issues": [
+   "Rude staff conduct at Lantern Hill branch",
+   "Unhelpful response to cashier's check question"
+  ],
+  "customer_requests": [
+   "Address staff member's behavior"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "I asked a simple question about a cashier's check"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:44:39+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0146",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 119,
+  "output_tokens": 313,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 4.4,
+  "cost_usd": 0.007188,
+  "request_id": "req_011CfqtuPr8TG7eTKEiCWepF"
+ }
+}

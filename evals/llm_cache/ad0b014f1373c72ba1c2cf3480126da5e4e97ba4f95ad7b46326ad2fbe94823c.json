@@ -1,0 +1,30 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your request to update your address and replacement card delivery",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for getting in touch with us through our web form.\n\nYou asked us to change the address we hold for you from your old address to your new one. You also mentioned that you want your replacement debit card sent to the new address, because you don't want it sitting at the old place. We understand why that matters to you.\n\nWe have passed your message to our Card Services team, who will review both your address change request and your request about where your replacement debit card is sent. They will respond to you within 10 business days, and if they need anything further from you, they will let you know.\n\nIf you have any other questions in the meantime, please get in touch.\n\nKind regards,\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "This is a service request, not a complaint; the reply treats it as a request.",
+   "The reply does not confirm the address has been changed; confirm whether the update can be made and tell the customer if so.",
+   "Check whether the replacement debit card has already been dispatched to the old address and decide what to tell the customer if it has.",
+   "Verify the customer's identity per standard procedure before making any address change.",
+   "The reply does not state either address; add them if appropriate.",
+   "The 10-business-day timeframe may be too slow for card delivery; consider whether faster action or contact is needed."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:40:39+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0076",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 1163,
+  "output_tokens": 1149,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 9.57,
+  "cost_usd": 0.027907,
+  "request_id": "req_011CfqtbHPRYDmUfCtuYYS4F"
+ }
+}

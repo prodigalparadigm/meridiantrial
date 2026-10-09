@@ -1,0 +1,31 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your complaint about your personal loan rate",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for speaking with us about your personal loan. We have received your complaint, and we want you to know it is being taken seriously.\n\nYou told us that a loan officer at Fairhaven gave you a written quote of 7.49% for your personal loan, but that the loan closed on 8/29 at 11.99%. You mentioned that you felt pressured to sign at the time because you needed to pay for a roof repair. You estimate that the difference will cost you about $2,140 in additional interest over the life of the loan, and you have asked that the quoted 7.49% rate be honored.\n\nWe understand how stressful it can be to manage an urgent home repair alongside a loan that, as you describe it, did not match what you were expecting. We're sorry for the worry and frustration this has caused.\n\nA specialist team is reviewing your complaint, and we will respond within 10 business days.\n\nThank you for your patience while we look into this.\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Confirm whether a written 7.49% quote exists and what terms and conditions it carried.",
+   "Verify the closing date (8/29, year not stated) and the final rate of 11.99% on the loan documents.",
+   "The $2,140 figure is the customer's own estimate; do not adopt or confirm it without checking.",
+   "Allegation of pressure to sign is sensitive; review how the closing was conducted before responding on substance.",
+   "The loan officer is named in the complaint; the draft deliberately does not name them.",
+   "Call note says the case was forwarded to a lending manager; confirm status so replies are not duplicated or contradictory.",
+   "Decide whether the customer's request to honor the quoted rate will be addressed in the final response."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:38:24+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0043",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 373,
+  "output_tokens": 1301,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 19.74,
+  "cost_usd": 0.027787,
+  "request_id": "req_011CfqtQbxpopG662vf3AiW7"
+ }
+}

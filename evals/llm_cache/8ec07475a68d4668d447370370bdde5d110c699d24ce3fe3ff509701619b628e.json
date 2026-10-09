@@ -1,0 +1,30 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your replacement debit card and expedited shipping fee",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for contacting us about your replacement debit card.\n\nYou told us you reported your debit card lost on 9/11 and paid $15.00 for expedited shipping, but the replacement card still hasn't arrived. You also mentioned that you fly out on 10/3 and really can't travel without a card. You've asked us either to get the card to you before you leave or to refund the $15.00 expedited shipping fee.\n\nWe understand how stressful it is to wait for a card with a trip coming up, and we're sorry for the worry this has caused. Our Card Services team will review what you've described, including your request about the shipping fee, and we will respond within 10 business days.\n\nIf anything changes in the meantime, such as the card arriving, please let us know so we can keep your complaint up to date.\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Customer travels 10/3, which may fall before the 10-business-day response window. Decide whether faster contact or action is needed.",
+   "Confirm the lost-card report date (9/11) and whether a replacement was issued and shipped, with tracking status.",
+   "Confirm the $15.00 expedited shipping fee was charged and what delivery timeframe applied.",
+   "Decide whether to refund the $15.00 fee. The draft only acknowledges the request.",
+   "Decide whether to offer any interim options for travel. None are mentioned in the draft.",
+   "Check whether the replacement card may have been sent to an outdated address."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:45:31+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0158",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 356,
+  "output_tokens": 1009,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 9.77,
+  "cost_usd": 0.021879,
+  "request_id": "req_011CfqtxqiCc9GYCTFR9N7jj"
+ }
+}

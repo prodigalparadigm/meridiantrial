@@ -1,0 +1,23 @@
+{
+ "agent": "regulatory_screener",
+ "model": "claude-opus-5-5",
+ "output": {
+  "potential_regulatory": false,
+  "categories": [],
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:32:56+00:00",
+ "usage": {
+  "agent": "regulatory_screener",
+  "case_id": "C-0007",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 92,
+  "output_tokens": 108,
+  "cache_read_tokens": 1823,
+  "cache_write_tokens": 0,
+  "latency_s": 3.32,
+  "cost_usd": 0.002893,
+  "request_id": "req_011Cfqt1eQGzuK2zw355LNEN"
+ }
+}

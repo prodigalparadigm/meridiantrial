@@ -116,7 +116,7 @@ _STREET = (r"(?:Street|St|Avenue|Ave|Road|Rd|Lane|Ln|Drive|Dr|Boulevard|Blvd|Cou
            r"Circle|Cir|Highway|Hwy|Parkway|Pkwy|Trail|Trl|Square|Sq|Loop|Pike|Turnpike|Calle|Glen|Hollow|Ridge|Crossing|"
            r"Landing|Heights|Hts|Commons|Manor|Mews|Bend|Knoll|Grove|Meadows?|Estates|Gardens|Cove|Run)")
 ADDRESS_RE = re.compile(
-    rf"\b\d{{1,6}}\s+(?:[NSEW]\.?\s+)?(?:[A-Za-z0-9][A-Za-z0-9'’\-]*\.?\s+){{0,4}}{_STREET}\b\.?"
+    rf"(?<![\d.,$])\b\d{{1,6}}\s+(?:[NSEW]\.?\s+)?(?:[A-Za-z0-9][A-Za-z0-9'’\-]*\.?\s+){{0,4}}{_STREET}\b\.?"
     r"(?:,?\s*(?:Apt|Apartment|Unit|Suite|Ste|#)\.?\s*[\w\-]+)?"
     r"(?:,\s*[A-Z][A-Za-z]+(?:\s+[A-Z][A-Za-z]+){0,2})?"
     r"(?:,?\s*[A-Z]{2})?(?:\s+\d{5}(?:-\d{4})?)?",
@@ -131,7 +131,18 @@ _UP = "[A-ZÁÉÍÓÚÑÜÀÈÌÒÙÂÊÎÔÛÄËÏÖÇ]"
 _LET = r"[^\W\d_]"
 _NAME_WORD = rf"{_UP}(?:{_LET}|['’\-])+"
 _NAME_WORD_ANYCASE = rf"{_LET}(?:{_LET}|['’\-])+"
-HONORIFIC_RE = re.compile(rf"\b(?:Mr|Mrs|Ms|Miss|Mx|Dr|Sr|Sra|Srta)\.?\s+({_NAME_WORD}(?:\s+{_NAME_WORD})?)")
+HONORIFIC_RE = re.compile(rf"\b(Mr|Mrs|Ms|Miss|Mx|Dr|Sr|Sra|Srta)\.?\s+(?!(?:[A-Z]{{2,}})\b)({_NAME_WORD}(?:[ \t]+{_NAME_WORD})?)")
+
+
+def honorific_names(text: str):
+    """Yield (start, end) of names after Mr/Mrs/Dr... "Dr" right after a capitalized word is a street
+    ("Riverside Dr ATM"), not a doctor, and an acronym after it ("Dr ATM") is never a name."""
+    for m in HONORIFIC_RE.finditer(text):
+        before = text[:m.start()].rstrip()
+        prev = before.split()[-1] if before.split() else ""
+        if m.group(1) in ("Dr", "Sr") and prev[:1].isupper() and prev.rstrip(".,").isalpha() and prev.lower() not in ("asked", "saw"):
+            continue
+        yield m.start(2), m.end(2)
 _CUES = (r"my\s+(?:son|daughter|husband|wife|mother|mom|father|dad|brother|sister|caregiver|aide|neighbou?r|friend|"
          r"grandson|granddaughter|grandmother|grandfather|grandma|grandpa|nephew|niece|partner|fianc[eé]e?|cousin|uncle|"
          r"aunt|roommate|landlord|boss|ex|ex-husband|ex-wife|stepson|stepdaughter|attorney|lawyer|accountant|"
@@ -296,8 +307,8 @@ class Redactor:
             add(m.start(), m.end(), "ADDRESS", "ADDRESS")
 
         # 3. Name heuristics ------------------------------------------------
-        for m in HONORIFIC_RE.finditer(text):
-            add(m.start(1), m.end(1), "NAME", "NAME")
+        for a, b in honorific_names(text):
+            add(a, b, "NAME", "NAME")
         for m in CUE_NAME_RE.finditer(text):
             s, e = self._trim_name(text, m.start(1), m.end(1), in_caps(m.start(1)))
             if s is not None:

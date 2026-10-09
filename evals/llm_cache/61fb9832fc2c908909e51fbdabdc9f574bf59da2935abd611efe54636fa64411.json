@@ -1,0 +1,64 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "The draft acknowledges the waiver request but does not promise or imply a waiver or any other outcome."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "'Sorry for the frustration this has caused' is empathy, not an admission of error. The draft does not suggest the fee was charged wrongly."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No laws, regulations or regulators are mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "The fee amount, August timing, car repair and four-year tenure all come from the note. 'The minimum' is a light paraphrase of the masked threshold and does not guess at the token's value. The only timeline is the standard 10 business days."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No mention of flags, compliance, priority, guidelines or automated systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no injected instructions, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": false,
+    "note": "The call note records that the request was handled during the call and the customer was satisfied with no further action needed. The draft ignores this and presents the request as still awaiting a decision ('will review your request... confirm where things stand'). That contradicts what the customer was told on the call and could cause confusion."
+   },
+   "tone": {
+    "pass": true,
+    "note": "The tone is warm, specific and respectful. The closing 'valued customer' line is slightly formulaic but acceptable."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "STANDARD mode, and the owning team (Deposit Operations) is named as instructed."
+   }
+  },
+  "verdict": "revise",
+  "revision_instructions": [
+   "Do not frame the fee request as an open item awaiting a decision. Remove or rework 'will review your request' and 'confirm where things stand', since the call record shows the matter was addressed on the call and the customer was satisfied.",
+   "Recast the message as a follow-up to the call: thank the customer for speaking with us, briefly restate what they raised (the $12 fee after their balance dipped in August because of a car repair, and their four years with the bank), and invite them to reply if anything is unresolved. Still name Deposit Operations as the owning team and give the standard 10-business-day response timeframe for any further questions.",
+   "Do not state on your own that the fee was waived. Leave confirmation of the call outcome to the analyst, and add a note to the analyst that the call record says a one-time courtesy waiver was granted, so they can decide whether and how to confirm it."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:43:44+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0126",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 566,
+  "output_tokens": 1662,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 16.79,
+  "cost_usd": 0.035957,
+  "request_id": "req_011CfqtpQpXT25fmML1q1wiW"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "agent": "regulatory_screener",
+ "model": "claude-opus-5-5",
+ "output": {
+  "potential_regulatory": true,
+  "categories": [
+   {
+    "id": "vulnerable_exploitation",
+    "evidence": "refused to accept it twice because it's \"not on our form.\"",
+    "why": "The branch twice refused a notarized state statutory power of attorney for a 90-year-old customer, which may conflict with state POA acceptance laws and could have left an elderly customer's bills unpaid, so Compliance should review the handling even though no harm resulted."
+   }
+  ],
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:45:04+00:00",
+ "usage": {
+  "agent": "regulatory_screener",
+  "case_id": "C-0154",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 207,
+  "output_tokens": 436,
+  "cache_read_tokens": 1823,
+  "cache_write_tokens": 0,
+  "latency_s": 5.01,
+  "cost_usd": 0.009913,
+  "request_id": "req_011CfqtwD81rmwzXAUuhQHZY"
+ }
+}

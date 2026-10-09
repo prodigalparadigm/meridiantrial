@@ -1,0 +1,60 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "Recently widowed customer cannot access joint checking account restricted after spouse's death notification; branch visited three times, each giving a different document list. Rep advised only certified death certificate needed; escalated to branch manager.",
+  "issues": [
+   "Joint checking account restricted after death notification",
+   "Inconsistent document requirements given at branch",
+   "Multiple branch visits without resolution"
+  ],
+  "customer_requests": [
+   "Access to joint checking account as surviving joint owner",
+   "Clear, consistent document requirements"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "unknown",
+    "evidence": "ACCT RESTRICTED AFTER DEATH NOTIFICATION"
+   },
+   "vulnerability_indicated": {
+    "value": true,
+    "evidence": "CX RECENTLY WIDOWED (SPOUSE LAYLA \u27e6CUSTOMER_NAME_1\u27e7 DECEASED 8/9)"
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "ACCT RESTRICTED AFTER DEATH NOTIFICATION"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": true,
+    "evidence": "CX HAS BEEN TO NORTH ARDLEY BR 3X, GIVEN DIFFERENT DOC LIST EACH TIME"
+   }
+  },
+  "sentiment": "distressed",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:41:06+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0094",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 321,
+  "output_tokens": 499,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 4.83,
+  "cost_usd": 0.011716,
+  "request_id": "req_011Cfqtdf8gVGfbgKj2ECbPH"
+ }
+}

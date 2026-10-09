@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your recent call with Meridian Harbor Bank",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for taking the time to share your experience with us after your recent call.\n\nYou told us that you waited 88 minutes on hold before you were able to speak with someone. We understand how frustrating it is to spend that long waiting, especially when you had a question you wanted answered. We're sorry for the frustration this has caused you.\n\nWe were glad to hear that your original question about your debit card PIN was resolved once you reached a representative. Your concern about the time it took to get there still matters to us, and we want to look into it properly.\n\nYour feedback has been passed to our Branch & Contact Center team, who will review what you've described. We will respond to you within 10 business days.\n\nThank you again for letting us know about your experience. Your comments help us understand where we need to look more closely.\n\nKind regards,\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Customer said they have already spoken to an attorney; decide whether this needs escalation or legal input before sending.",
+   "The attorney mention is deliberately left out of the reply; decide whether to acknowledge it.",
+   "Confirm the 88-minute hold time against call records before responding further.",
+   "No specific request was recorded; decide whether any goodwill gesture is appropriate.",
+   "The debit card PIN issue is noted as resolved; confirm there is no outstanding card issue."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:40:17+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0077",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 252,
+  "output_tokens": 660,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 8.21,
+  "cost_usd": 0.014483,
+  "request_id": "req_011CfqtZms8YYrTiMxk1EUWZ"
+ }
+}

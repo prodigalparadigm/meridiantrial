@@ -1,0 +1,58 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer objects to the planned closure of the Wexford Commons branch, citing reliance on the bus route and inability to stand long enough to reach the next branch. Asks the bank to reconsider.",
+  "issues": [
+   "Planned closure of Wexford Commons branch",
+   "Next branch difficult to access due to mobility limitations"
+  ],
+  "customer_requests": [
+   "Reconsider closing the Wexford Commons branch"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "It's unfair to close the Wexford Commons branch."
+   },
+   "vulnerability_indicated": {
+    "value": true,
+    "evidence": "The next closest branch is two buses away and I can't stand that long."
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": "Please reconsider."
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": "Please reconsider."
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": "Please reconsider."
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": "Please reconsider."
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:38:57+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0060",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 141,
+  "output_tokens": 373,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 4.01,
+  "cost_usd": 0.008476,
+  "request_id": "req_011CfqtUBFPW25HRE7Sezjfp"
+ }
+}

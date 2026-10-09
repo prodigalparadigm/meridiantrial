@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your suggestion about merchant names in our app",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for taking the time to write to us with your suggestion. We have received your message.\n\nYou told us that you almost filed a fraud dispute today over a charge that appeared in the app as \"SQ *HARBORBREW LLC\", before realising it was the coffee place on Depot Square. You suggested that the app show the actual business name, as you said other banks do, and you mentioned that you suspect many fraud calls may come from the same kind of confusion. You were also clear that this is not a dispute, simply a suggestion.\n\nWe're glad you took a moment to check before going further, and we're sorry for the worry an unfamiliar name caused. Feedback like yours, drawn from a real moment of using the app, is useful to hear.\n\nA specialist team is now reviewing your suggestion, and we will respond within 10 business days.\n\nThank you again for sharing your thoughts with us.\n\nKind regards,\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Customer sent a suggestion, not a complaint, and explicitly said it is not a dispute.",
+   "Confirm no fraud dispute or card block was opened on the account for this charge.",
+   "Decide whether to tell the customer anything about current or planned changes to how merchant names appear in the app; the draft makes no commitment.",
+   "Decide whether to add any guidance on identifying unfamiliar merchant names; none is included in the draft.",
+   "Customer remarked that many fraud calls may stem from unclear merchant names; the draft acknowledges this without agreeing or disagreeing."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:38:07+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0040",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 346,
+  "output_tokens": 1328,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 12.14,
+  "cost_usd": 0.028219,
+  "request_id": "req_011CfqtPwM7NsGAmAqqrfUK5"
+ }
+}

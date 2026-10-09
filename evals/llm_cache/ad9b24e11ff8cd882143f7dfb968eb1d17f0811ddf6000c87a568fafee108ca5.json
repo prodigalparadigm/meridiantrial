@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "deposit_ops",
+  "secondary": "none",
+  "rationale": "Customer disputes a second NSF fee charged when the same returned autopay was re-presented on their checking account. NSF/overdraft fee refunds are owned by Deposit Operations. The payment itself is authorized, so this is not a fraud dispute.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:39:55+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0074",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 167,
+  "output_tokens": 125,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.16,
+  "cost_usd": 0.003476,
+  "request_id": "req_011CfqtYas4ZxcZZDerZDsq7"
+ }
+}

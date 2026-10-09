@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "digital_banking",
+  "secondary": "none",
+  "rationale": "Complaint about the mobile app redesign's usability (transfer button buried in menus, wants old home screen back). This is owned by Digital Banking. The joking legal threat is not a real issue, and there is no second problem.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:36:36+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0023",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 143,
+  "output_tokens": 112,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.22,
+  "cost_usd": 0.00312,
+  "request_id": "req_011CfqtHv25RSuhF54JUQn6C"
+ }
+}

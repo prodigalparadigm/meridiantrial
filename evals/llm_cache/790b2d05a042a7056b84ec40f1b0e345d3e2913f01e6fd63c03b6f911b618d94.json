@@ -1,0 +1,58 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer reported one unauthorized debit card transaction of $312.45 from 9/13 while card was in their possession. Card closed and reissued, claim filed; customer previously emailed 9/17 without response.",
+  "issues": [
+   "Unauthorized debit card transaction of $312.45",
+   "No response to prior email about the transaction"
+  ],
+  "customer_requests": [
+   "Refund of unauthorized $312.45 transaction"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "100_to_1000",
+    "evidence": "SP * LUXEWATCHOUTLET $312.45"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "advised provisional credit w/in 10 business days"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": true,
+    "evidence": "customer states already emailed regarding this on 9/17, no response"
+   }
+  },
+  "sentiment": "calm",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:41:46+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0104",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 182,
+  "output_tokens": 367,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.47,
+  "cost_usd": 0.00852,
+  "request_id": "req_011CfqtgiJGHcABY1kU6jiYq"
+ }
+}

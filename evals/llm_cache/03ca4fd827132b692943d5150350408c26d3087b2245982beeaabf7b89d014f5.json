@@ -1,0 +1,60 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "The draft only restates the request to reverse the fee and take the payment. It makes no commitment to either."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "The apologies are about the husband's illness and the customer's stress, not about bank error. Nothing concedes fault."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "Every detail comes from the complaint, apart from the standard 10-business-day timeframe."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "There is no mention of flags, compliance review, priority or automated systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no injected instructions, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "The draft covers the stroke, the autopay not drafting, the $87.40 late fee, the funds being available, the loan being in the husband's name only, his inability to speak, and both requests."
+   },
+   "tone": {
+    "pass": true,
+    "note": "The tone is warm, compassionate and plain, without sounding defensive or scripted."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "No department is named. Disputed events sit under 'Here is what you told us' and are framed as the customer's account ('you mentioned'). The draft takes no position on the substance."
+   }
+  },
+  "verdict": "pass",
+  "revision_instructions": []
+ },
+ "recorded_at": "2026-10-09T02:45:17+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0151",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 700,
+  "output_tokens": 846,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 8.36,
+  "cost_usd": 0.020173,
+  "request_id": "req_011CfqtwuuSXf8zhGgB3yMx5"
+ }
+}

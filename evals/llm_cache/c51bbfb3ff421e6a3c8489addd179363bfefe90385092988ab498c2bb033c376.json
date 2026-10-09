@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "privacy_office",
+  "secondary": "none",
+  "rationale": "The customer wants to opt out of marketing offers and of having their data shared with third-party partners. Both requests are data-sharing and marketing opt-outs, which the Privacy Office owns. The threat to close accounts is leverage, not a separate request.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:40:51+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0089",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 143,
+  "output_tokens": 122,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.55,
+  "cost_usd": 0.00332,
+  "request_id": "req_011CfqtcjN9jaNJT15ZaVXmY"
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer, aged 77, complains the Fairhaven branch refused an $18,500 wire to a fianc\u00e9 in Ghana for a customs fee, questioned the relationship, and threatens to close accounts unless the wire is sent.",
+  "issues": [
+   "Branch refused $18,500 international wire to Ghana",
+   "Customer felt questioning was insulting and age-discriminatory",
+   "Customer previously sent two wires to same recipient"
+  ],
+  "customer_requests": [
+   "Send the $18,500 wire to \u27e6NAME_1\u27e7"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "over_1000",
+    "evidence": "refused to send a wire of $18,500 to my fianc\u00e9 \u27e6NAME_1\u27e7 in Ghana"
+   },
+   "vulnerability_indicated": {
+    "value": true,
+    "evidence": "I am 77 years old"
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": "your Fairhaven branch refused to send a wire of $18,500"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": true,
+    "evidence": "Send the wire or I will close every account I have with you."
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "angry",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:43:39+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0131",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 283,
+  "output_tokens": 432,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 4.16,
+  "cost_usd": 0.010224,
+  "request_id": "req_011CfqtpxE9hqHYp4YZkByGd"
+ }
+}

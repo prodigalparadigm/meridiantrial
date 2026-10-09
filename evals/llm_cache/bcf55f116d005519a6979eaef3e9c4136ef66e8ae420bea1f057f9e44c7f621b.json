@@ -1,0 +1,63 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "No refund, waiver, removal of default status or other outcome is promised. Committing that the reply will address whether anything extra is owed is not a promise about the answer."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "\"We're sorry for the concern it has caused\" expresses sympathy without conceding that the letter was wrong. The related \"keeping up with your payments\" wording is handled under mode_respected."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "No fees, policies or procedures are described. The only timeline is the standard 10 business days. Inviting the customer to reply to this email suits the email channel."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No mention of flags, compliance review, priority or automated systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no instructions aimed at an AI."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "Covers the default-status letter, the customer's payment history including the late payments, whether default differs from past due, whether extra is owed, and the request for a plain-English explanation."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and respectful, and not defensive."
+   },
+   "mode_respected": {
+    "pass": false,
+    "note": "\"especially when you have been keeping up with your payments\" states the customer's disputed payment standing as fact, in the bank's own voice. The customer admits some payments were late, and the bank's letter says the loan is in default. Otherwise no department is named and the rest is framed as the customer's account."
+   }
+  },
+  "verdict": "revise",
+  "revision_instructions": [
+   "Change \"A letter like this can be worrying, especially when you have been keeping up with your payments, and we're sorry for the concern it has caused.\" to \"A letter like this can be worrying, especially when, as you say, you have made every payment this year, and we're sorry for the concern it has caused.\" This attributes the payment history to the customer rather than stating it as fact.",
+   "Change the greeting token from \u27e6CUSTOMER_NAME_1\u27e7 to \u27e6NAME_1\u27e7, which is the token the customer signed with, so the reply is addressed to the same person."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:41:42+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0096",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 550,
+  "output_tokens": 1380,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 13.59,
+  "cost_usd": 0.030253,
+  "request_id": "req_011Cfqtfh274HvpYDEDiDPmn"
+ }
+}

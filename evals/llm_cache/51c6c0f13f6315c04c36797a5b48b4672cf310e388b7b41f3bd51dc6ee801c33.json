@@ -1,0 +1,31 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your replacement debit card",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for speaking with us about your replacement debit card. You told us that you ordered the replacement on 8/16 and that it has not arrived, even though it shows as mailed. We understand how inconvenient it is to be without your card, and we're sorry for the frustration this has caused.\n\nDuring your call, you confirmed your mailing address with our representative, and a new card was requested. You also asked how you could make purchases in the meantime, and our representative talked you through adding your card to the digital wallet on your phone. If you have any trouble setting that up, please let us know.\n\nIf you have further questions, we will respond within 10 business days.\n\nThank you for your patience.\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Confirm that 10 business days matches the bank's standard response timeframe for this kind of follow-up.",
+   "The reply does not name a reviewing team; add Card Services if your standard reply format requires it.",
+   "Confirm the reorder with expedited shipping was placed, and decide whether to mention the expedite and estimated delivery.",
+   "Call note says a fee was waived; confirm it was applied before mentioning it to the customer (left out of the reply).",
+   "Check whether the original replacement card ordered 8/16 was deactivated, and decide whether to tell the customer.",
+   "Confirm digital wallet setup is available for the customer's existing or new card before they rely on it.",
+   "If the original card may have been intercepted, consider advising the customer to review recent account activity."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:32:55+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0005",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 1061,
+  "output_tokens": 1299,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 12.55,
+  "cost_usd": 0.030499,
+  "request_id": "req_011CfqszsdEUp93XoucduE14"
+ }
+}

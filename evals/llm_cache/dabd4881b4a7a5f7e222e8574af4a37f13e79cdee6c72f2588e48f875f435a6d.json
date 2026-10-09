@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "deposit_ops",
+  "secondary": "branch_contact_center",
+  "rationale": "The core problem is the restriction on a joint checking account after the death notification. Deposit Operations owns this and can process the surviving owner's access. The branch gave inconsistent document lists across three visits, which is a service-quality issue for Branch & Contact Center and was escalated to the branch manager.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:41:05+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0094",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 321,
+  "output_tokens": 143,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 3.89,
+  "cost_usd": 0.004452,
+  "request_id": "req_011Cfqtdf3jNiVR7uewdpYNU"
+ }
+}

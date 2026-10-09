@@ -1,0 +1,30 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your complaint about your ATM withdrawal on 9/17",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for speaking with us and for taking the time to explain what happened. We know how unsettling it is when money leaves your account and you don't have it in hand, and we're sorry for the worry and inconvenience this has caused.\n\nWe want to confirm that we have received your complaint. As you told us, on 9/17 you tried to withdraw $800 at the ATM at our Route 9 branch. You mentioned that the machine did not give you the cash, but the $800 was still taken from your account. We understand you would like the $800 returned, and you also let us know that you are traveling on 9/26, so we appreciate that timing matters to you.\n\nA specialist team is now reviewing your complaint and will respond to you within 10 business days. If anything changes, or if you have receipts or other details about the transaction you'd like us to see, please reply to this message and we'll make sure it reaches the team looking into it.\n\nThank you again for bringing this to us.\n\nKind regards,\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Customer says they travel on 9/26; 10 business days from the call may run past that date, so decide whether to say anything about timing before sending.",
+   "The call note does not record the customer explicitly asking for a credit; the $800 request comes from intake. Confirm what the customer actually asked for.",
+   "An ATM dispute reference was opened on the call; decide whether to quote it to the customer (it is not in the draft).",
+   "The call note says the ATM balancing is not yet complete; the draft does not mention it or any outcome.",
+   "Check whether the customer was told anything on the call about provisional credit or fund availability, and keep the reply consistent with that.",
+   "Confirm the branch location, date and amount against the transaction record before sending."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:42:27+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0112",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 403,
+  "output_tokens": 916,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 10.07,
+  "cost_usd": 0.020207,
+  "request_id": "req_011CfqtjEV2HFfD5y9eBCaSk"
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer reports three unauthorized debit card charges totaling $970.70 on September 23, card still in possession, and requests reversal and a replacement card; has drafted a CFPB complaint.",
+  "issues": [
+   "Unauthorized debit card charges",
+   "Possible card compromise"
+  ],
+  "customer_requests": [
+   "Reverse the three charges",
+   "Issue a new debit card"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "100_to_1000",
+    "evidence": "That's $970.70."
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "There are 3 charges on my debit card from Wednesday, September 23 that I did not make"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": true,
+    "evidence": "I've already started a complaint on the CFPB website and I'll submit it if this isn't fixed."
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": true
+ },
+ "recorded_at": "2026-10-09T02:44:25+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0143",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 262,
+  "output_tokens": 364,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.97,
+  "cost_usd": 0.00878,
+  "request_id": "req_011CfqttQEutaNkLmBwkDTap"
+ }
+}

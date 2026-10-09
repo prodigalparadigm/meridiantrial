@@ -1,0 +1,60 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "It says the callback request has been noted but does not promise a callback, fee reversal or any other outcome."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "The apology is for the customer's frustration. It does not say staff behaved badly or that the fees were wrong."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned, and there is no view on legality."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "The only timeline is the 10-business-day response window, assumed to be the standard timeframe. No fees, policies or procedures are made up."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No flags, compliance review, priority or automated systems are mentioned."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The call note contains no embedded instructions, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "Covers the rude teller, the refusal without a second ID, the 45-minute wait with one window open, the unavailable manager, the two overdraft fees on one check, and the request for a manager callback."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and respectful. The restatement is specific enough to show a person read it."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "Every disputed event is framed as the customer's account ('You told us', 'You also told us'). It takes no position on the substance. 'A specialist team' is generic, not a named department."
+   }
+  },
+  "verdict": "pass",
+  "revision_instructions": []
+ },
+ "recorded_at": "2026-10-09T02:33:42+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0010",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 556,
+  "output_tokens": 1053,
+  "cache_read_tokens": 2159,
+  "cache_write_tokens": 0,
+  "latency_s": 10.66,
+  "cost_usd": 0.023716,
+  "request_id": "req_011Cfqt4XjmUGV8FoSPcEzjQ"
+ }
+}

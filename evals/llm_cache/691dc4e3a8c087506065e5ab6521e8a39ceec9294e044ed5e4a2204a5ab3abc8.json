@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer was charged $3.50 by Meridian plus $3.50 by the other bank on each of 5 out-of-network ATM uses during a trip; acknowledges disclosure but considers fees unfair.",
+  "issues": [
+   "Out-of-network ATM fees charged by bank",
+   "Third-party ATM surcharges",
+   "No in-network ATMs in travel area"
+  ],
+  "customer_requests": [
+   "Join a no-fee ATM network"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "under_100",
+    "evidence": "I got charged $3.50 by you AND $3.50 by the other bank every time I used an ATM on my trip - 5 times"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:43:20+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0127",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 205,
+  "output_tokens": 357,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 4.51,
+  "cost_usd": 0.008412,
+  "request_id": "req_011CfqtoXHg9zQVrV4SxM1i2"
+ }
+}

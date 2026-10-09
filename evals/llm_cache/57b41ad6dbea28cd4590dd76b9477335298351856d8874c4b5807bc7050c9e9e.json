@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer finds the new mortgage statement format confusing, cannot locate the principal balance, and had to call to learn the amount owed. Requests the old format or balance shown at top.",
+  "issues": [
+   "New mortgage statement format hard to read",
+   "Principal balance not visible on statement"
+  ],
+  "customer_requests": [
+   "Restore the old one-page statement format",
+   "Display the balance at the top of the statement"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "Your new mortgage statement format is impossible to read."
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:36:13+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0016",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 140,
+  "output_tokens": 316,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.36,
+  "cost_usd": 0.007332,
+  "request_id": "req_011CfqtG9YrzSGaYDL7viFeo"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "agent": "regulatory_screener",
+ "model": "claude-opus-5-5",
+ "output": {
+  "potential_regulatory": true,
+  "categories": [
+   {
+    "id": "servicing_error",
+    "evidence": "it's all sitting in \"unapplied funds.\"",
+    "why": "The customer says six months of extra mortgage principal payments, totaling $3,000, were held as unapplied funds instead of reducing the balance, which may be a payment-application error."
+   }
+  ],
+  "injection_suspected": true
+ },
+ "recorded_at": "2026-10-09T02:35:59+00:00",
+ "usage": {
+  "agent": "regulatory_screener",
+  "case_id": "C-0014",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 237,
+  "output_tokens": 294,
+  "cache_read_tokens": 1823,
+  "cache_write_tokens": 0,
+  "latency_s": 4.14,
+  "cost_usd": 0.007193,
+  "request_id": "req_011CfqtF71J689aS5syPzyFJ"
+ }
+}

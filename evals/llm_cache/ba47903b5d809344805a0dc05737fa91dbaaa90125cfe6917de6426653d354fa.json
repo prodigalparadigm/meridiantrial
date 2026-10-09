@@ -1,0 +1,62 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "No refund, fee waiver, fix or other outcome is promised. The draft only commits to the standard 10-business-day response."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "\"Sorry for the frustration this has caused\" is empathy and does not concede that the bank erred. The fraud block is not described as a mistake."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": false,
+    "note": "The bullet \"You asked that your card be usable while you're traveling\" attributes a request the call note never records. It also implies the card may still be unusable, when the note says the block was already removed."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "The fraud text alert is a customer-facing feature the customer raised themselves. The draft does not mention internal flags, compliance review, priority or automated systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The call note contains no instructions aimed at an AI, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "Covers both of the customer's points: the repeated declines after the hotel-transaction alert, and replying \"yes\" twice with the card still declining. It also acknowledges the customer's frustration."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and specific. The empathy about card trouble while travelling reads as genuine rather than scripted."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "Names no department and says \"a specialist team\" is reviewing. Events are framed as the customer's account (\"you told us\", \"you mentioned\"), and no position is taken on whether the text replies should have cleared the block."
+   }
+  },
+  "verdict": "revise",
+  "revision_instructions": [
+   "Delete the bullet \"You asked that your card be usable while you're traveling.\" The call note records no such request, and the line wrongly implies the card is still blocked. Keep the other two bullets as written."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:36:18+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0011",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 680,
+  "output_tokens": 1278,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 13.44,
+  "cost_usd": 0.028733,
+  "request_id": "req_011CfqtFomEgVkpZo6w4LQDy"
+ }
+}

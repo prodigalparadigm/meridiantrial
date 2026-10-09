@@ -1,0 +1,34 @@
+{
+ "agent": "regulatory_screener",
+ "model": "claude-opus-5-5",
+ "output": {
+  "potential_regulatory": true,
+  "categories": [
+   {
+    "id": "collections_conduct",
+    "evidence": "I've told your people at least five times that this is the wrong number",
+    "why": "Collection calls continued to a non-customer's wrong number after repeated notice, which may be harassing collection contact with a third party."
+   },
+   {
+    "id": "privacy_incident",
+    "evidence": "I don't know this person and I should not know that",
+    "why": "The collector disclosed a borrower's debt amount and repossession plans to an unrelated third party."
+   }
+  ],
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:33:08+00:00",
+ "usage": {
+  "agent": "regulatory_screener",
+  "case_id": "C-0009",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 249,
+  "output_tokens": 376,
+  "cache_read_tokens": 1823,
+  "cache_write_tokens": 0,
+  "latency_s": 4.43,
+  "cost_usd": 0.008881,
+  "request_id": "req_011Cfqt2RpXC2LbcX3ZDhWq2"
+ }
+}

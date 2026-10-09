@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your complaint about your bill payment to Tarrow Water Authority",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for contacting us about your bill payment to Tarrow Water Authority. We have received your complaint, and we want to confirm what you told us.\n\nYou mentioned that on 8/18/2026 you scheduled a bill payment of $1,240.00 to Tarrow Water Authority through our online bill pay. You told us the payment shows as \"Paid\" and that the money left your account on 8/20/2026. However, you said Tarrow Water Authority has told you they never received it and has charged you a $25 late fee. You've asked us to locate the payment and explain where your money went.\n\nWe understand how worrying it is to see money leave your account without knowing where it ended up, especially when it has led to a late fee from the payee. We're sorry for the stress and frustration this has caused.\n\nA specialist team is now reviewing your complaint, and we will respond to you within 10 business days.\n\nKind regards,\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Check the payment trace: was it sent electronically or by check, and has it been delivered, cashed, returned or rejected?",
+   "Confirm the payee details and account reference used for Tarrow Water Authority.",
+   "Decide whether to take a position on the $25 late fee; the customer mentioned it but did not explicitly ask the bank to cover it.",
+   "Consider whether to give the customer interim guidance to share with the payee while the trace is in progress.",
+   "The customer's phone number was provided in the complaint; confirm the preferred contact method before responding."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:36:41+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0022",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 396,
+  "output_tokens": 1061,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 10.21,
+  "cost_usd": 0.023079,
+  "request_id": "req_011CfqtHhhAPoENoKayUFdpN"
+ }
+}

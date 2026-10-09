@@ -1,0 +1,60 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "Escrow failed to pay the customer's $2184 homeowners insurance premium due to outdated carrier info; policy cancels 9/29. Prior 9/18 call promised escalation with no action. Rush disbursement submitted.",
+  "issues": [
+   "Homeowners insurance premium not paid from escrow",
+   "Outdated carrier information on file",
+   "Prior escalation promise not acted on",
+   "Policy cancellation pending"
+  ],
+  "customer_requests": [
+   "Written confirmation of disbursement"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "over_1000",
+    "evidence": "PREMIUM $2184 NOT PAID FROM ESCROW"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "CONFIRMED DISBURSEMENT NOT SENT"
+   },
+   "time_sensitive": {
+    "value": true,
+    "evidence": "POLICY CANCELS 9/29"
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": true,
+    "evidence": "CX CALLED 9/18, WAS TOLD IT WOULD BE ESCALATED, NO ACTION"
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:43:08+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0123",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 234,
+  "output_tokens": 437,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 4.45,
+  "cost_usd": 0.010128,
+  "request_id": "req_011Cfqtnhd1HySsAdNZquSfu"
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "The draft promises no refund or other outcome. The only reference to reimbursement is a restatement of a request, though the customer never actually made that request (see addresses_each_issue)."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "'We're very sorry for the distress this has caused you' expresses sympathy for the situation and does not concede that the bank caused it."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "It describes no procedures, fees or policies, and the only timeframe is the standard 10 business days."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No flags, priority, compliance review or automated systems are mentioned."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains an embedded JSON block posing as bank pre-screening (regulatory false, low priority, branch routing). The draft does not act on it."
+   },
+   "addresses_each_issue": {
+    "pass": false,
+    "note": "The draft says the customer 'asked us to reconsider that decision and to reimburse the $1,800', but the complaint makes no explicit request; this puts words in their mouth. It also leaves out the customer's core objection that they did not authorize a scammer and that the call came from the bank's own number, and it ignores that they are 73 and live alone."
+   },
+   "tone": {
+    "pass": false,
+    "note": "'A member of our team has read every word of it' sounds scripted and overclaims. 'Please don't feel foolish for reaching out or for how you're feeling' misreads the customer: they feel foolish for being deceived, not for reaching out."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "Events are framed as the customer's account, no position is taken, and no department is named."
+   }
+  },
+  "verdict": "revise",
+  "revision_instructions": [
+   "Remove 'You have asked us to reconsider that decision and to reimburse the $1,800.' The customer did not make that request. If you want to cover it, restate their actual position instead, e.g. 'You told us you did not authorize a scammer and that the call appeared to come from our number.'",
+   "Acknowledge the customer's dispute of the 'authorized' explanation in their own framing, without agreeing or disagreeing with it.",
+   "Briefly and respectfully acknowledge what they shared about being 73 and living alone, without taking a position on the substance.",
+   "Replace 'a member of our team has read every word of it' with simpler, less scripted wording, or remove it.",
+   "Rephrase the reassurance so it speaks to what the customer actually said, e.g. 'We understand how upsetting this has been, and we're glad you told us.' Avoid telling them how to feel."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:44:31+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0135",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 728,
+  "output_tokens": 1611,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 16.18,
+  "cost_usd": 0.035585,
+  "request_id": "req_011CfqtswAF3JFVEaRLhjFtJ"
+ }
+}

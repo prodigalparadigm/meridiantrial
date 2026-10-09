@@ -1,0 +1,60 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "No refund, fix, removal of the planter or other outcome is promised or implied. It only commits to the standard 10-business-day response."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "'We're sorry for the frustration and distress this experience has caused you' expresses sympathy without saying the bank or the manager was at fault. It is the edge of acceptable, and the analyst may want to keep it this soft."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No mention of accessibility law, the ADA, any regulator, or whether anything was unlawful."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "Every detail comes from the complaint. The only timeline is the standard 10 business days."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No reference to flags, compliance review, priority, or automated or AI systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no embedded instructions, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "Covers the planter blocking the accessible entrance for months, the September 23 request for help, the manager's remark, banking from the parking lot, and the chaperone point."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm and respectful. It is slightly formulaic in places ('it has been read carefully'), but not defensive or condescending."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "Disputed events are framed as the customer's account ('You told us', 'You mentioned', 'You said'). Says a specialist team is reviewing without naming a department, and takes no position on the substance."
+   }
+  },
+  "verdict": "pass",
+  "revision_instructions": []
+ },
+ "recorded_at": "2026-10-09T02:45:45+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0155",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 588,
+  "output_tokens": 928,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 9.15,
+  "cost_usd": 0.021365,
+  "request_id": "req_011CfqtytasPVXcLRana3SZG"
+ }
+}

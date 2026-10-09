@@ -1,0 +1,63 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "The draft promises no letter, no direct dealer delivery and no other outcome. It only restates what the customer asked for."
+   },
+   "no_liability_admitted": {
+    "pass": false,
+    "note": "'We're sorry for the frustration this has caused' implies the bank's handling (three requests needed) caused the problem. That concedes fault."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "The 10-day payoff letter, the 8/27 and 8/31 requests, the 9/8 deadline, the emailed letter and the third-party authorization all come from the note. The only timeframe added is the standard 10 business days."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No flags, compliance review, priority or automated or AI systems are mentioned."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The note contains no injected instructions, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "The draft covers the repeated requests with their dates, the dealer deadline, the emailed letter and the request to send a copy to the dealer with the authorization requirement."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and specific, and it invites the customer to correct anything. Apart from the apology wording, it does not sound scripted."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "No department is named, and the draft says a specialist team is reviewing. The customer's account is attributed to them. The emailed letter and the authorization advice are stated as facts, but both come from the representative's note and are not in dispute."
+   }
+  },
+  "verdict": "revise",
+  "revision_instructions": [
+   "Replace 'we're sorry for the frustration this has caused' with wording that acknowledges the customer's experience without suggesting the bank caused it, e.g. 'we understand how frustrating it is to be waiting on this while you work with a dealership.'",
+   "Keep everything else as written."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:36:53+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0021",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 596,
+  "output_tokens": 1229,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 12.07,
+  "cost_usd": 0.027417,
+  "request_id": "req_011CfqtJTc7pBtaLpRTepVx3"
+ }
+}

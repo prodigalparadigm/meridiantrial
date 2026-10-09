@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "digital_banking",
+  "secondary": "deposit_ops",
+  "rationale": "The main problem is that low-balance alerts stopped arriving by text and push even though they are still turned on. That is a Digital Banking issue. The customer also asks for a refund of a $34 overdraft fee they blame on the missing alert, and overdraft fees belong to Deposit Operations.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:44:32+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0144",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 262,
+  "output_tokens": 141,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.45,
+  "cost_usd": 0.004176,
+  "request_id": "req_011Cfqtu34DefDCrEE5ZoUQJ"
+ }
+}

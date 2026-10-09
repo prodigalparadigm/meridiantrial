@@ -1,0 +1,60 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "The draft does not promise or imply a repair or any other outcome. It says only that the feedback was passed on for review."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "'Sorry for the frustration this has caused' expresses empathy without conceding fault. The draft does not say the bank erred or neglected the machine."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "No procedures, fees, policies or timelines are described beyond the standard 10-business-day timeframe. The vendor ticket is not mentioned, which is fine. Minor point: 'your request for the machine to be repaired' and 'main concern is getting the ATM back in working order' slightly go beyond the note, which records only a report. This is a reasonable inference and describes no bank process."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "There is no mention of flags, compliance, priority, vendor tickets or automated systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no injected instructions, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "The draft acknowledges the specific location, the cracked screen, the outage of more than two weeks, and the absence of any transaction problem."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and respectful. The closing is slightly generic but not scripted to a problematic degree."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "STANDARD mode: the draft names the owning team (Branch & Contact Center) and gives the standard timeframe."
+   }
+  },
+  "verdict": "pass",
+  "revision_instructions": []
+ },
+ "recorded_at": "2026-10-09T02:40:13+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0073",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 464,
+  "output_tokens": 1025,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 10.25,
+  "cost_usd": 0.022809,
+  "request_id": "req_011CfqtZMxTNGxnWDgpMkMga"
+ }
+}

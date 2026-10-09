@@ -1,0 +1,65 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": false,
+    "note": "'We are sharing your thanks so it can be recognized' commits the bank to forwarding the praise and implies the employee will be recognized. Only the analyst can make that commitment."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "The condolences are sympathy and concede nothing. No fault is admitted."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "Details match the complaint: Elm & 4th, the unknown CD, and the callback about a rejected form. The sharing and recognition step is handled under no_outcome_promised. 'Nothing further you need to do' is borderline but describes no specific procedure."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No mention of flags, compliance, priority or automated systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no injected instructions."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "Acknowledges the father's death, the dread of closing the accounts, the step-by-step help, the CD that was found, the callback and the thanks."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, personal and plain. Condolences are handled with care."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "Events are framed as the customer's account ('You told us', 'You mentioned'). No department is named."
+   }
+  },
+  "verdict": "revise",
+  "revision_instructions": [
+   "Replace 'we are sharing your thanks so it can be recognized' with neutral wording that commits to nothing, such as 'A specialist team is reviewing your message,' and do not name a department.",
+   "Add the standard response timeframe: within 10 business days.",
+   "Consider removing 'There is nothing further you need to do' so the reply does not suggest any process. Keep the invitation to get in touch with questions.",
+   "Keep the condolences, the specific restatement framed as the customer's account, and the warm tone unchanged."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:39:00+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0053",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 489,
+  "output_tokens": 1318,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 12.99,
+  "cost_usd": 0.028769,
+  "request_id": "req_011CfqtTmcLbyUFuSDMdnFFV"
+ }
+}

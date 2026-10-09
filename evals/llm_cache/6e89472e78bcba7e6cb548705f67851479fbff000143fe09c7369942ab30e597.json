@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer received another person's statement (\u27e6NAME_1\u27e7, \u27e6ACCOUNT_1\u27e7) in an envelope addressed to them and fears their own statement was sent to that person. Asks what the bank is doing and where to return it.",
+  "issues": [
+   "Misdirected statement received containing another customer's details",
+   "Possible exposure of the customer's own statement to a third party"
+  ],
+  "customer_requests": [
+   "Explanation of what the bank is doing about the mix-up",
+   "Instructions on where to send the misdirected statement"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "I received a statement in the mail today in an envelope addressed to me, but inside was a statement for someone named \u27e6NAME_1\u27e7"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "calm",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:41:01+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0090",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 177,
+  "output_tokens": 385,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 4.2,
+  "cost_usd": 0.00886,
+  "request_id": "req_011CfqtdMiC8mkhfxStGnz2w"
+ }
+}

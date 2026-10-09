@@ -1,0 +1,56 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer reports rude treatment by teller \u27e6NAME_1\u27e7 at Millbrook Plaza branch on September 5 while depositing business cash, including sighing, disparaging comments to a colleague, and being told to come at a better time.",
+  "issues": [
+   "Rude and unprofessional teller behavior",
+   "Disparaging comments made about the customer to another teller"
+  ],
+  "customer_requests": [],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": ""
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:38:06+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0045",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 222,
+  "output_tokens": 303,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 2.96,
+  "cost_usd": 0.0074,
+  "request_id": "req_011CfqtQYirhsbX5nTUeoqcm"
+ }
+}

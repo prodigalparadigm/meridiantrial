@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your feedback about the incoming wire fee",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for calling us and sharing your concerns about the $30 fee charged on an incoming wire. We understand you feel strongly about this. You told our representative that, while you know the fee appears on our fee schedule, you consider it excessive, or in your words, \"highway robbery.\" We appreciate you being so direct with us, and we're sorry for the frustration this has caused.\n\nYou mentioned that our representative went over the fee schedule with you and shared information about Premier Checking, and that you would think it over. If you have questions about that information, or would like to talk through your options, we're happy to help.\n\nYour feedback has been passed to our Deposit Operations team, who will review it. We will respond within 10 business days. Comments like yours help us understand how our customers experience our fees, and we take them seriously.\n\nThank you again for taking the time to let us know how you feel.\n\nKind regards,\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "The customer made no specific request (refund, waiver, etc.). Decide whether any goodwill gesture is appropriate or whether the reply should simply acknowledge the feedback.",
+   "Confirm the $30 incoming wire fee matches the current fee schedule that applied to the customer's account at the time of the wire.",
+   "The draft mentions Premier Checking only as information the representative shared. Add accurate product details and eligibility if you want to elaborate, and avoid implying any waiver of the existing fee.",
+   "Check whether this was a one-off wire or whether the customer regularly receives wires, which may affect which options are relevant.",
+   "The source is a brief call-center note. Verify that the customer wants a written follow-up and that the contact details on file are correct."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:39:40+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0067",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 303,
+  "output_tokens": 791,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 9.09,
+  "cost_usd": 0.017307,
+  "request_id": "req_011CfqtWzJuEzHpGLZtNWnk5"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "fraud_disputes",
+  "secondary": "none",
+  "rationale": "A non-customer is reporting phishing texts that impersonate the bank and point to a fake login site. Scams and phishing that impersonate the bank are owned by Fraud & Disputes. No account problem exists for any other team to handle. The selected topic matches.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:36:19+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0019",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 115,
+  "output_tokens": 127,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.07,
+  "cost_usd": 0.003308,
+  "request_id": "req_011CfqtGjRKBseHGDJKkWSkG"
+ }
+}

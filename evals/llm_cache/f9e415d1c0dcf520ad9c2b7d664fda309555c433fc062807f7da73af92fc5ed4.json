@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "digital_banking",
+  "secondary": "none",
+  "rationale": "The customer is asking about the daily Zelle transfer limit and whether it can be raised. Transfer limits within online and mobile banking are owned by Digital Banking. There is no fraud, fee, or failed-transaction issue, despite the 'Fees' topic selected on the form.",
+  "confidence": "medium",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:42:43+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0118",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 101,
+  "output_tokens": 134,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.1,
+  "cost_usd": 0.003392,
+  "request_id": "req_011Cfqtm3Ax6iBjh2XJd6J1o"
+ }
+}

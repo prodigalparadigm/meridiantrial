@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your mobile check deposit for $812.00",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for contacting us about your mobile check deposit.\n\nYou told us you've tried to deposit the same check, for $812.00, through mobile deposit four times, and each time it was rejected for \"image quality.\" You mentioned that you took the photos carefully, with the check flat on a dark background in good light, so we understand why these repeated rejections have been so frustrating. You also told us your nearest branch is forty minutes away, which makes going in person a real inconvenience, and that you would like to have access to your money.\n\nWe're sorry for the frustration this has caused. Our Digital Banking team will review what you've described, including your deposit attempts and your request to have the $812.00 check deposited. We will respond to you within 10 business days.\n\nIf there is anything else you'd like us to know in the meantime, please reply to this message.\n\nKind regards,\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Check the four rejected mobile deposit attempts and the actual rejection reasons recorded.",
+   "Decide whether to offer an alternative way to deposit the check, given the customer is forty minutes from a branch.",
+   "Confirm whether the check is still eligible for deposit (e.g. not already deposited, not stale-dated).",
+   "Consider adding practical guidance on mobile deposit image requirements if appropriate.",
+   "No outcome has been promised; decide what resolution, if any, to offer for access to the $812.00."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:42:38+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0115",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 317,
+  "output_tokens": 953,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 8.95,
+  "cost_usd": 0.020603,
+  "request_id": "req_011Cfqtk8Z7vJoFrwwdu39JP"
+ }
+}

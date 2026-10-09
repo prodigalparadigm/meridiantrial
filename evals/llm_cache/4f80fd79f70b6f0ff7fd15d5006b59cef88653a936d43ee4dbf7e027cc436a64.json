@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "collections",
+  "secondary": "none",
+  "rationale": "Customer's vehicle was repossessed for past-due payments and they need to retrieve personal property (work tools, child car seat) from it. Repossession and personal-property recovery are owned by Collections & Recoveries, and the 9/13 job start makes it time-sensitive. No staff-conduct or other separate issue is raised.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:37:42+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0038",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 115,
+  "output_tokens": 145,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 3.2,
+  "cost_usd": 0.003668,
+  "request_id": "req_011CfqtNjD5zmHj86fh1GcRk"
+ }
+}

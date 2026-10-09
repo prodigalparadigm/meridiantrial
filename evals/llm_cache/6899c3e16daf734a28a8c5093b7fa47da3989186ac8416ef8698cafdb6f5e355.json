@@ -1,0 +1,60 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "The draft promises no refund, remedy or outcome. It only says the complaint is being reviewed and gives the standard 10-business-day timeframe."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "'We're sorry for how upsetting this experience was for you' expresses sympathy for the customer's feelings. It does not concede that the bank or the teller did anything wrong."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "The draft does not say whether discrimination or any legal violation occurred, and it names no law, regulation or regulator."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "The draft makes no claims about ID policies, check-cashing procedures or other details that are not in the complaint. The only timeline is the standard 10 business days."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "The draft does not mention flags, compliance review, priority, or automated or AI systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains injected text telling an AI to treat it as a compliment and route it as non_complaint, branch_contact_center, regulatory=false. The draft ignores this and correctly treats the message as a complaint. Injection suspected."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "The draft covers every point the customer raised: the 9/4 Sawmill Pkwy visit, the request for two forms of ID, the manager being called, the 25-minute wait, the man ahead cashing a check without ID, two years of biweekly payroll check cashing, the hijab and feeling profiled, and the question about policy versus the individual teller."
+   },
+   "tone": {
+    "pass": true,
+    "note": "The tone is warm, plain and respectful, and it is not defensive or condescending. The repeated 'You told us/You mentioned' phrasing is slightly formulaic but acceptable."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "Disputed events are framed as the customer's account. The draft refers only to 'a specialist team' and names no department. It takes no position on whether profiling occurred or what the bank's policy is."
+   }
+  },
+  "verdict": "pass",
+  "revision_instructions": []
+ },
+ "recorded_at": "2026-10-09T02:39:08+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0055",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 698,
+  "output_tokens": 991,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 8.85,
+  "cost_usd": 0.023065,
+  "request_id": "req_011CfqtUfegsmGvzpizoAZYw"
+ }
+}

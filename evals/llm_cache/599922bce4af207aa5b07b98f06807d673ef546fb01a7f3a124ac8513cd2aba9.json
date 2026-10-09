@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "deposit_ops",
+  "secondary": "none",
+  "rationale": "Customer deposited a $12,500 check at a branch and it is under an extended hold until 10/5; deposit holds are owned by Deposit Operations. The app only displays the hold, so this is not a digital issue. The lack of hold notice at the branch is part of the same hold-disclosure issue, not a separate conduct complaint.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:44:21+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0142",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 158,
+  "output_tokens": 150,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.45,
+  "cost_usd": 0.00394,
+  "request_id": "req_011CfqttBAMt7HJ9nfkYvTU4"
+ }
+}

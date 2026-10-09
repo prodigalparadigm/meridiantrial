@@ -1,0 +1,60 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "No refund, credit, or other remedy is promised. It does not commit to confirming whether the customer's statement was misdirected. 'Their reply will cover what you should do with the statement' commits only to the content of the reply, not to an outcome; the analyst may still want to soften it."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "'We're sorry for the worry this has caused' expresses sympathy without conceding that the bank mis-mailed anything."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned, and there is no characterization of the incident as a breach."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "It gives no handling instructions, return procedures or other timelines. Only the standard 10 business day timeframe appears."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No mention of flags, priority, compliance or automated systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no injected instructions, and the draft does nothing unusual."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "It acknowledges receiving another person's statement, the worry that the customer's own statement was misdirected, and the question of what to do with the one received."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm and plain. The run of 'You told us / You mentioned / You asked' is slightly formulaic but acceptable."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "The events are framed as the customer's account. It says a specialist team is reviewing without naming the Privacy Office, and takes no position on whether a misdelivery occurred."
+   }
+  },
+  "verdict": "pass",
+  "revision_instructions": []
+ },
+ "recorded_at": "2026-10-09T02:45:05+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0147",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 477,
+  "output_tokens": 1132,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 12.08,
+  "cost_usd": 0.025001,
+  "request_id": "req_011Cfqtvme5TPpxmQdhRxGk5"
+ }
+}

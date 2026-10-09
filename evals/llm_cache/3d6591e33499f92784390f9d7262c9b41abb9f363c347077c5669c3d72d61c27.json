@@ -1,0 +1,64 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "Notes the request to recover $2,450 without suggesting it will be returned."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "The apology is for the customer's distress, not for any bank action. It does not concede fault."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "All details come from the complaint. The only timeline is the standard 10 business days."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No mention of flags, compliance, priority or automated systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no instructions aimed at an AI."
+   },
+   "addresses_each_issue": {
+    "pass": false,
+    "note": "Each issue is restated accurately, including that the customer did not understand the phone explanation because their English is limited. But the reply is in English to a customer who wrote in Spanish and said that exact barrier is the problem. That fails to address the issue in practice and repeats the communication gap they complained about."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and respectful. Not defensive or condescending."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "Disputed events are framed as the customer's account ('You told us', 'You said'). No position on the substance. 'A specialist team' is used without naming Fraud & Disputes."
+   }
+  },
+  "verdict": "revise",
+  "revision_instructions": [
+   "Write the reply in Spanish, the language the customer used. The customer said limited English stopped them from understanding the bank's phone explanation, so an English-only reply repeats the problem. Keep the same content: restate the customer's account as theirs, note the request to recover $2,450, say a specialist team is reviewing it, and give the 10-business-day timeframe. Translate the subject line too.",
+   "Do not add promises of interpreter services, Spanish-speaking staff or callbacks unless the analyst confirms they are available. Writing the reply in Spanish is enough.",
+   "Keep everything else unchanged: the restatement framed as the customer's words, no named department, and the apology limited to the customer's distress."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:41:49+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0099",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 778,
+  "output_tokens": 1195,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 12.54,
+  "cost_usd": 0.027465,
+  "request_id": "req_011CfqtgGNJFuGJnABrg6mu4"
+ }
+}

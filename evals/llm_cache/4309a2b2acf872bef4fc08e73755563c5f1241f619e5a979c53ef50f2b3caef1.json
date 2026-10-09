@@ -1,0 +1,31 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your message about your check deposit hold",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for contacting us and for explaining your situation so clearly. We have received your complaint, and we want to confirm what you told us.\n\nYou mentioned that you deposited a check for $12,500 at a branch on 9/25, and that the app now shows the funds on hold until 10/5. You told us that nobody said anything about a hold when you made the deposit at the branch. You also explained that this money is for your rent, which is due on September 30, and that you don't have other funds in the account to cover it. You've asked us to remove the hold.\n\nWe understand how stressful it is to wait on money you need for rent, and we're sorry for the worry this has caused.\n\nA specialist team is reviewing your complaint and will respond to you within 10 business days. If there is anything else you'd like us to know in the meantime, please reply to this email.\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Rent is due Sept 30, likely before a reply within 10 business days. Decide whether faster contact is needed.",
+   "Customer included a phone number in the email. Consider calling them given the time pressure.",
+   "Customer asked for the hold to be removed. Decide on this; the draft does not promise any outcome.",
+   "Verify the hold placed on the 9/25 deposit, its reason, and the release date of 10/5.",
+   "Check whether hold notice was given at the branch, since the customer says they were told nothing.",
+   "Customer says there are no other funds in the account. Consider any hardship or overdraft implications around Sept 30.",
+   "Year not stated for the 9/25 deposit date. Confirm before referencing dates in the final reply."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:44:36+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0142",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 369,
+  "output_tokens": 1183,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 12.55,
+  "cost_usd": 0.025411,
+  "request_id": "req_011CfqttZzHhgAVBAUajsKpa"
+ }
+}

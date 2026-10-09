@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your complaint about grocery rewards at Pinecrest Grocers",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for getting in touch about the rewards on your card. We have received your complaint, and we want to make sure we have understood it correctly.\n\nYou told us that your purchases at Pinecrest Grocers, which you describe as your biggest expense, are earning 1% rather than the 3% grocery rate. You said this is because the store is coded as a \"specialty retailer.\" You mentioned that you have read the terms and understand the rate is based on the merchant category code. However, you feel this doesn't reflect how people actually shop, and you described the grocery category as a scam.\n\nYou asked for the 3% grocery rate to be applied to your Pinecrest Grocers purchases. You also told us that you will cancel the card if this isn't fixed.\n\nWe're sorry for the frustration this has caused. We understand how disappointing it is when rewards on everyday spending don't match what you expected.\n\nA specialist team is now reviewing your complaint and will respond to you within 10 business days.\n\nKind regards,\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Check how Pinecrest Grocers is currently coded and whether that coding is correct.",
+   "Decide whether any rewards adjustment for past Pinecrest Grocers purchases is appropriate.",
+   "The customer has threatened to cancel the card, so consider whether a retention contact is warranted.",
+   "The customer called the program a 'scam', so check whether the rewards terms and marketing describe the grocery category clearly.",
+   "The draft takes no position on the substance, in line with acknowledge-only mode. Confirm this before sending."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:37:19+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0029",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 361,
+  "output_tokens": 1198,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 11.94,
+  "cost_usd": 0.025679,
+  "request_id": "req_011CfqtLQW8yeZVaxyV25szJ"
+ }
+}

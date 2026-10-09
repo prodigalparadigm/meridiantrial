@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your complaint about your card being declined near Orlando",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for speaking with us, and for taking the time to tell us what happened. We have your complaint and want to make sure we've understood it correctly.\n\nYou told us your card was declined three times while you were trying to buy fuel at a gas station outside Orlando, with your children waiting in the car. We understand how stressful that must have been, far from home and unable to fill up. You mentioned that once you were on the phone with us, the hold on your card was released and you were able to pump fuel during the call. You also let us know you're driving home through 9/27.\n\nMost of all, you told us you were upset that no one contacted you before your card was blocked, and you've asked to be contacted before that happens in future.\n\nWe're sorry for the frustration and worry this caused you and your family. A specialist team is now reviewing your complaint and will respond to you within 10 business days.\n\nThank you again for raising this with us, and we hope the rest of your drive home goes smoothly.\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Acknowledge-only reply: confirm no position on the block or contact process should be added before sending.",
+   "Confirm the hold release and travel dates (through 9/27) are recorded as the rep noted.",
+   "Specialist team to decide how to respond to the request for contact before future blocks.",
+   "Customer's card is in active use during travel; check no further declines have occurred.",
+   "Confirm the preferred channel for the written response, as the complaint came by phone."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:42:48+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0116",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 448,
+  "output_tokens": 906,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 12.15,
+  "cost_usd": 0.020187,
+  "request_id": "req_011CfqtkcTezzsri6sJ5GtkA"
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "agent": "regulatory_screener",
+ "model": "claude-opus-5-5",
+ "output": {
+  "potential_regulatory": true,
+  "categories": [
+   {
+    "id": "servicing_error",
+    "evidence": "approved for a three-month forbearance",
+    "why": "The customer says an approved mortgage forbearance is not being honored, since they are now being told they are past due $5,862.30."
+   },
+   {
+    "id": "credit_reporting",
+    "evidence": "reported me late to the credit bureaus for July and August",
+    "why": "Late payments were reported for months that the customer says were covered by an approved forbearance, which may be inaccurate credit reporting."
+   },
+   {
+    "id": "collections_conduct",
+    "evidence": "calls from your collections department two or three times a day",
+    "why": "Frequent collection calls on a debt the customer says is not delinquent may be harassing or improper collection contact."
+   }
+  ],
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:39:49+00:00",
+ "usage": {
+  "agent": "regulatory_screener",
+  "case_id": "C-0072",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 191,
+  "output_tokens": 248,
+  "cache_read_tokens": 1823,
+  "cache_write_tokens": 0,
+  "latency_s": 2.94,
+  "cost_usd": 0.006089,
+  "request_id": "req_011CfqtY6MaLqnh4rmq5uWaj"
+ }
+}

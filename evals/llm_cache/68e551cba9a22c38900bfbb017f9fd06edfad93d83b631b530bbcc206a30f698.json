@@ -1,0 +1,58 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer requests a mailing address update on a joint account after moving; the app directed them to contact the bank because joint account address changes cannot be made in-app.",
+  "issues": [
+   "Mailing address change needed",
+   "App cannot process address changes on joint accounts"
+  ],
+  "customer_requests": [
+   "Update mailing address to new address"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": ""
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "positive",
+  "language": "English",
+  "is_complaint": false,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:37:42+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0039",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 159,
+  "output_tokens": 272,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.17,
+  "cost_usd": 0.006528,
+  "request_id": "req_011CfqtNm7w6idvQbLo9Ny6A"
+ }
+}

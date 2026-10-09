@@ -1,0 +1,60 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer cannot log in to online banking since an update; device verification codes go to an old phone no longer owned. Password reset three times without success; needs to pay a light bill.",
+  "issues": [
+   "Unable to log in after update",
+   "Device verification code sent to old phone number",
+   "Password resets did not resolve access"
+  ],
+  "customer_requests": [
+   "Restore online banking access",
+   "Update phone number for verification codes"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "i need to pay my light bill and i cant see nothing"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "cant log in since the update"
+   },
+   "time_sensitive": {
+    "value": true,
+    "evidence": "i need to pay my light bill"
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:42:22+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0114",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 106,
+  "output_tokens": 333,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.63,
+  "cost_usd": 0.007536,
+  "request_id": "req_011CfqtjPP4h325ZLTuFdtaX"
+ }
+}

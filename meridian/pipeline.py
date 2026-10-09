@@ -106,14 +106,16 @@ class Pipeline:
         with ThreadPoolExecutor(max_workers=3) as ex:
             futures = {name: ex.submit(fn) for name, fn in jobs.items()}
         results = {name: self._settle(case, name, f) for name, f in futures.items()}
-        screen_s = round(time.monotonic() - t0, 2)   # when the flag decision is known
+        # When the flag decision is known. Replayed calls take ~0 s, so use the recorded live latency when larger.
+        recorded = [c["latency_s"] for c in case["calls"] if c["agent"] in ("regulatory_screener", "triage_analyst", "router")]
+        screen_s = round(max([time.monotonic() - t0] + recorded), 2)
 
         scr = results["screener"]
         if scr is not None:
             case["regulatory"]["sources"]["screener"] = scr
             case["injection_suspected"] |= scr["injection_suspected"]
             if scr["potential_regulatory"]:
-                self._raise_flag(case, "screener", [x["id"] for x in scr["categories"]])
+                self._raise_flag(case, "screener", [x["id"] for x in scr["categories"]] or ["unspecified"])
         else:
             # Could not screen: a person must, inside the same window.
             self._raise_flag(case, "screen_failed", ["unscreened"])
@@ -133,6 +135,7 @@ class Pipeline:
             case["route"] = rte
             case["injection_suspected"] |= rte["injection_suspected"]
 
+        case["regulatory"]["lane"] = _lane(case)
         if tri is None or rte is None:
             case["status"] = MANUAL
         else:
@@ -235,6 +238,8 @@ class Pipeline:
         if not reviewer_name:
             raise PermissionError("approval needs a named reviewer")
         case = self.store.get(case_id)
+        if case["status"] == APPROVED:
+            raise PermissionError("this reply was already approved; the record cannot be overwritten")
         reg = case["regulatory"]
         if reg["flagged"] and reg["status"] == "open":
             raise PermissionError("Compliance must acknowledge this regulatory flag before a reply can be approved")
@@ -244,11 +249,12 @@ class Pipeline:
         drafted = self.rehydrate(case_id, (case.get("draft") or {}).get("body", ""), priv)
         ratio = difflib.SequenceMatcher(None, drafted, final_body).ratio() if drafted else 0.0
         case["status"] = APPROVED
+        unchanged = drafted.strip() == final_body.strip()
         case["approval"] = {"by": reviewer_name, "at": _now(), "subject": final_subject, "body": final_body,
-                            "similarity_to_draft": round(ratio, 3)}
+                            "unchanged": unchanged, "similarity_to_draft": round(ratio, 3)}
         self.store.save(case)
         self.audit.append(case_id, f"analyst:{reviewer_name}", "reply.approved",
-                          {"similarity_to_draft": round(ratio, 3), "subject": final_subject, "body": final_body,
+                          {"unchanged": unchanged, "similarity_to_draft": round(ratio, 3), "subject": final_subject, "body": final_body,
                            "note": "approved for the bank's existing outbound process; this system cannot send"})
         return case
 
@@ -289,6 +295,21 @@ class Pipeline:
         from .redact import TOKEN_RE
         vault = (private or self.store.get_private(case_id))["vault"]
         return TOKEN_RE.sub(lambda m: vault.get(m.group(0), m.group(0)), text)
+
+
+def _lane(case: dict) -> str | None:
+    """Which Compliance lane a flag belongs in. Every flag reaches Compliance; the lane only says how.
+
+    review_48h      the model screener flagged it, or the screen could not run
+    tripwire_check  only the Compliance tripwire fired and the model screener read it as not regulatory
+    """
+    reg = case["regulatory"]
+    if not reg["flagged"]:
+        return None
+    scr = reg["sources"]["screener"]
+    if scr is None or scr.get("potential_regulatory"):
+        return "review_48h"
+    return "tripwire_check"
 
 
 def _sum_usage(calls: list[dict]) -> dict:

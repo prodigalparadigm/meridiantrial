@@ -1,0 +1,62 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "The draft promises no refund, waiver or change; it only says the suggestion was shared for review."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "'Sorry for the frustration' expresses empathy without conceding error, and the draft makes no admission of fault."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No law, regulation or regulator is mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": false,
+    "note": "The complaint says Meridian doesn't have \u27e6NAME_1\u27e7 out there. The draft turns this redacted token into 'we don't have ATMs where you were travelling', guessing what the token hides and stating it as fact."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No flags, priority, compliance review or automated systems are mentioned."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no injected instructions."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "Covers the double $3.50 charges across 5 uses, the customer's acknowledgment of the disclosure, the 'racket' feeling, and the no-fee network suggestion."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and respectful, and acknowledges the customer's directness without condescension."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "STANDARD mode; the owning team Deposit Operations is named as instructed."
+   }
+  },
+  "verdict": "revise",
+  "revision_instructions": [
+   "Replace 'you know we don't have ATMs where you were travelling' with wording that does not guess what \u27e6NAME_1\u27e7 hides. For example: 'You mentioned that you know Meridian Harbor doesn't have \u27e6NAME_1\u27e7 in the area you visited', or a neutral paraphrase such as 'that you know we don't have a presence there'. Leave the rest of the draft unchanged."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:43:40+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0127",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 595,
+  "output_tokens": 956,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 9.45,
+  "cost_usd": 0.021953,
+  "request_id": "req_011Cfqtphm1NbofxrUMnVyBy"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your message about a statement delivered to you",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for getting in touch with us, and for taking the time to let us know about this.\n\nWe have your complaint. You told us that a bank statement addressed to another person arrived in your mail. You mentioned that you're worried your own statement may have gone to someone else. You asked us to confirm whether that happened and what you should do with the statement you received.\n\nWe understand how unsettling it is to find someone else's financial details in your mailbox, and to wonder whether your own information might have reached someone else. We're sorry for the worry this has caused.\n\nA specialist team is reviewing your complaint, including both of your questions, and will respond to you within 10 business days. Their reply will cover what you should do with the statement you received.\n\nThank you again for bringing this to our attention.\n\nKind regards,\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Customer has asked what to do with the other person's statement. Decide whether to add handling instructions (keep, return, destroy) before sending, given the 10-day window.",
+   "Customer asked whether their own statement was sent to someone else. The draft takes no position, so confirm what can be said once reviewed.",
+   "The other customer's name and account number were deliberately left out of the reply.",
+   "Consider whether the third-party customer named in the complaint needs separate follow-up.",
+   "Verify the customer's mailing address on file.",
+   "Customer selected the topic 'Other'. Confirm the routing to the specialist team is correct."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:44:53+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0147",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 342,
+  "output_tokens": 1191,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 11.81,
+  "cost_usd": 0.025463,
+  "request_id": "req_011Cfqtuu2JDJYRw7hTQ2g2v"
+ }
+}

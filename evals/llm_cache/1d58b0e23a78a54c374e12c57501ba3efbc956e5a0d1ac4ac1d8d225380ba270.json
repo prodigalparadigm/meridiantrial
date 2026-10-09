@@ -1,0 +1,29 @@
+{
+ "agent": "regulatory_screener",
+ "model": "claude-opus-5-5",
+ "output": {
+  "potential_regulatory": true,
+  "categories": [
+   {
+    "id": "fee_practices",
+    "evidence": "Nobody ever told me about a fee for my statement.",
+    "why": "The customer says a $2.00 paper statement fee was charged without ever being disclosed to her."
+   }
+  ],
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:31:53+00:00",
+ "usage": {
+  "agent": "regulatory_screener",
+  "case_id": "C-0004",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 199,
+  "output_tokens": 215,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 1823,
+  "latency_s": 4.08,
+  "cost_usd": 0.014211,
+  "request_id": "req_011Cfqsw2VvSHhDYe9o6NSxE"
+ }
+}

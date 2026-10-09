@@ -1,0 +1,58 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer asks whether paper statements incur a charge and wants mailed paper statements to resume starting next month.",
+  "issues": [
+   "Inquiry about paper statement fees"
+  ],
+  "customer_requests": [
+   "Confirm whether paper statements carry a charge",
+   "Resume mailed paper statements starting next month"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "is there a charge for paper statements?"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "calm",
+  "language": "English",
+  "is_complaint": false,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:39:43+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0069",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 70,
+  "output_tokens": 281,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 2.85,
+  "cost_usd": 0.006352,
+  "request_id": "req_011CfqtXf9WsZZ6h1FTUptwG"
+ }
+}

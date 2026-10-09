@@ -107,7 +107,7 @@ a:focus-visible{outline:2px solid var(--harbor);outline-offset:2px}
       <circle cx="122" cy="128" r="7" fill="var(--ok)"/>
       <text x="136" y="133" style="font-size:13px;fill:var(--ok);font-weight:600">in the Compliance queue {{flag_phrase}}</text>
     </svg>
-    <figcaption>Days from receipt, to scale. On the synthetic month: {{tp}} of {{pos}} regulatory complaints flagged. {{trip_share}} were caught by the local tripwire before any model call; the rest within a median {{screen_median}} seconds by the model screener.</figcaption>
+    <figcaption>Days from receipt, to scale. On the synthetic month: {{tp}} of {{pos}} regulatory complaints flagged. {{trip_share}} were caught by the local tripwire before any model call; the rest by the model screener, a median of {{screen_median}} seconds after receipt.</figcaption>
   </figure>
 
   <h2>What each of you gets</h2>
@@ -147,6 +147,15 @@ a:focus-visible{outline:2px solid var(--harbor);outline-offset:2px}
   </table></div>
   {{limits_note}}
 
+  <h2>The decision for Compliance: how flags are handled</h2>
+  <p class="col">Every regulatory complaint in the test month was flagged, and that is the floor. The price is false flags, and nearly all of them come from one place. When only the tripwire fired and the model read the complaint as not regulatory, the complaint was not regulatory in any of {{trip_lane_n}} cases. We propose two lanes. You decide how the second one is worked.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Lane</th><th>What goes in it</th><th>Test month</th></tr>
+    <tr><td><b>48-hour review</b></td><td>The model screener flagged it, or the screen could not run. Full review, as today.</td><td class="n">{{lane_r_t}} regulatory · {{lane_r_f}} not</td></tr>
+    <tr><td><b>Tripwire check</b></td><td>Only your tripwire terms fired; the model disagreed. Shown with the term and the model's summary; cleared or escalated in one click.</td><td class="n">{{lane_t_t}} regulatory · {{lane_t_f}} not</td></tr>
+  </table></div>
+  <p class="col" style="font-size:15px;color:var(--ink-2)">Expected load at 1,400 complaints a month depends on how many are really regulatory, which the shadow pilot measures. {{load_line}} The evidence file ranks every tripwire term by the false flags it caused, so you can narrow the noisiest ones, such as “fraud”, which also fires on fraud alerts that worked.</p>
+
   <h2>“Serious” is your call, and now it is written down</h2>
   <p class="col">The model never ranks a complaint. It pulls out six facts and quotes the complaint for each: money at stake, a vulnerable customer, harm still happening, a deadline, an escalation threat, and repeat contact. A policy file turns facts into P1, P2 or P3. We wrote one policy for each senior analyst's view as we heard it. On the true facts they disagree on <b>{{disagree}} of {{n}}</b> complaints. That list is the agenda for one 30-minute meeting, and the agreed rule goes in the file.</p>
   <div class="tablewrap"><table>
@@ -166,6 +175,7 @@ a:focus-visible{outline:2px solid var(--harbor);outline-offset:2px}
       <li>Does “our environment” include Meridian's own cloud account? If so, production runs Claude inside it and complaint text never crosses to an outside service.</li>
       <li>Which reply types can use a pre-approved acknowledgement template?</li>
       <li>Who besides you may clear a flag?</li>
+      <li>How tripwire-only flags are worked: a daily check list, or the full 48-hour process. And which tripwire terms to narrow.</li>
       <li>Replies in Spanish: who approves Spanish text, so what is sent is exactly what was signed?</li>
     </ol></div>
     <div class="card ops"><div class="who">Operations</div><ol>
@@ -178,7 +188,7 @@ a:focus-visible{outline:2px solid var(--harbor);outline-offset:2px}
   <h2>Proposed pilot</h2>
   <div class="tablewrap"><table>
     <tr><th>Phase</th><th>What happens</th><th>We measure</th></tr>
-    <tr><td><b>Weeks 1–2</b><br>shadow</td><td>The assistant processes real complaints alongside the analysts. Nothing it produces is acted on.</td><td>Flags vs. Compliance's own review, routing vs. analysts', minutes per complaint with and without a draft.</td></tr>
+    <tr><td><b>Weeks 1–2</b><br>shadow</td><td>The assistant processes real complaints alongside the analysts. Nothing it produces is acted on.</td><td>Flags vs. Compliance's own review, the real share of regulatory complaints (it sets your queue load), routing vs. analysts', minutes per complaint with and without a draft.</td></tr>
     <tr><td><b>Weeks 3–6</b><br>assisted</td><td>Analysts work from the assistant's queue and drafts. Compliance works the flag queue.</td><td>Backlog age, time from receipt to flag, how much analysts change drafts, flags cleared as not regulatory.</td></tr>
   </table></div>
   <p class="note col"><b>Stop conditions, agreed in advance:</b> any customer data found in an outbound message; any regulatory complaint that Compliance finds and the assistant did not flag, until it is explained and fixed; a flag queue Compliance cannot work in a day.</p>

@@ -1,0 +1,60 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer's child, acting as power of attorney, reports the 82-year-old customer lost $9,000 in cash withdrawals at Depot Square branch to a grandparent bail scam; branch staff did not question unusual withdrawals.",
+  "issues": [
+   "Elderly customer defrauded via grandparent impersonation scam",
+   "Large unusual cash withdrawals not questioned by branch staff",
+   "Concern about bank safeguards for elderly customers"
+  ],
+  "customer_requests": [
+   "Explanation of what the bank will do about the loss",
+   "Information on safeguards for elderly customers"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "over_1000",
+    "evidence": "withdrew $4000 and then $5,000 in cash"
+   },
+   "vulnerability_indicated": {
+    "value": true,
+    "evidence": "Dad is 82."
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "withdrew $4000 and then $5,000 in cash and handed it to a \"courier\" who came to the house"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "distressed",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:38:01+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0042",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 289,
+  "output_tokens": 424,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.58,
+  "cost_usd": 0.010088,
+  "request_id": "req_011CfqtQ6aVNcsguyHJVBGDa"
+ }
+}

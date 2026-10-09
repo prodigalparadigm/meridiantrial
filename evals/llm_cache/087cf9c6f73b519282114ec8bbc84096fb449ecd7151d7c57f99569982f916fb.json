@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer's credit line was reduced to $2,000 with only a form letter as notice. The customer, who usually pays in full, wants the specific reason and how to restore the limit.",
+  "issues": [
+   "Credit limit decreased without adequate warning",
+   "Reason for decrease not explained"
+  ],
+  "customer_requests": [
+   "Explanation of what triggered the credit limit decrease",
+   "Steps to restore the previous credit limit"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "You cut my credit line to $2,000 with zero warning other than a form letter."
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": "You cut my credit line to $2,000"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:35:52+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0012",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 151,
+  "output_tokens": 344,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.48,
+  "cost_usd": 0.007936,
+  "request_id": "req_011CfqtEc8ibWJGHb9UJu1zN"
+ }
+}

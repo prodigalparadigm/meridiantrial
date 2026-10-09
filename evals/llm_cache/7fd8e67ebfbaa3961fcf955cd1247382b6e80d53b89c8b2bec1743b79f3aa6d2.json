@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "privacy_office",
+  "secondary": "collections",
+  "rationale": "The core harm is that a collector told the customer's supervisor about the debt, which means account information was disclosed to the wrong person. That is owned by the Privacy Office. Collections owns the collector's conduct and the past-due auto loan account, so it is the secondary.",
+  "confidence": "medium",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:37:30+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0036",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 199,
+  "output_tokens": 128,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.57,
+  "cost_usd": 0.003664,
+  "request_id": "req_011CfqtMvVhyhdFjFf8HoQqy"
+ }
+}

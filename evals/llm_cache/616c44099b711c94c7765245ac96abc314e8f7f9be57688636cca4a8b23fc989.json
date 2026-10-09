@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer reports a paycheck the employer says was sent on 9/10 has not arrived in the account. Car insurance will be cancelled on 9/21/2026 if payment fails.",
+  "issues": [
+   "Missing direct deposit paycheck",
+   "Risk of car insurance cancellation"
+  ],
+  "customer_requests": [
+   "Locate the missing paycheck deposit",
+   "Credit the funds to the account"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "unknown",
+    "evidence": "Paycheck missing."
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "It's not in my account."
+   },
+   "time_sensitive": {
+    "value": true,
+    "evidence": "My car insurance gets cancelled on 9/21/2026 if the payment doesn't go through."
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:38:59+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0061",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 154,
+  "output_tokens": 349,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.85,
+  "cost_usd": 0.008048,
+  "request_id": "req_011CfqtUPSczY9L8fwZLx853"
+ }
+}

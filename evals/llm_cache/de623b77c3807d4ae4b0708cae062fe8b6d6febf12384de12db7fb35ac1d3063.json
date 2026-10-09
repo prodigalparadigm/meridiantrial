@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your complaint about the charges on check #1250",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for contacting us. Please don't worry about writing in Spanish. We're glad you reached out, and we understood your message.\n\nWe have received your complaint. You told us that check #1250, for $92.40, was returned on September 16 and then presented again on September 19, and that you were charged $34 each time, so you paid two $34 charges for the same check. You mentioned that it doesn't seem fair to pay twice for a single check, and you asked us to return the repeated charge. You also told us your account is still negative and that you're worried about being charged more.\n\nWe understand how stressful it is to see your balance below zero and to worry about further charges, and we're sorry for the worry this has caused you.\n\nA specialist team is reviewing your complaint and will respond within 10 business days.\n\nKind regards,\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "The customer wrote in Spanish and said their English is limited. Consider sending the reply in Spanish or offering Spanish-language support.",
+   "ACKNOWLEDGE ONLY mode: the draft takes no position on whether the second $34 charge should be refunded.",
+   "Confirm that check #1250 was returned on Sept 16 and re-presented on Sept 19, and that a $34 charge was applied each time.",
+   "The customer says the account is still negative and fears more charges. Decide whether anything should be said or done about further charges while the review is pending.",
+   "Confirm that mentioning the check number and amounts in the reply is acceptable."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:44:59+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0149",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 449,
+  "output_tokens": 1069,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 10.5,
+  "cost_usd": 0.023451,
+  "request_id": "req_011CfqtvP3XfHgnZg6GGDMyu"
+ }
+}

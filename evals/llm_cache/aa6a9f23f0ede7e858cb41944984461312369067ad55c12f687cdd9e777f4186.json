@@ -1,0 +1,60 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer deposited a $1,850.00 inheritance check from an aunt's estate on August 31; funds are held until Sept 10. The customer travels 9/7 and wants the hold released.",
+  "issues": [
+   "Hold placed on deposited inheritance check",
+   "Funds unavailable until Sept 10",
+   "Customer feels treated as a fraud risk despite long tenure"
+  ],
+  "customer_requests": [
+   "Explanation for the check hold",
+   "Release of funds before 9/7 travel"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "over_1000",
+    "evidence": "$1,850.00, deposited August 31, \"available Sept 10\""
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": "my inheritance check from my aunt's estate"
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "Why is my inheritance check from my aunt's estate being held?"
+   },
+   "time_sensitive": {
+    "value": true,
+    "evidence": "I fly out on 9/7 and need this fixed before I go."
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:36:41+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0024",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 169,
+  "output_tokens": 411,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 4.84,
+  "cost_usd": 0.009348,
+  "request_id": "req_011CfqtJ6Y6n3LKEca29PwAv"
+ }
+}

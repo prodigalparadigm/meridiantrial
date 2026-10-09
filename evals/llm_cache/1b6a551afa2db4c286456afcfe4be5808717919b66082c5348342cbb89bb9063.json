@@ -1,0 +1,60 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer's $104,250 CD matured September 18 and auto-renewed for 12 months at 3.10% despite a prior secure message requesting proceeds be moved to savings. Customer requests transfer without early withdrawal penalty.",
+  "issues": [
+   "CD renewed despite maturity instructions",
+   "Customer instructions sent by secure message not followed",
+   "Funds locked in renewed CD subject to early withdrawal penalty"
+  ],
+  "customer_requests": [
+   "Move CD proceeds to savings account",
+   "Waive early withdrawal penalty"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "over_1000",
+    "evidence": "for $104250"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "Instead it renewed for another 12 months at 3.10%."
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": "There's no urgency on my end"
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "calm",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:45:21+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0159",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 200,
+  "output_tokens": 385,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 4.23,
+  "cost_usd": 0.008952,
+  "request_id": "req_011CfqtxYFUzVhAJEwWCBn9E"
+ }
+}

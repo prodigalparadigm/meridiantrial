@@ -1,0 +1,61 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "Since the 9/26 app update, the customer cannot log in because verification codes go to an outdated phone number. Password resets failed, and phone support redirects to the app.",
+  "issues": [
+   "Unable to log in to app after update",
+   "Verification code sent to outdated phone number",
+   "Cannot view balance or pay bills",
+   "Phone support redirects customer back to app"
+  ],
+  "customer_requests": [
+   "Restore app access",
+   "Update phone number for verification codes"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": ""
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "I can't see my balance or pay my bills"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": true,
+    "evidence": "the phone line keeps telling me to use the app"
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:45:31+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0162",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 130,
+  "output_tokens": 342,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.36,
+  "cost_usd": 0.007812,
+  "request_id": "req_011CfqtyLbn7qEzRXtnAUCs2"
+ }
+}

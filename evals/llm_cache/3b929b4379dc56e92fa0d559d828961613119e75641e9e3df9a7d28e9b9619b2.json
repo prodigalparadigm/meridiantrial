@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your message about the change to your credit line",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for contacting us about the change to your credit line. We understand how unsettling an unexpected change like this can be, and we're sorry for the frustration it has caused.\n\nYou told us your credit line was reduced to $2,000 and that the only notice you received was a form letter, with no other warning beforehand. You mentioned that you pay your balance in full most months, so the decision came as a surprise. You've asked us two things: exactly what triggered the decrease, and what you can do to get your previous limit back.\n\nWe have passed your message to our Card Services team, who will look into the circumstances you described. We will respond to you within 10 business days and address both of your questions.\n\nIf there is anything else you'd like us to take into account, such as details from the letter you received, please reply to this email and we will add it to your file.\n\nKind regards,\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Confirm the actual reason(s) for the limit decrease so the customer's request for the specific trigger can be answered.",
+   "Check the date and content of the notice letter the customer received and whether it met the bank's notice obligations.",
+   "Decide whether the previous limit can be restored or reviewed, and what steps, if any, to give the customer.",
+   "Confirm the customer's previous limit and payment history, given their statement that they pay in full most months.",
+   "Customer contacted by email and included a mobile number; confirm preferred contact method before replying."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:36:03+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0012",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 357,
+  "output_tokens": 1012,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 11.01,
+  "cost_usd": 0.021943,
+  "request_id": "req_011CfqtEsAbsm5ZWbXEQHN35"
+ }
+}

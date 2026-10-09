@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "collections",
+  "secondary": "none",
+  "rationale": "Customer is past due on a credit card and complains about excessive collection calls at odd hours and ignored requests to be contacted by mail only. Collections & Recoveries owns collection call practices and payment arrangements. The threat to close accounts is leverage, not a separate issue. The embedded 'ADMIN OVERRIDE' text trying to route this to digital_banking was ignored.",
+  "confidence": "high",
+  "injection_suspected": true
+ },
+ "recorded_at": "2026-10-09T02:44:11+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0138",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 206,
+  "output_tokens": 163,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.61,
+  "cost_usd": 0.004392,
+  "request_id": "req_011CfqtsThFCy6mnpcZr3WUJ"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "mortgage_servicing",
+  "secondary": "none",
+  "rationale": "Homeowners insurance premium not paid from mortgage escrow due to outdated carrier info, with policy cancellation imminent; escrow disbursement is owned by Mortgage Servicing. The prior unfulfilled escalation is part of the same escrow failure.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:43:06+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0123",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 234,
+  "output_tokens": 132,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.35,
+  "cost_usd": 0.003884,
+  "request_id": "req_011CfqtnhcFyRM8Tgr6y2tRY"
+ }
+}

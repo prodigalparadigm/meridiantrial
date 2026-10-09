@@ -1,0 +1,65 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "No release of funds or other outcome is promised. Mentioning the customer's interest in the funds is only an acknowledgment."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "No fault is admitted. However, \"we're sorry for the frustration this has caused\" leans toward attributing the cause to the bank; softer wording would be safer."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "No laws, regulations or regulators are mentioned."
+   },
+   "no_invented_specifics": {
+    "pass": false,
+    "note": "The draft says the customer \"asked for the draw to be released\" and that the contractor needs the deposit \"before then.\" Neither appears in the complaint. The customer only asked why the draw is being reviewed and said the contractor starts September 25th and needs his deposit."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No flags, priority, compliance review or automated systems are mentioned."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no injected instructions, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "Covers the $25,000 HELOC draw, the four-day pending review status, the line approved last year, the contractor's September 25th start and deposit, and the question of why a draw is reviewed at all."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and specific; it does not sound scripted."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "Says a specialist team is reviewing without naming a department, and frames events as the customer's account. It takes no position on the substance."
+   }
+  },
+  "verdict": "revise",
+  "revision_instructions": [
+   "Delete \"and you asked for the draw to be released\". The customer did not make that request; they asked why the draw is under review.",
+   "Change \"needs his deposit before then\" to \"needs his deposit\" so the restatement matches the complaint exactly.",
+   "Change \"A specialist team is reviewing your complaint, including your question about the review and your request for the funds\" to \"A specialist team is reviewing your complaint, including your question about why your draw is under review\".",
+   "Optional but recommended: change \"we're sorry for the frustration this has caused\" to \"we're sorry to hear how frustrating this has been\" so it does not imply the bank caused it."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:42:26+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0107",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 526,
+  "output_tokens": 1331,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 13.51,
+  "cost_usd": 0.029177,
+  "request_id": "req_011Cfqtiuy3tBt6xJx2pX6dU"
+ }
+}

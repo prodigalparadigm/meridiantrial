@@ -1,0 +1,58 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer complains that the Wexford Commons branch drive-through has been \"temporarily closed\" since July with no reopening date, which is inconvenient for parents with toddlers in car seats.",
+  "issues": [
+   "Drive-through at Wexford Commons closed since July",
+   "No clear reopening timeline"
+  ],
+  "customer_requests": [
+   "Information on when the drive-through will reopen"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": ""
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": "I'll sue! ...just kidding."
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:38:03+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0044",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 147,
+  "output_tokens": 309,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.51,
+  "cost_usd": 0.00722,
+  "request_id": "req_011CfqtQHTqFmj1d1tCH4pqr"
+ }
+}

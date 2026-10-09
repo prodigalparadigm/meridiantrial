@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your visit to our Fairhaven branch on 9/5",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for speaking with us about your visit to our Fairhaven branch on 9/5. You told us that when you paid with coins, the teller serving you rolled their eyes and made a comment about it, and that this happened in front of other customers. You mentioned that you felt humiliated, and we're sorry for how upsetting that experience was for you.\n\nEvery customer should feel respected when they visit us. We appreciate you taking the time to tell us what happened, because hearing directly from customers about their experiences helps us keep improving.\n\nOur Branch & Contact Center team will review the concerns you raised about this visit, and we will respond to you within 10 business days.\n\nIf there is anything else you would like to share about what happened that day, please let us know and we will include it in the review.\n\nKind regards,\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Call note says the rep apologized and sent feedback to the branch manager. Decide whether to mention this to the customer.",
+   "The teller is named in the note but left out of the draft. Confirm that is appropriate.",
+   "The customer made no specific request. Consider whether to offer a follow-up conversation with the branch manager.",
+   "Confirm the visit date (9/5) and the branch location with branch records.",
+   "Check how the customer prefers to be contacted, since the complaint came in by phone."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:38:59+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0056",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 377,
+  "output_tokens": 1078,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 14.17,
+  "cost_usd": 0.023343,
+  "request_id": "req_011CfqtTbDGgz3gb5fAV4i2H"
+ }
+}

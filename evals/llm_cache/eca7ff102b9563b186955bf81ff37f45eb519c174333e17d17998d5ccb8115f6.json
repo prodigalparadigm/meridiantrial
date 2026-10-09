@@ -1,0 +1,55 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer complained about an 88-minute hold time before reaching an agent. The original debit card PIN question was resolved. The customer mentioned having already spoken to an attorney.",
+  "issues": [
+   "Excessive hold time (88 minutes)"
+  ],
+  "customer_requests": [],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "original question re debit card pin, resolved"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": "original question re debit card pin, resolved"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": true,
+    "evidence": "cx mentioned atty, says already spoke to one"
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:40:08+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0077",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 96,
+  "output_tokens": 306,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.11,
+  "cost_usd": 0.006956,
+  "request_id": "req_011CfqtZVWt4y9Z1ZSa4N2tK"
+ }
+}

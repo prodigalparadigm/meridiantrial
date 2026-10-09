@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your request about the $12 maintenance fee",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for speaking with us about the $12 maintenance fee on your account. You told us your balance dropped below the minimum in August after you moved money out to cover a car repair, and you asked us to waive the fee. You also mentioned that you have banked with us for four years, and we truly appreciate your loyalty over that time.\n\nAn unexpected car repair is stressful enough without an added charge to think about, and we're sorry for the frustration this has caused.\n\nOur Deposit Operations team will review your request, and we will respond within 10 business days to confirm where things stand. If anything has changed since your call, or if there is anything else you would like us to consider, please reply to this message and we will make sure it is included.\n\nThank you again for being a valued customer.\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "The call note says the representative already waived the $12 fee as a one-time courtesy and the customer was satisfied. Decide whether a written reply is needed at all.",
+   "If you send a reply, confirm in the account that the waiver actually posted. If it did, consider revising the draft to confirm the waiver instead of describing a pending review.",
+   "The 10-business-day review language may not fit a case that is already resolved. Adjust or remove it if you confirm the waiver.",
+   "The minimum balance amount is not given in the complaint. Add it only if you want the reply to reference it.",
+   "Check whether the customer has had earlier courtesy waivers, since the note calls this one a one-time courtesy."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:43:27+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0126",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 407,
+  "output_tokens": 1207,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 12.05,
+  "cost_usd": 0.026043,
+  "request_id": "req_011CfqtoX8zzEwJYEKV6kEJR"
+ }
+}

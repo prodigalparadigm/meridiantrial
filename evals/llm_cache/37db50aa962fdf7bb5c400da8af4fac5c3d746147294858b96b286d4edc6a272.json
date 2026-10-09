@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your online banking login issue",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for contacting us about trouble getting into your online banking.\n\nYou told us that since the update you haven't been able to log in, because you keep getting a message saying your device can't be verified. You mentioned that the verification code is being sent to your old phone, which you no longer have, so you can't receive it. You also said you've reset your password three times and tried everything you could think of, and you still can't see your account.\n\nWe understand how stressful this must be, especially because you need to pay your light bill and can't get into your account to do it. We're sorry for the frustration this has caused.\n\nYou asked us to help you get back into online banking and to update the phone number your verification codes are sent to. We've passed your complaint to our Digital Banking team, who will review it, and we will respond to you within 10 business days.\n\nThank you for your patience while we look into this.\n\nKind regards,\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "The customer has an urgent bill to pay. Consider contacting them sooner than 10 business days or offering another way to pay the bill.",
+   "Updating the verification phone number will need identity checks. Decide how to verify the customer before any change.",
+   "Check whether the recent update is causing device-verification failures for other customers.",
+   "Confirm which contact channel to use, since the customer cannot receive codes on the old phone.",
+   "Check for any risk of late payment on the bill if access is not restored quickly, and decide whether to address it."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:42:34+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0114",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 308,
+  "output_tokens": 1023,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 11.05,
+  "cost_usd": 0.021967,
+  "request_id": "req_011CfqtjeqVDD1667pvPPz3F"
+ }
+}

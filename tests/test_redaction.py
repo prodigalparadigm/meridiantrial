@@ -66,6 +66,14 @@ class RedactionFixtures(unittest.TestCase):
         red = R.redact(text, {})
         self.assertEqual(text, red.text, red.found)
 
+    def test_model_written_phrases_are_not_pii(self):
+        # Both of these blocked a drafter call in the first full run (false alarms from model-written summaries).
+        for text in ("an $800.00 ATM withdrawal at Harbor Street branch", "the Riverside Dr ATM has a cracked screen"):
+            self.assertEqual(text, R.redact(text, {}).text)
+        self.assertNotIn("Patel", R.redact("I asked Dr. Patel and then Mrs Gonzalez", {}).text)
+        self.assertNotIn("Gonzalez", R.redact("I asked Dr. Patel and then Mrs Gonzalez", {}).text)
+        self.assertNotIn("14 Cold", R.redact("mail went to 14 Cold Spring Rd instead", {}).text)
+
     def test_rehydrate_round_trip(self):
         text = "Margaret Okafor, card 4000 0012 3456 7899, my son Dmitri, SSN 900-12-3456."
         red = R.redact(text, KNOWN)

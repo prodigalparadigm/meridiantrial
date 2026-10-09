@@ -1,0 +1,60 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer, behind on a credit card, reports 6-8 collection calls daily including after 9pm and Sunday 7am, despite a stated payment plan. Account noted to limit calls; customer wants written confirmation.",
+  "issues": [
+   "Excessive collection call frequency (6-8 per day)",
+   "Collection calls outside reasonable hours (after 9pm, Sunday 7am)",
+   "Calls continued after customer stated payment date"
+  ],
+  "customer_requests": [
+   "Stop collection calls",
+   "Written confirmation of call restrictions"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "unknown",
+    "evidence": "cx behind on cc"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": "cx has newborn, calls waking baby"
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "states recvg 6-8 calls/day incl after 9pm and sun 7am"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:42:09+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0111",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 160,
+  "output_tokens": 397,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.61,
+  "cost_usd": 0.009032,
+  "request_id": "req_011CfqtiNDqA745iGgXj25yu"
+ }
+}

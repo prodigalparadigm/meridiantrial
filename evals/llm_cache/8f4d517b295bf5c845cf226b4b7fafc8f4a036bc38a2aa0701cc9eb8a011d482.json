@@ -1,0 +1,58 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer complains that purchases at Pinecrest Grocers earn 1% instead of the 3% grocery rewards rate because the merchant is coded as a specialty retailer, and threatens to cancel the card.",
+  "issues": [
+   "Grocery merchant miscategorized for rewards",
+   "Earning 1% instead of 3% on grocery spending"
+  ],
+  "customer_requests": [
+   "Apply 3% grocery rewards to Pinecrest Grocers purchases"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "unknown",
+    "evidence": "so I get 1% on my biggest expense"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": "Fix it or I'm cancelling the card."
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "angry",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:37:07+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0029",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 130,
+  "output_tokens": 353,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.61,
+  "cost_usd": 0.008032,
+  "request_id": "req_011CfqtL97BRt7TVp7SkhNTp"
+ }
+}

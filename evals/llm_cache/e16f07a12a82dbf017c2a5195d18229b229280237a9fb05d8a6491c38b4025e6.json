@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer's $1,240.00 online bill payment to Tarrow Water Authority shows paid and left the account on 8/20/2026, but the payee says it was never received and charged a $25 late fee.",
+  "issues": [
+   "Bill payment debited but not received by payee",
+   "Payee charged late fee due to missing payment"
+  ],
+  "customer_requests": [
+   "Locate the missing payment",
+   "Explain where the funds went"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "over_1000",
+    "evidence": "I scheduled a bill payment of $1,240.00 to Tarrow Water Authority"
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "the money left my account on 8/20/2026. Tarrow Water Authority says they never received it"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:36:30+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0022",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 180,
+  "output_tokens": 367,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.38,
+  "cost_usd": 0.008512,
+  "request_id": "req_011CfqtHT6aQnEUnRQaJ3tes"
+ }
+}

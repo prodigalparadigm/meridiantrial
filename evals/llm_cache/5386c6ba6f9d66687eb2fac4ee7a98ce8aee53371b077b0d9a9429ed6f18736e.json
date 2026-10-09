@@ -1,0 +1,57 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer complains that the Bridge St drive-through no longer provides lollipops, which their children looked forward to on Saturdays, and states they will file a complaint with the CFPB.",
+  "issues": [
+   "Lollipops discontinued at Bridge St drive-through"
+  ],
+  "customer_requests": [
+   "Implied: restore lollipops at drive-through"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "none",
+    "evidence": "The lollipops at the Bridge St drive-through are GONE."
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": false,
+    "evidence": ""
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": true,
+    "evidence": "I will be filing a complaint with the CFPB."
+   },
+   "repeat_contact": {
+    "value": false,
+    "evidence": ""
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:40:24+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0082",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 105,
+  "output_tokens": 323,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.12,
+  "cost_usd": 0.007332,
+  "request_id": "req_011Cfqtahf9k98D14cKwX2vz"
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "branch_contact_center",
+  "secondary": "deposit_ops",
+  "rationale": "Main complaint is branch staff conduct, long wait with one teller window, no manager available, and a callback request, all owned by Branch & Contact Center. The customer also mentioned two overdraft fees for the same check #1102, which is a separate fee issue for Deposit Operations.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:33:19+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0010",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 179,
+  "output_tokens": 139,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 3.4,
+  "cost_usd": 0.003804,
+  "request_id": "req_011Cfqt3NUsZnUU5Fo2S4827"
+ }
+}

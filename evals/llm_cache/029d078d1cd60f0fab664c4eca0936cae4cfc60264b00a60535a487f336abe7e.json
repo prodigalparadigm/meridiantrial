@@ -1,0 +1,31 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your closing cashier's check from the Bridge St branch",
+  "body": "Dear Valued Customer,\n\nThank you for writing to us about the cashier's check you received after closing your savings account.\n\nYou told us that you closed the account at our Bridge St branch on August 17, and that the cashier's check for your balance of $846.10 arrived in the mail made out to a name that is not spelled the way your name is spelled. You mentioned that your other bank will not accept the check because of the name, so you have not been able to deposit your funds. You also let us know that the branch told you they need to research the matter before a new check can be issued, and you have asked us to send a replacement check with your name spelled correctly.\n\nWe understand how frustrating it is to wait for your own funds and then find you cannot use them. We're sorry for the inconvenience this has caused.\n\nOur Deposit Operations team will review your complaint and your request, and we will respond to you within 10 business days.\n\nKind regards,\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "The greeting is a generic 'Dear Valued Customer' and contains no name; replace it with the customer's correctly spelled name, as given in the complaint, if you want a personal greeting.",
+   "Do not address the customer by the name on the check; they say that spelling is wrong.",
+   "The customer gave the correct spelling of their name in the complaint; verify it against account records before any reissue.",
+   "Decide whether and how the $846.10 check will be reissued, and the timing.",
+   "Check the status of the branch research at Bridge St and whether the original check must be returned or voided.",
+   "Confirm the account closure date of Aug 17 and the closing balance.",
+   "The customer signed as 'S.' followed by a surname; check whether the account holder name on file matches."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:37:41+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0030",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 1268,
+  "output_tokens": 1157,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 10.34,
+  "cost_usd": 0.028487,
+  "request_id": "req_011CfqtN8Kcgc1qqEHr1nx8a"
+ }
+}

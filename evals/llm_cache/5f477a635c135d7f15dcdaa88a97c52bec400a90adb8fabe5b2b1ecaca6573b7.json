@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We've received your message about your HELOC draw",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for contacting us, and for explaining your situation so clearly. We have received your complaint.\n\nYou told us that four days ago you requested a $25,000 draw from your home equity line of credit, which you mentioned was approved last year, so you could pay a deposit to your kitchen contractor. You said the online system still shows the request as \"pending review,\" and you asked why a draw on your own line of credit is being reviewed at all. You also let us know that your contractor is due to start on September 25th and needs his deposit.\n\nWe understand how stressful it is to wait on funds when a project start date is approaching, and we're sorry to hear how frustrating this has been.\n\nA specialist team is reviewing your complaint, including your question about why your draw is under review, and will respond to you within 10 business days.\n\nKind regards,\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Time-sensitive: the contractor starts September 25th, which may fall before the 10-business-day response window. Consider whether earlier contact is needed.",
+   "Check the current status of the $25,000 draw request and the reason it is pending review.",
+   "Decide whether and how to explain the review to the customer. The reply gives no reason and takes no position.",
+   "Intake lists release of the draw as a request, but the customer's message only asks why it is under review. Decide whether to address release, and do not promise an outcome.",
+   "Confirm the line of credit's status and available balance before responding on substance."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:42:33+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0107",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 1162,
+  "output_tokens": 777,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 7.1,
+  "cost_usd": 0.020463,
+  "request_id": "req_011CfqtjuucShFpSuXugv8i9"
+ }
+}

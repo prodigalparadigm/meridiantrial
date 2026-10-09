@@ -1,0 +1,59 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "The customer was charged two $34 NSF fees for the same $425 insurance autopay re-presented on 9/10/2026; accepts the first fee, requests refund of the duplicate. Prior web complaint unanswered.",
+  "issues": [
+   "Duplicate NSF fee for re-presented payment",
+   "No response to prior web complaint"
+  ],
+  "customer_requests": [
+   "Refund of the duplicate $34 NSF fee",
+   "Response within the week"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "under_100",
+    "evidence": "That's 2 fees ($68) for one payment. I'd like the duplicate fee refunded."
+   },
+   "vulnerability_indicated": {
+    "value": false,
+    "evidence": ""
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "I was charged another $34 for it"
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": ""
+   },
+   "escalation_threat": {
+    "value": true,
+    "evidence": "If I don't hear back this week I'm moving my accounts to the credit union down the street."
+   },
+   "repeat_contact": {
+    "value": true,
+    "evidence": "I submitted this through the complaint form on your website on 9/15/2026 and haven't heard anything, so I'm trying email."
+   }
+  },
+  "sentiment": "frustrated",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:41:32+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0102",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 271,
+  "output_tokens": 427,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 4.37,
+  "cost_usd": 0.010076,
+  "request_id": "req_011CfqtfcgtxeeetYZ9qgGub"
+ }
+}

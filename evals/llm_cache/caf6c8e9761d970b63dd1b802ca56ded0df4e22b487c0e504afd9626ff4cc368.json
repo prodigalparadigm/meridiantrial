@@ -1,0 +1,29 @@
+{
+ "agent": "regulatory_screener",
+ "model": "claude-opus-5-5",
+ "output": {
+  "potential_regulatory": true,
+  "categories": [
+   {
+    "id": "servicing_error",
+    "evidence": "The payoff quote included the monthly payment that had already been drafted",
+    "why": "Customer reports an incorrect mortgage payoff amount resulting in an overpayment and an outstanding escrow refund not yet received, which are loan servicing issues with regulatory refund timelines."
+   }
+  ],
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:39:47+00:00",
+ "usage": {
+  "agent": "regulatory_screener",
+  "case_id": "C-0071",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 262,
+  "output_tokens": 135,
+  "cache_read_tokens": 1823,
+  "cache_write_tokens": 0,
+  "latency_s": 2.27,
+  "cost_usd": 0.004113,
+  "request_id": "req_011CfqtY3HnBeq6Fuy8sEBmu"
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "agent": "triage_analyst",
+ "model": "claude-opus-5-5",
+ "output": {
+  "summary": "Bereaved customer reports joint checking account restricted after spouse's death; $4,210.55 inaccessible. Three branch visits each requested different documents. Customer needs funds for funeral and bills and wants one complete document list.",
+  "issues": [
+   "Joint account restricted after account holder's death",
+   "Inconsistent document requirements across branch visits",
+   "Funds of $4,210.55 inaccessible"
+  ],
+  "customer_requests": [
+   "Single complete list of required documents",
+   "Access to funds in joint account"
+  ],
+  "facts": {
+   "financial_impact": {
+    "value": "over_1000",
+    "evidence": "I can't get to the $4,210.55 that's in it"
+   },
+   "vulnerability_indicated": {
+    "value": true,
+    "evidence": "My wife, \u27e6CUSTOMER_NAME_1\u27e7, passed away on July 27th."
+   },
+   "harm_ongoing": {
+    "value": true,
+    "evidence": "Now the account is restricted and I can't get to the $4,210.55 that's in it."
+   },
+   "time_sensitive": {
+    "value": false,
+    "evidence": "I have the funeral bill and my own bills to pay."
+   },
+   "escalation_threat": {
+    "value": false,
+    "evidence": ""
+   },
+   "repeat_contact": {
+    "value": true,
+    "evidence": "I have been to the Elm & 4th branch three times and each time I was told I needed a different document"
+   }
+  },
+  "sentiment": "distressed",
+  "language": "English",
+  "is_complaint": true,
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:36:20+00:00",
+ "usage": {
+  "agent": "triage_analyst",
+  "case_id": "C-0018",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 253,
+  "output_tokens": 460,
+  "cache_read_tokens": 2259,
+  "cache_write_tokens": 0,
+  "latency_s": 3.9,
+  "cost_usd": 0.010664,
+  "request_id": "req_011CfqtGfEZ94SM7PvuGfCq6"
+ }
+}

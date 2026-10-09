@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "fraud_disputes",
+  "secondary": "branch_contact_center",
+  "rationale": "The customer is complaining that a wire was refused, but the facts strongly suggest an ongoing romance scam. The fianc\u00e9 is overseas, has apparently never been met in person, needs money for a 'customs fee' to release a shipment, and two prior wires have already been sent. Fraud & Disputes owns scam investigation and is the time-sensitive owner, including possible recovery or review of the prior wires. Branch & Contact Center is secondary for the customer's complaint about the assistant manager's questioning and alleged age-based treatment.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:43:38+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0131",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 283,
+  "output_tokens": 223,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 3.15,
+  "cost_usd": 0.0059,
+  "request_id": "req_011CfqtpxDep8EqwseutWkZQ"
+ }
+}

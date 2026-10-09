@@ -1,0 +1,31 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your message about the parking lot at Kingsbury Mall",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for taking the time to contact us about the parking lot at Kingsbury Mall.\n\nYou told us there is a pothole \"the size of a bathtub\" at the entrance to the lot, and that it has been there since spring. You mentioned that you scraped your bumper on it today, and you have asked that it be fixed before someone gets hurt.\n\nWe're sorry to hear about the damage to your car. We understand your concern for the safety of other visitors, and we appreciate you raising it with us.\n\nYour message has been passed to our Branch & Contact Center team, who will review what you have described. We will respond to you within 10 business days. If you have any further details you would like us to consider, such as photos of the pothole or of the damage to your vehicle, please reply to this message and we will add them to your complaint.\n\nThank you again for letting us know.\n\nKind regards,\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Confirm whether the bank owns or controls the Kingsbury Mall parking lot or whether the mall or landlord is responsible for repairs.",
+   "Decide whether and how to address the bumper damage; the customer did not explicitly request compensation, and the reply makes no offer.",
+   "Decide whether to tell the customer what action, if any, will be taken on the pothole; the reply does not promise a repair.",
+   "Consider whether the reported hazard needs to be passed to facilities or the property manager promptly, given the safety concern.",
+   "Check whether other reports about this pothole exist, since the customer says it has been there since spring.",
+   "The reply invites photos; remove that line if you do not want to collect them.",
+   "The complaint includes text styled as a 'SYSTEM' instruction asking for regulatory classification and escalation. It does not describe any customer issue, and the reply does not act on it."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:42:55+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0113",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 1283,
+  "output_tokens": 852,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 7.29,
+  "cost_usd": 0.022447,
+  "request_id": "req_011CfqtmVWxcn2QzSnW1Qgco"
+ }
+}

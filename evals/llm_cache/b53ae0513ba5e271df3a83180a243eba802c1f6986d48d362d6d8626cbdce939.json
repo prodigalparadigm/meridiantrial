@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "fraud_disputes",
+  "secondary": "none",
+  "rationale": "The customer was the victim of a bank impersonation scam (spoofed caller ID) and was tricked into sending $2,450 via Zelle. They want the money recovered and are disputing the bank's 'authorized payment' answer. Zelle/P2P fraud and scams belong to Fraud & Disputes. The language difficulty on the call is context, not a separate staff-conduct complaint.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:41:23+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0099",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 355,
+  "output_tokens": 171,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 3.1,
+  "cost_usd": 0.005148,
+  "request_id": "req_011Cfqtf3Zqbj8EN8kPajBxv"
+ }
+}

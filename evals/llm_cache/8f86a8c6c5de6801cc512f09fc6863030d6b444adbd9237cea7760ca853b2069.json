@@ -1,0 +1,34 @@
+{
+ "agent": "regulatory_screener",
+ "model": "claude-opus-5-5",
+ "output": {
+  "potential_regulatory": true,
+  "categories": [
+   {
+    "id": "collections_conduct",
+    "evidence": "called my job at Harbor Falls Middle School and told my supervisor",
+    "why": "A collector contacting the customer's employer and discussing the debt is a collection-practices concern."
+   },
+   {
+    "id": "privacy_incident",
+    "evidence": "\u27e6NAME_1\u27e7 had no business knowing that.",
+    "why": "Staff disclosed the customer's car loan and past-due status to an unauthorized third party, the customer's supervisor."
+   }
+  ],
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:37:30+00:00",
+ "usage": {
+  "agent": "regulatory_screener",
+  "case_id": "C-0036",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 199,
+  "output_tokens": 183,
+  "cache_read_tokens": 1823,
+  "cache_write_tokens": 0,
+  "latency_s": 2.36,
+  "cost_usd": 0.004821,
+  "request_id": "req_011CfqtMvH4ph59DAtLRgFuy"
+ }
+}

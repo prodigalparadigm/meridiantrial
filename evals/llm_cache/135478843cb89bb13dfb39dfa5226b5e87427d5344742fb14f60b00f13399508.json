@@ -1,0 +1,29 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "Your call about accessing our app and website",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for calling us. You told us you had been unable to use our app and website since that morning, and that this was especially stressful because you needed to send your rent payment by 5pm that day. You mentioned that our representative offered to process the transfer by phone and that you preferred to wait and make the payment through the app yourself.\n\nWe understand how worrying it is not to be able to make an important payment when a deadline is close. We're sorry for the frustration and anxiety this caused.\n\nOur Digital Banking team will review what you've told us and respond to you within 10 business days. If you are still unable to access the app or website, or if you have any concerns about your rent payment, please contact us. We are glad to help you.\n\nThank you for your patience while we look into this.\n\nKind regards,\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "Confirm whether the customer's rent payment was sent before the 5pm deadline. This reply arrives after that deadline, so consider a direct follow-up call.",
+   "Check whether the customer is still having trouble accessing the app or website.",
+   "Confirm the outage details, including its start time, its scope and when service was restored, before saying anything specific about it.",
+   "The note contains a redacted token (\u27e6NAME_1\u27e7) that was not included in the reply. Check the original call record if its meaning matters.",
+   "Decide whether the customer suffered any late-payment consequence and whether anything further should be offered. The draft makes no commitment."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:32:06+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0001",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 369,
+  "output_tokens": 833,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 1376,
+  "latency_s": 10.95,
+  "cost_usd": 0.025016,
+  "request_id": "req_011CfqswNSiprX4w49SXWUME"
+ }
+}

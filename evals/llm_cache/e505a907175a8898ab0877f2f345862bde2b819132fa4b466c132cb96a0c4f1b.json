@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "mortgage_servicing",
+  "secondary": "branch_contact_center",
+  "rationale": "The core problem is a stalled mortgage application: underwriting keeps re-requesting documents, the rate lock expires 10/4 and closing is 10/9, so mortgage applications (Mortgage Servicing) owns it and it is time-sensitive. The unresponsive loan officer is a service-quality and staff-responsiveness issue that could go to Branch & Contact Center as secondary. It is closely tied to the mortgage process, though, so the secondary is debatable.",
+  "confidence": "medium",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:45:33+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0163",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 227,
+  "output_tokens": 206,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 2.89,
+  "cost_usd": 0.005336,
+  "request_id": "req_011CfqtyW2KJApTZnba21jmG"
+ }
+}

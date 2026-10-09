@@ -1,0 +1,31 @@
+{
+ "agent": "drafter",
+ "model": "claude-opus-5-5",
+ "output": {
+  "subject": "We have received your complaint about a collections call",
+  "body": "Dear \u27e6CUSTOMER_NAME_1\u27e7,\n\nThank you for speaking with us. We want you to know that we have received your complaint, and we are truly sorry for how upsetting this experience has been for you.\n\nYou told us that a collector contacted you about a past-due payment of $640 and said you could be arrested for check fraud if the payment was not made. You mentioned that you did not get the collector's name. We understand how frightening it must have been to hear something like that, and we know how distressed you were when you spoke with us. You also mentioned that you arranged a payment plan with us during that call.\n\nA specialist team is reviewing your complaint about how the collector spoke to you, and we will respond within 10 business days.\n\nIf you remember anything more about the call, such as the date, the time or the number it came from, please let us know when you get in touch, as it may help with the review.\n\nKind regards,\n\nCustomer Care, Meridian Harbor Bank",
+  "notes_for_analyst": [
+   "The note does not give the date or time of the collection call; check records to identify the collector.",
+   "Confirm whether the collector was bank staff or a third-party agency before responding on the substance.",
+   "The rep told the customer the bank does not threaten arrest and apologized; the draft does not repeat this, so decide whether to include it.",
+   "Confirm the terms of the payment arrangement set up on the call, and whether to reference them.",
+   "The customer was crying on the call; consider whether vulnerability or wellbeing support should be offered.",
+   "The complaint came in by phone; confirm the customer's preferred contact method for this reply.",
+   "The intake summary says the collector did not identify themselves, but the note says only that the customer did not get the name; the draft uses the note's wording."
+  ]
+ },
+ "recorded_at": "2026-10-09T02:45:22+00:00",
+ "usage": {
+  "agent": "drafter",
+  "case_id": "C-0156",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 452,
+  "output_tokens": 1290,
+  "cache_read_tokens": 1376,
+  "cache_write_tokens": 0,
+  "latency_s": 12.67,
+  "cost_usd": 0.027883,
+  "request_id": "req_011CfqtwxzjJVfoHnfpejxXz"
+ }
+}

@@ -17,7 +17,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 
-from .redact import (ADDRESS_RE, DIGIT_RUN_RE, EMAIL_OBFUSCATED_RE, EMAIL_RE, HONORIFIC_RE, PHONE_RE, SSN_CUE_RE,
+from .redact import (ADDRESS_RE, DIGIT_RUN_RE, EMAIL_OBFUSCATED_RE, EMAIL_RE, honorific_names, PHONE_RE, SSN_CUE_RE,
                      SSN_RE, TOKEN_RE, _LET, _digits, _looks_like_amount, _looks_like_date_or_time, _luhn_ok)
 
 
@@ -64,7 +64,7 @@ class EgressGate:
                 f.append({"kind": "KNOWN_IDENTIFIER", "detector": "directory"})
         if ADDRESS_RE.search(text):
             f.append({"kind": "ADDRESS", "detector": "pattern"})
-        if HONORIFIC_RE.search(text):
+        if next(honorific_names(text), None):
             f.append({"kind": "NAME", "detector": "honorific"})
         if self._name_re and self._name_re.search(text):
             f.append({"kind": "CUSTOMER_NAME", "detector": "directory"})

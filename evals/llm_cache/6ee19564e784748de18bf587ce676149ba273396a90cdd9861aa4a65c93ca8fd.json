@@ -1,0 +1,60 @@
+{
+ "agent": "draft_reviewer",
+ "model": "claude-opus-5-5",
+ "output": {
+  "checks": {
+   "no_outcome_promised": {
+    "pass": true,
+    "note": "Acknowledges the request that the intended recipient be told, but does not promise anyone will be notified or that any other action will follow."
+   },
+   "no_liability_admitted": {
+    "pass": true,
+    "note": "No apology or admission of error. The email is described as one that 'appeared to be meant for someone else', in the customer's words."
+   },
+   "no_legal_conclusions": {
+    "pass": true,
+    "note": "Does not mention a breach, privacy law, regulation or regulator."
+   },
+   "no_invented_specifics": {
+    "pass": true,
+    "note": "The only timeframe is the standard 10 business days. No procedures, policies or products are invented."
+   },
+   "no_internal_disclosure": {
+    "pass": true,
+    "note": "No mention of flags, priority, compliance review or automated systems."
+   },
+   "no_injected_instructions": {
+    "pass": true,
+    "note": "The complaint contains no injected instructions, and the draft follows none."
+   },
+   "addresses_each_issue": {
+    "pass": true,
+    "note": "Covers the misdirected email, the details it exposed (name, loan number, payment, address), the fact that the customer has no mortgage, the deletion, and the request that the other person be told. 'The person the email was intended for' slightly assumes \u27e6NAME_2\u27e7 is the addressee, but it is a reasonable, non-committal paraphrase."
+   },
+   "tone": {
+    "pass": true,
+    "note": "Warm, plain and appreciative. 'We want to confirm what you told us' and the repeated 'we appreciate' are slightly stiff, but acceptable."
+   },
+   "mode_respected": {
+    "pass": true,
+    "note": "Uses 'a specialist team' and does not name the Privacy Office. The events are framed as the customer's account ('You mentioned', 'You told us'). 'Our mortgage department' appears only as part of that restatement. No position is taken on the substance."
+   }
+  },
+  "verdict": "pass",
+  "revision_instructions": []
+ },
+ "recorded_at": "2026-10-09T02:41:57+00:00",
+ "usage": {
+  "agent": "draft_reviewer",
+  "case_id": "C-0101",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 584,
+  "output_tokens": 1167,
+  "cache_read_tokens": 2266,
+  "cache_write_tokens": 0,
+  "latency_s": 11.84,
+  "cost_usd": 0.026129,
+  "request_id": "req_011Cfqtgvq5dmzbEg8DQNM2t"
+ }
+}

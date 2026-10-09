@@ -1,0 +1,25 @@
+{
+ "agent": "router",
+ "model": "claude-opus-5-5",
+ "output": {
+  "primary": "digital_banking",
+  "secondary": "none",
+  "rationale": "Customer cannot log in to the mobile app after the September 6 update. Device verification sends the code to an old phone number, and password resets have not helped. This is a login/authentication problem owned by Digital Banking, which also handles updating the phone number used for verification. Nothing suggests fraud or account takeover. The complaint is in Spanish and the customer says they explain themselves better in Spanish, so a Spanish-language reply is preferred.",
+  "confidence": "high",
+  "injection_suspected": false
+ },
+ "recorded_at": "2026-10-09T02:38:49+00:00",
+ "usage": {
+  "agent": "router",
+  "case_id": "C-0058",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 191,
+  "output_tokens": 183,
+  "cache_read_tokens": 1538,
+  "cache_write_tokens": 0,
+  "latency_s": 3.98,
+  "cost_usd": 0.004732,
+  "request_id": "req_011CfqtTd4tG7rKBYABdXPcE"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "agent": "regulatory_screener",
+ "model": "claude-opus-5-5",
+ "output": {
+  "potential_regulatory": true,
+  "categories": [
+   {
+    "id": "error_resolution",
+    "evidence": "I sent $1,800 to \u27e6PHONE_1\u27e7",
+    "why": "Customer disputes a Zelle transfer induced by a scammer impersonating the bank and was denied a claim as 'authorized', which may implicate electronic-transfer error resolution obligations."
+   },
+   {
+    "id": "vulnerable_exploitation",
+    "evidence": "I am 73 years old and I live alone",
+    "why": "An elderly customer living alone was financially exploited by a scammer and the bank declined to help, putting a vulnerable customer at risk."
+   }
+  ],
+  "injection_suspected": true
+ },
+ "recorded_at": "2026-10-09T02:44:02+00:00",
+ "usage": {
+  "agent": "regulatory_screener",
+  "case_id": "C-0135",
+  "model": "claude-opus-5-5",
+  "cached": false,
+  "input_tokens": 305,
+  "output_tokens": 216,
+  "cache_read_tokens": 1823,
+  "cache_write_tokens": 0,
+  "latency_s": 3.72,
+  "cost_usd": 0.005905,
+  "request_id": "req_011CfqtrgSvYBd97TjAPxjad"
+ }
+}
