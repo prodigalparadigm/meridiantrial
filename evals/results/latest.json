@@ -2,14 +2,14 @@
  "run": "month",
  "mode": "replay",
  "model": "claude-opus-5-5",
- "at": "2026-10-09T02:50:22+00:00",
+ "at": "2026-10-09T03:25:27+00:00",
  "complaints": 163,
- "wall_seconds": 15.1,
+ "wall_seconds": 14.4,
  "spent_this_run_usd": 0,
  "audit_chain": {
   "ok": true,
   "entries": 975,
-  "head": "4ed8df51c9dc4ebd1882bbce185973bcf523e6ee2cb9d708fb74a09975780ba4"
+  "head": "0c5a616057aa435a60a6d5333149f962275055c519988b2a6c2de9634d441dca"
  },
  "pii": {
   "payloads_scanned": 901,

@@ -2,7 +2,9 @@
 
 A working prototype of a multi-agent complaint-intake assistant for a 60-branch regional bank. It reads every complaint (email, web form or call-center note) as it arrives, flags possible regulatory issues to Compliance within seconds, routes the complaint to the owning department, extracts the facts that set priority, and prepares a draft reply for an analyst to edit and sign.
 
-It does not send anything to customers, and it does not replace the three analysts. The goal is the backlog and the 48-hour regulatory window. Why this is the right scope: [docs/SCOPING.md](docs/SCOPING.md). How it behaves on a synthetic month: [docs/EVIDENCE.md](docs/EVIDENCE.md). The Friday walkthrough for the two stakeholders: [docs/walkthrough.html](docs/walkthrough.html) (also served by the workbench at `/walkthrough`).
+It does not send anything to customers, and it does not replace the three analysts. The goal is the backlog and the 48-hour regulatory window. Why this is the right scope: [docs/SCOPING.md](docs/SCOPING.md). How it behaves on a synthetic month: [docs/EVIDENCE.md](docs/EVIDENCE.md). The Friday walkthrough for the two stakeholders: [docs/walkthrough.html](docs/walkthrough.html) (also served by the workbench at `/walkthrough`), with a three-slide deck for the meeting at https://claude.ai/artifact/4fpwqtydM1Bdd8Yuks5Wxj (private until shared).
+
+**New here? Start with [docs/QUICKSTART.md](docs/QUICKSTART.md):** running in five minutes, no API key needed.
 
 ## Run it
 
@@ -13,6 +15,7 @@ python3 -m unittest discover -s tests -t .        # controls: redaction, egress 
 python3 -m evals.redaction_check                  # redaction only, no model: PII left readable on the month and on a held-out month
 python3 -m evals.run_eval --mode replay           # score the synthetic month offline from recorded model responses
 python3 -m meridian.server --seed --port 8770     # load the month (offline replay) and open http://127.0.0.1:8770
+                                                  # (add --reset to start the demo state over)
 ```
 
 With `ANTHROPIC_API_KEY` set, `python3 -m evals.run_eval` re-runs anything not yet recorded against Claude. New complaints typed into the workbench are processed live. Without a key, unrecorded complaints fail closed: they go to manual triage and into the Compliance queue as *unscreened*, which is the intended behavior.
@@ -70,7 +73,7 @@ data/        synthetic month + held-out month, generator, verifier, README (writ
 evals/       run_eval.py (scoring), report.py (renders docs/EVIDENCE.md), build_walkthrough.py, redaction_check.py,
              results/, llm_cache/ (recorded model responses, keyed to redacted payloads; no PII)
 tests/       unittest suite with erosion checks: each safety test is shown to fail when its control is removed
-docs/        SCOPING.md, EVIDENCE.md (generated), walkthrough.html (generated from walkthrough.template.html)
+docs/        QUICKSTART.md, SCOPING.md, EVIDENCE.md (generated), walkthrough.html (generated from walkthrough.template.html)
 ```
 
 ## Not production

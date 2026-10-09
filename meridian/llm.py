@@ -104,11 +104,11 @@ class LLM:
                 output_config={"effort": effort, "format": {"type": "json_schema", "schema": schema}},
             )
         except (anthropic.RateLimitError, anthropic.APIConnectionError, anthropic.InternalServerError) as e:
+            self._log_failure(case_id, agent, key, e)
             raise ModelUnavailable(f"{type(e).__name__}: {e}") from e
-        except anthropic.APIStatusError as e:
-            if e.status_code >= 500:
-                raise ModelUnavailable(f"API {e.status_code}") from e
-            raise
+        except Exception as e:  # noqa: BLE001 - any other failure (no credentials, bad request) fails closed to a person
+            self._log_failure(case_id, agent, key, e)
+            raise ModelUnavailable(f"{type(e).__name__}: {str(e)[:200]}") from e
         rec.latency_s = round(time.monotonic() - t0, 2)
         rec.request_id = getattr(resp, "_request_id", "") or ""
         u = resp.usage
@@ -130,6 +130,12 @@ class LLM:
         cache_file.write_text(json.dumps({"agent": agent, "model": self.model, "output": output,
                                           "recorded_at": _now(), "usage": asdict(rec)}, indent=1))
         return output, rec
+
+    def _log_failure(self, case_id, agent, key, err):
+        entry = {"at": _now(), "case_id": case_id, "agent": agent, "payload_sha256": key,
+                 "call_failed": f"{type(err).__name__}: {str(err)[:200]}"}
+        with self._lock, self.egress_log.open("a") as fh:
+            fh.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
     def _log(self, case_id, agent, key, system, user, sent: bool, rec):
         entry = {"at": _now(), "case_id": case_id, "agent": agent, "model": self.model, "payload_sha256": key,

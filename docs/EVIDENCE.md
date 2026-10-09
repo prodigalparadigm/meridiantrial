@@ -1,6 +1,6 @@
 # Evidence: how the prototype behaves on a synthetic month
 
-Generated from `evals/results/month.json` (2026-10-09T02:50:22+00:00). Model `claude-opus-5-5`, run mode `replay`. 163 complaints. Re-run with `python3 -m evals.run_eval`.
+Generated from `evals/results/month.json` (2026-10-09T03:25:27+00:00). Model `claude-opus-5-5`, run mode `replay`. 163 complaints. Re-run with `python3 -m evals.run_eval`.
 
 The labels live in a sidecar file the pipeline never reads. The dataset was written by a separate agent that could see the taxonomy but not the detectors, prompts or tripwire terms. See `data/README.md`.
 
@@ -235,4 +235,4 @@ On the *true* facts, the two analyst policies disagree on **65 of 163** complain
 - Outcomes: 163 awaiting analyst. Failures by stage: none.
 - Model cost per complaint: $0.075 → about $105/month at 1,400 complaints.
 - Median end-to-end time per complaint (including draft and review): 26.3 s. Model calls: 901.
-- Audit chain: intact, 975 entries, head `4ed8df51c9dc4ebd…`.
+- Audit chain: intact, 975 entries, head `0c5a616057aa435a…`.

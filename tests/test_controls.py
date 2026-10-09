@@ -125,6 +125,15 @@ class RegulatoryRatchet(unittest.TestCase):
             self.assertLess(events.index("compliance.queued"), events.index("draft.prepared"))
             self.assertEqual(p.store.get("C-9")["regulatory"]["seconds_to_flag"] < 1, True)  # tripwire: before any model call
 
+    def test_no_model_credentials_fails_closed(self):
+        err = TypeError("Could not resolve authentication method")   # what the SDK raises with no key
+        with tempfile.TemporaryDirectory() as tmp:
+            p, _ = pipeline(tmp, {a: err for a in ("regulatory_screener", "triage_analyst", "router", "drafter", "draft_reviewer")})
+            case = p.process(email("C-10", "The app logged me out twice today."))
+            self.assertEqual(case["status"], "manual_triage")
+            self.assertTrue(case["regulatory"]["flagged"])
+            self.assertIn("unscreened", case["regulatory"]["categories"])
+
     def test_clean_complaint_is_not_flagged(self):  # erosion: the flag is not always on
         with tempfile.TemporaryDirectory() as tmp:
             p, _ = pipeline(tmp)

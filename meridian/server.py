@@ -187,7 +187,7 @@ class Handler(BaseHTTPRequestHandler):
             f = pipe.var / "egress.jsonl"
             rows = [json.loads(l) for l in f.read_text().splitlines()] if f.exists() else []
             rows = [{k: r[k] for k in ("at", "agent", "model", "sent_to_model", "payload_sha256", "user")}
-                    for r in rows if r["case_id"] == m.group(1)]
+                    for r in rows if r["case_id"] == m.group(1) and "user" in r]
             return self._json(rows)
         if u.path == "/api/stats":
             return self._json(_stats(pipe.store.all()))
@@ -245,8 +245,19 @@ def main():
     ap.add_argument("--port", type=int, default=8765)
     ap.add_argument("--var", default=str(config.VAR))
     ap.add_argument("--seed", action="store_true", help="process the synthetic month into --var before serving")
+    ap.add_argument("--reset", action="store_true", help="with --seed: delete the demo state in --var first (cases, audit, egress log)")
     ap.add_argument("--mode", default=None, help="llm mode for new complaints: auto | replay | live")
     args = ap.parse_args()
+    var = Path(args.var)
+    if args.seed and (var / "cases").exists() and any((var / "cases").glob("*.json")):
+        if not args.reset:
+            raise SystemExit(f"{var} already holds cases. Serve it as is (drop --seed), or add --reset to start the demo fresh.")
+        import shutil
+        for name in ("cases", "private"):
+            shutil.rmtree(var / name, ignore_errors=True)
+        for name in ("audit.jsonl", "egress.jsonl"):
+            (var / name).unlink(missing_ok=True)
+        print(f"reset demo state in {var}")
     pipe = Pipeline(_load_crm(), var=Path(args.var), mode=args.mode or ("replay" if args.seed else None), cache_dir=CACHE)
     if args.seed:
         seed(pipe)

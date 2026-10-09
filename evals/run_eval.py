@@ -306,6 +306,9 @@ def main():
 
     name = args.name or datetime.now(timezone.utc).strftime("run-%Y%m%d-%H%M%S")
     var = ROOT / "evals" / "runs" / name
+    if var.exists():                     # a re-used run name starts clean, or logs would double-count
+        import shutil
+        shutil.rmtree(var)
     pipe = Pipeline(crm, var=var, mode=args.mode, cache_dir=CACHE)
     t0 = time.monotonic()
     cases = {}
@@ -316,7 +319,7 @@ def main():
             if n % 10 == 0 or n == len(futs):
                 print(f"  {n}/{len(futs)} processed  ({time.monotonic() - t0:.0f}s)", flush=True)
 
-    egress = load_jsonl(var / "egress.jsonl")
+    egress = [e for e in load_jsonl(var / "egress.jsonl") if "user" in e]   # failure records carry no payload
     originals = {cid: json.loads((var / "private" / f"{cid}.json").read_text())["original_text"] for cid in cases}
     for cid, c in cases.items():
         c["_original"] = originals[cid]      # in memory only, for the per-term tripwire table
