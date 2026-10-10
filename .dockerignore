@@ -1,0 +1,16 @@
+# Keep the build context to what the server actually reads.
+.git
+.gitignore
+.DS_Store
+__pycache__/
+*.pyc
+# Local runtime state - the image builds its own seeded copy instead.
+var/
+evals/runs/
+# Not needed to serve the workbench.
+tests/
+data/holdout/
+evals/results/
+Dockerfile
+.dockerignore
+QUICKSTART-CLOUD.md

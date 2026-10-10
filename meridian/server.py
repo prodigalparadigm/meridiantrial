@@ -1,15 +1,22 @@
-"""Local workbench server. Binds to 127.0.0.1 only; standard library only.
+"""Local workbench server. Binds to 127.0.0.1 unless told otherwise; standard library only.
 
     python3 -m meridian.server            # serve var/ (seed it first with --seed)
     python3 -m meridian.server --seed     # process the synthetic month into var/ (replay: offline, no key needed)
 
 This is an inbound-only UI server for people inside the bank. It has no
 route that sends anything to a customer.
+
+The bind address defaults to loopback. A container has to listen on all
+interfaces, so --host (or MERIDIAN_HOST) can widen it, and --port reads PORT
+when the platform assigns one. Nothing else about the server changes: there is
+still no authentication, so a non-loopback bind must sit behind something that
+provides it.
 """
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import threading
 from datetime import datetime, timezone
@@ -242,7 +249,9 @@ def seed(pipe: Pipeline):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--port", type=int, default=8765)
+    ap.add_argument("--host", default=os.environ.get("MERIDIAN_HOST", "127.0.0.1"),
+                    help="interface to bind; loopback by default, 0.0.0.0 in a container")
+    ap.add_argument("--port", type=int, default=int(os.environ.get("PORT", 8765)))
     ap.add_argument("--var", default=str(config.VAR))
     ap.add_argument("--seed", action="store_true", help="process the synthetic month into --var before serving")
     ap.add_argument("--reset", action="store_true", help="with --seed: delete the demo state in --var first (cases, audit, egress log)")
@@ -264,8 +273,8 @@ def main():
         if args.mode is None:
             pipe.llm.mode = "auto"
     STATE["pipe"] = pipe
-    srv = ThreadingHTTPServer(("127.0.0.1", args.port), Handler)
-    print(f"Meridian workbench on http://127.0.0.1:{args.port}  (model {pipe.llm.model}, llm mode {pipe.llm.mode})")
+    srv = ThreadingHTTPServer((args.host, args.port), Handler)
+    print(f"Meridian workbench on http://{args.host}:{args.port}  (model {pipe.llm.model}, llm mode {pipe.llm.mode})")
     srv.serve_forever()
 
 
